@@ -1,7 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="83ff69a3-d345-4ba9-a541-95019bb69808" name="Default Changelist" comment="" />
+    <list default="true" id="83ff69a3-d345-4ba9-a541-95019bb69808" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/admin/home/css/test.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/admin/home/html/test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/admin/home/js/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/logo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/signin_signup/css/test.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/signin_signup/html/test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/signin_signup/js/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/user/cart/css/test.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/user/cart/html/test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/user/cart/js/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/user/checkout/css/test.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/user/checkout/html/test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/user/checkout/js/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/user/home/css/test.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/user/home/html/test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/user/home/js/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/user/profile/css/test.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/user/profile/html/test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/user/profile/js/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,8 +35,14 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="CSS File" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -29,22 +58,27 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/org/iti/model/entity" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/user/profile" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Shimaa Shokry\Documents\NetBeansProjects\E-Commerce_Application\src\main\webapp" />
+      <recent name="C:\Users\Shimaa Shokry\Documents\NetBeansProjects\E-Commerce_Application\src\main\webapp\user" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="org.iti.model.dao" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Shimaa Shokry\Documents\NetBeansProjects\E-Commerce_Application\src\main\java\org\iti\model\entity" />
-      <recent name="C:\Users\Shimaa Shokry\Documents\NetBeansProjects\E-Commerce_Application\src\main\resources" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Shimaa Shokry\Documents\NetBeansProjects\E-Commerce_Application\src\main\webapp" />
-      <recent name="C:\Users\Shimaa Shokry\Documents\NetBeansProjects\E-Commerce_Application\src\main\webapp\user" />
+      <recent name="C:\Users\Shimaa Shokry\IdeaProjects\E-Commerce-Application\src\main\webapp\user\profile" />
+      <recent name="C:\Users\Shimaa Shokry\IdeaProjects\E-Commerce-Application\src\main\webapp\user\home" />
+      <recent name="C:\Users\Shimaa Shokry\IdeaProjects\E-Commerce-Application\src\main\webapp\user\checkout" />
+      <recent name="C:\Users\Shimaa Shokry\IdeaProjects\E-Commerce-Application\src\main\webapp\user\cart" />
+      <recent name="C:\Users\Shimaa Shokry\IdeaProjects\E-Commerce-Application\src\main\webapp\signin_signup" />
     </key>
   </component>
   <component name="RunManager">
@@ -145,6 +179,7 @@
       <option name="presentableId" value="Default" />
       <updated>1586528899265</updated>
       <workItem from="1586528902891" duration="10090000" />
+      <workItem from="1586568471294" duration="548000" />
     </task>
     <servers />
   </component>
