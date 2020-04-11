@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 11, 2020, 2:26:10 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="org.iti.model.entity.User" table="user" catalog="ecommerce_app" optimistic-lock="version">
+        <id name="userId" type="java.lang.Integer">
+            <column name="user_id" />
+            <generator class="identity" />
+        </id>
+        <property name="firstName" type="string">
+            <column name="first_name" length="60" not-null="true" />
+        </property>
+        <property name="lastName" type="string">
+            <column name="last_name" length="60" not-null="true" />
+        </property>
+        <property name="username" type="string">
+            <column name="username" length="80" not-null="true" unique="true" />
+        </property>
+        <property name="password" type="string">
+            <column name="password" length="45" not-null="true" />
+        </property>
+        <property name="jop" type="string">
+            <column name="jop" length="65" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="80" not-null="true" unique="true" />
+        </property>
+        <property name="creditLimit" type="int">
+            <column name="credit_limit" not-null="true" />
+        </property>
+        <property name="address" type="string">
+            <column name="address" length="200" />
+        </property>
+        <property name="role" type="string">
+            <column name="role" length="45" not-null="true" />
+        </property>
+        <set name="carts" table="cart" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="user_id" not-null="true" />
+            </key>
+            <one-to-many class="org.iti.model.entity.Cart" />
+        </set>
+    </class>
+</hibernate-mapping>
