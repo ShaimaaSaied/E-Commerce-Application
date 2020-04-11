@@ -7,8 +7,8 @@ public class User  implements java.io.Serializable {
 
 
      private Integer userId;
-     private String firstName;
-     private String lastName;
+     private String firstName="";
+     private String lastName="";
      private String username;
      private String password;
      private String jop;
@@ -21,7 +21,13 @@ public class User  implements java.io.Serializable {
     public User() {
     }
 
-	
+    public User(String username, String password, String email, int creditLimit) {
+        this.username = username;
+        this.password = password;
+        this.email = email;
+        this.creditLimit = creditLimit;
+    }
+
     public User(String firstName, String lastName, String username, String password, String email, int creditLimit, String role) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -122,9 +128,17 @@ public class User  implements java.io.Serializable {
         this.carts = carts;
     }
 
-
-
-
+    @Override
+    public String toString() {
+        return "User{" +
+                "userId=" + userId +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", email='" + email + '\'' +
+                ", creditLimit=" + creditLimit +
+                ", role='" + role + '\'' +
+                '}';
+    }
 }
 
 
