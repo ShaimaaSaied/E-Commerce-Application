@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="83ff69a3-d345-4ba9-a541-95019bb69808" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="83ff69a3-d345-4ba9-a541-95019bb69808" name="Default Changelist" comment="implemented CategoryDao and CategoryDaoImpl">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iti/model/dao/daoimpl/UserImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iti/model/dao/daoimpl/UserImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iti/model/dao/interfaces/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iti/model/dao/interfaces/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iti/model/dao/daoimpl/CategoryDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iti/model/dao/daoimpl/CategoryDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iti/model/dao/daoimpl/UserImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iti/model/dao/interfaces/CategoryDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iti/model/dao/interfaces/CategoryDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iti/model/dao/interfaces/User.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,10 +17,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="CSS File" />
         <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -66,7 +66,20 @@
       <recent name="C:\Users\Shimaa Shokry\IdeaProjects\E-Commerce-Application\src\main\webapp\signin_signup" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.myMain">
+    <configuration name="myMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.iti.model.dao.daoimpl.myMain" />
+      <module name="E-Commerce-Application" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.iti.model.dao.daoimpl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="e-commerce" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.0.M17" ALTERNATIVE_JRE_ENABLED="false">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:9090/E_Commerce_Application_war_exploded/" />
       <option name="UPDATING_POLICY" value="restart-server" />
@@ -140,6 +153,11 @@
         </option>
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.myMain" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -165,50 +183,74 @@
       <updated>1586528899265</updated>
       <workItem from="1586528902891" duration="10090000" />
       <workItem from="1586568471294" duration="548000" />
-      <workItem from="1586623026960" duration="5847000" />
+      <workItem from="1586623026960" duration="9048000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="implemented CategoryDao and CategoryDaoImpl" />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented CategoryDao and CategoryDaoImpl" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="137" y="23" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586566720698">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="137" y="23" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1586566720698" />
-    <state x="574" y="123" key="#com.intellij.ide.util.MemberChooser" timestamp="1586630659916">
+    <state x="574" y="123" key="#com.intellij.ide.util.MemberChooser" timestamp="1586633829370">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="123" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1586630659916" />
+    <state x="574" y="123" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1586633829370" />
     <state x="484" y="277" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1586530287942">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="484" y="277" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1366.728@0.0.1366.728" timestamp="1586530287942" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1586529447624">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1586633672088">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1586633672088" />
+    <state x="328" y="8" key="CommitChangelistDialog2" timestamp="1586635134089">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="328" y="8" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1586635134089" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1586635134127">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586529447624" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1586529447623">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586635134127" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1586635134126">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586529447623" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1586529447623">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1586635134126" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1586635134125">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586529447623" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1586529447624">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1586635134125" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1586635134127">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586529447624" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1586635134127" />
+    <state x="139" y="42" key="MergeDialog" timestamp="1586632969996">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="139" y="42" key="MergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1586632969996" />
+    <state x="481" y="129" key="MultipleFileMergeDialog" timestamp="1586632970016">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="481" y="129" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1586632970016" />
     <state x="470" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1586623032009">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="470" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1586623032009" />
-    <state x="578" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586632098641">
+    <state x="578" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586633657973">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="578" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1586632098641" />
+    <state x="578" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1586633657973" />
     <state x="463" y="10" width="609" height="804" key="find.popup" timestamp="1586627082995">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
