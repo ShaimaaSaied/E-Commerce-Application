@@ -1,0 +1,92 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="SigninSignUp.css">
+
+</head>
+
+<body>
+    <div class="login-wrap">
+        <div class="login-html">
+            <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
+            <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+
+            <div class="login-form">
+                <form class="signIn-form" id="signIn-form">
+                    <div class="sign-in-htm">
+
+                        <div class="group ">
+                            <label for="email_login" class="label">Email</label>
+                            <input id="email_login" type="text" class="input" required placeholder="xxx@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                        </div>
+
+                        <div class="group">
+                            <label for="password_login" class="label">Password</label>
+                            <input id="password_login" type="password" class="input" data-type="password" required pattern="^(?=.[0-9]+.)(?=.[a-zA-Z]+.)[0-9a-zA-Z]{6,}$" oninvalid="setCustomValidity('Password must contain at least one letter, at least one number, and be longer than six charaters.')">
+                        </div>
+
+                        <div class="group">
+                            <input type="submit" class="button" value="Sign In">
+                        </div>
+                        <div class="hr"></div>
+
+                    </div>
+                </form>
+
+                <form>
+                    <div class="sign-up-htm">
+                        <div class="group">
+                            <label for="user" class="label">Username</label>
+                            <input id="user" type="text" class="input" required pattern="^[a-zA-Z]{4,}(?: [a-zA-Z]+){0,2}$">
+                        </div>
+                        <div class="group">
+                            <label for="password" class="label">Password</label>
+                            <input id="password" type="password" class="input" data-type="password" required>
+                        </div>
+                        <div class="group">
+                            <label for="confirm_password" class="label">Confirm Password</label>
+                            <input id="confirm_password" type="password" class="input" data-type="password" required>
+                        </div>
+                        <div class="group">
+                            <label for="email" class="label">Email Address</label>
+                            <input id="email" type="text" class="input" required placeholder="xxx@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                        </div>
+
+                        <div class="group">
+                            <label for="creditLimit" class="label">Credit Limit </label>
+                            <input id="creditLimit" type="number" min="0" class="input" required>
+                        </div>
+
+                        <div class="group">
+                            <input type="submit" class="button" value="Sign Up">
+                        </div>
+                        <div class="hr"></div>
+                        <div class="foot-lnk">
+                            <label for="tab-1">Already Member?</a>
+                        </div>
+                    </div>
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+    <script>
+        var password = document.getElementById("password"),
+            confirm_password = document.getElementById("confirm_password");
+
+        function validatePassword() {
+            if (password.value != confirm_password.value) {
+                confirm_password.setCustomValidity("Passwords Don't Match");
+            } else {
+                confirm_password.setCustomValidity('');
+            }
+        }
+
+        password.onchange = validatePassword;
+        confirm_password.onkeyup = validatePassword;
+
+    </script>
+</body>
+
+</html>
