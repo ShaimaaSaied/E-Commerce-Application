@@ -1,34 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="E-Commerce_Application:war exploded" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="83ff69a3-d345-4ba9-a541-95019bb69808" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/admin/home/css/test.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/admin/home/html/test.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/admin/home/js/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/logo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/signin_signup/css/test.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/signin_signup/html/test.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/signin_signup/js/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/user/cart/css/test.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/user/cart/html/test.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/user/cart/js/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/user/checkout/css/test.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/user/checkout/html/test.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/user/checkout/js/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/user/home/css/test.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/user/home/html/test.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/user/home/js/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/user/profile/css/test.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/user/profile/html/test.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/user/profile/js/test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="0aa820e3-527b-4858-b7f2-3184a5d1fa6a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/user/profile/html/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/user/profile/css/test.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/user/profile/html/test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/user/profile/js/test.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -43,6 +46,13 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -62,28 +72,42 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/user/profile" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/user/profile/html" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Shimaa Shokry\Documents\NetBeansProjects\E-Commerce_Application\src\main\webapp" />
-      <recent name="C:\Users\Shimaa Shokry\Documents\NetBeansProjects\E-Commerce_Application\src\main\webapp\user" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="org.iti.model.dao" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\ProjectITI2\E-Commerce-Application\src\main\webapp\user\profile\html" />
       <recent name="C:\Users\Shimaa Shokry\IdeaProjects\E-Commerce-Application\src\main\webapp\user\profile" />
       <recent name="C:\Users\Shimaa Shokry\IdeaProjects\E-Commerce-Application\src\main\webapp\user\home" />
       <recent name="C:\Users\Shimaa Shokry\IdeaProjects\E-Commerce-Application\src\main\webapp\user\checkout" />
       <recent name="C:\Users\Shimaa Shokry\IdeaProjects\E-Commerce-Application\src\main\webapp\user\cart" />
-      <recent name="C:\Users\Shimaa Shokry\IdeaProjects\E-Commerce-Application\src\main\webapp\signin_signup" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\ProjectITI2\E-Commerce-Application\src\main\webapp\user\profile\html" />
+      <recent name="D:\ProjectITI2\E-Commerce-Application\src\main\webapp\user\home\html" />
+      <recent name="D:\ProjectITI2\E-Commerce-Application\src\main\webapp\user\home\css" />
+      <recent name="C:\Users\Shimaa Shokry\Documents\NetBeansProjects\E-Commerce_Application\src\main\webapp" />
+      <recent name="C:\Users\Shimaa Shokry\Documents\NetBeansProjects\E-Commerce_Application\src\main\webapp\user" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager">
     <configuration name="e-commerce" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.0.M17" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:9090/E_Commerce_Application_war_exploded/" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="E-Commerce_Application:war exploded">
@@ -156,18 +180,6 @@
       </method>
     </configuration>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -185,6 +197,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="WindowStateProjectService">
     <state x="137" y="23" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586566720698">
