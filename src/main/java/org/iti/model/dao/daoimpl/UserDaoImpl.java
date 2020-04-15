@@ -20,6 +20,9 @@ public class UserDaoImpl implements UserDao {
             "u.lastName=:lastName, u.username=:username, u.password=:password,u.email=:email,u.address=:address," +
             "u.jop=:jop ,u.role=:role where u.userId=:userId";
 
+    private final String RETRIVE_ALL_MAIL = "select email FROM org.iti.model.entity.User";
+    private final String RETRIVE_ALL_USERNAME = "select username FROM org.iti.model.entity.User";
+
     public UserDaoImpl() {
         sessionFactory = DBConnection.getInstance();
     }
@@ -79,4 +82,15 @@ public class UserDaoImpl implements UserDao {
         System.out.println("insert Successfully");
     }
 
+    @Override
+    public List<String> allUsernames() {
+        List<String> username = sessionFactory.openSession().createQuery(RETRIVE_ALL_USERNAME).list();
+        return username;
+    }
+
+    @Override
+    public List<String> allEmails() {
+        List<String> mails = sessionFactory.openSession().createQuery(RETRIVE_ALL_MAIL).list();
+        return mails;
+    }
 }

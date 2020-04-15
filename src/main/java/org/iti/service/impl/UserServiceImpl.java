@@ -39,4 +39,14 @@ public class UserServiceImpl implements UserService {
     public void createUser(User user) {
         userDao.createUser(user);
     }
+
+    @Override
+    public List<String> allUsernames() {
+        return userDao.allUsernames();
+    }
+
+    @Override
+    public List<String> allEmails() {
+        return userDao.allEmails();
+    }
 }

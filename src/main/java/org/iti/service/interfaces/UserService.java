@@ -15,4 +15,8 @@ public interface UserService {
     List<User> retriveAllUsers();
 
     void createUser(User user);
+
+    List<String> allUsernames();
+
+    public List<String> allEmails();
 }
