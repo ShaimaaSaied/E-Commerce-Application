@@ -24,7 +24,7 @@
                     <div class="group">
                         <label for="password_login" class="label">Password</label>
                         <input id="password_login" name="password" type="password" class="input" data-type="password"
-                               required  pattern="^(?=.[0-9]+.)(?=.[a-zA-Z]+.)[0-9a-zA-Z]{6,}$"
+                               required pattern="^(?=.[0-9]+.)(?=.[a-zA-Z]+.)[0-9a-zA-Z]{6,}$"
                                oninvalid="setCustomValidity('Password must contain at least one letter, at least one number, and be longer than six charaters.')">
                     </div>
 
@@ -43,6 +43,7 @@
                         <label for="user" class="label">Username</label>
                         <input id="user" type="text" name="username" class="input" required
                                pattern="^[a-zA-Z]{4,}(?: [a-zA-Z]+){0,2}$">
+                        <div id="validateUser"></div>
                     </div>
                     <div class="group">
                         <label for="password" class="label">Password</label>
@@ -78,6 +79,7 @@
         </div>
     </div>
 </div>
+<script src=http://code.jquery.com/jquery-latest.min.js></script>
 <script>
     var password = document.getElementById("password"),
         confirm_password = document.getElementById("confirm_password");
@@ -93,7 +95,26 @@
     password.onchange = validatePassword;
     confirm_password.onkeyup = validatePassword;
 
+    $(document).ready(function () {
+        $("#user").keypress(function () {
+            var name = $("#user").val();
+            console.log(name);
+            $.post("../../register",
+                {"user": name}
+                , ajaxCallBack);
+        });
+    });
+
+    function ajaxCallBack(responseTxt, statusTxt, xhr) {
+        if (statusTxt == "success") {
+            console.log(responseTxt.data.user);
+            if(responseTxt.user==false){
+                document.getElementById("validateUser").innerHTML="User is exist"
+            }
+        }
+    }
 </script>
+
 </body>
 
 </html>
