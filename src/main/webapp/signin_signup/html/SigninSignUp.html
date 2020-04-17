@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="../css/SigninSignUp.css">
+    <link rel="stylesheet" href="../../E_Commerce_Application_war_exploded/signin_signup/css/SigninSignUp.css">
 
 </head>
 
@@ -12,7 +12,7 @@
         <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
 
         <div class="login-form">
-            <form class="signIn-form" id="signIn-form" method="post" action="login">
+            <form class="signIn-form" id="signIn-form" method="post" action="../../E_Commerce_Application_war_exploded/login">
                 <div class="sign-in-htm">
 
                     <div class="group ">
@@ -24,8 +24,9 @@
                     <div class="group">
                         <label for="password_login" class="label">Password</label>
                         <input id="password_login" name="password" type="password" class="input" data-type="password"
-                               required pattern="^(?=.[0-9]+.)(?=.[a-zA-Z]+.)[0-9a-zA-Z]{6,}$"
-                               oninvalid="setCustomValidity('Password must contain at least one letter, at least one number, and be longer than six charaters.')">
+                               required>
+                        <!--                                pattern="^(?=.[0-9]+.)(?=.[a-zA-Z]+.)[0-9a-zA-Z]{6,}$"-->
+                        <!--                               oninvalid="setCustomValidity('Password must contain at least one letter, at least one number, and be longer than six charaters.')">-->
                     </div>
 
 
@@ -37,7 +38,7 @@
                 </div>
             </form>
 
-            <form action="../../register" method="post">
+            <form action="../../E_Commerce_Application_war_exploded/register" method="post">
                 <div class="sign-up-htm">
                     <div class="group">
                         <label for="user" class="label">Username</label>
@@ -96,10 +97,10 @@
     confirm_password.onkeyup = validatePassword;
 
     $(document).ready(function () {
-        $("#user").keypress(function () {
+        $("#user").blur(function () {
             var name = $("#user").val();
             console.log(name);
-            $.post("../../register",
+            $.post("../../E_Commerce_Application_war_exploded/register",
                 {"user": name}
                 , ajaxCallBack);
         });
@@ -107,9 +108,10 @@
 
     function ajaxCallBack(responseTxt, statusTxt, xhr) {
         if (statusTxt == "success") {
-            console.log(responseTxt.data.user);
-            if(responseTxt.user==false){
-                document.getElementById("validateUser").innerHTML="User is exist"
+            console.log(responseTxt.data);
+            console.log("******");
+            if (responseTxt.data) {
+                document.getElementById("validateUser").innerHTML = "User is exist"
             }
         }
     }

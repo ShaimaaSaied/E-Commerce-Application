@@ -81,6 +81,8 @@
                     <url>http://localhost:8088/manager/text</url>
                     <server>TomcatServer</server>
                     <path>/e-commerce</path>
+                    <username>root</username>
+                    <password>root</password>
                 </configuration>
                 <executions>
                     <execution>
