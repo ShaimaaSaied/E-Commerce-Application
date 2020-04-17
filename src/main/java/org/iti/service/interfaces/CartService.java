@@ -17,4 +17,6 @@ public interface CartService {
     boolean buyProductFromCart(int userId, int productId);
 
     boolean addProductToCart(int userId, int productId, int quantity);
+
+    boolean updateProductQuantityInCart(int userId, int productId, int quantity);
 }

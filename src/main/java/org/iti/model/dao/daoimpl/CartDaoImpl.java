@@ -23,6 +23,8 @@ public class CartDaoImpl implements CartDao {
     private final String DELETE_ALL_FROM_CART = "DELETE FROM org.iti.model.entity.Cart";
     private final String BUY_PRODUCT_FROM_CART = "UPDATE org.iti.model.entity.Cart c SET c.purchased=:bought " +
             "WHERE c.product.productId=:product_id and c.user.userId=:user_id";
+    private final String UPDATE_PRODUCT_QUANTITY_IN_CART="UPDATE org.iti.model.entity.Cart c SET c.quantity=:quantity " +
+           "WHERE c.product.productId=:product_id and c.user.userId=:user_id" ;
 
     public CartDaoImpl() {
         sessionFactory = DBConnection.getInstance();
@@ -129,6 +131,19 @@ public class CartDaoImpl implements CartDao {
     @Override
     public double getTotalPrice(int userId) {
         return (double) sessionFactory.openSession().createQuery(GET_TOTAL_PRICE).setParameter("user_id", userId).uniqueResult();
+    }
+
+    @Override
+    public boolean updateProductQuantityInCart(int userId, int productId, int quantity) {
+        Session session = sessionFactory.openSession();
+        session.beginTransaction();
+        int result = session.createQuery(UPDATE_PRODUCT_QUANTITY_IN_CART)
+                .setParameter("user_id",userId)
+                .setParameter("product_id",productId)
+                .setParameter("quantity",quantity)
+                .executeUpdate();
+        session.getTransaction().commit();
+        return (result==1);
     }
 
 }
