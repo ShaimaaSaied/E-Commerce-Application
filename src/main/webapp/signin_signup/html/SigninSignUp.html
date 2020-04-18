@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="../../E_Commerce_Application_war_exploded/signin_signup/css/SigninSignUp.css">
+    <link rel="stylesheet" href="signin_signup/css/SigninSignUp.css">
 
 </head>
 
@@ -12,7 +12,7 @@
         <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
 
         <div class="login-form">
-            <form class="signIn-form" id="signIn-form" method="post" action="../../E_Commerce_Application_war_exploded/login">
+            <form class="signIn-form" id="signIn-form" method="post" action="/ECommerce/login">
                 <div class="sign-in-htm">
 
                     <div class="group ">
@@ -38,7 +38,7 @@
                 </div>
             </form>
 
-            <form action="../../E_Commerce_Application_war_exploded/register" method="post">
+            <form action="/ECommerce/register" method="post">
                 <div class="sign-up-htm">
                     <div class="group">
                         <label for="user" class="label">Username</label>
@@ -100,7 +100,7 @@
         $("#user").blur(function () {
             var name = $("#user").val();
             console.log(name);
-            $.post("../../E_Commerce_Application_war_exploded/register",
+            $.post("/ECommerce/register",
                 {"user": name}
                 , ajaxCallBack);
         });
