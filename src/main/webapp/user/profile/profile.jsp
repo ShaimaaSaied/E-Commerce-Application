@@ -30,15 +30,15 @@
     </style>
     <script src=http://code.jquery.com/jquery-latest.min.js></script>
 
-    <link rel="stylesheet" href="../../css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="../../css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="../../css/themify-icons.css" type="text/css">
-    <link rel="stylesheet" href="../../css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="../../css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="../../css/nice-select.css" type="text/css">
-    <link rel="stylesheet" href="../../css/jquery-ui.min.css" type="text/css">
-    <link rel="stylesheet" href="../../css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="../../css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/themify-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 
 <body>
@@ -49,9 +49,9 @@
         <div class="container">
             <nav class="nav-menu mobile-menu">
                 <ul>
-                    <li><a href="../home/home.html">&nbsp;&nbsp;&nbsp;Home&nbsp;&nbsp;&nbsp;</a></li>
-                    <li><a href="#">&nbsp;&nbsp;&nbsp;Profile&nbsp;&nbsp;&nbsp;</a></li>
-                    <li><a href="../cart/shopping-cart.html">&nbsp;&nbsp;&nbsp;Shopping cart&nbsp;&nbsp;&nbsp;</a></li>
+                    <li><a href="/ECommerce/home">&nbsp;&nbsp;&nbsp;Home&nbsp;&nbsp;&nbsp;</a></li>
+                    <li><a href="/ECommerce/profile">&nbsp;&nbsp;&nbsp;Profile&nbsp;&nbsp;&nbsp;</a></li>
+                    <li><a href="/ECommerce/cart">&nbsp;&nbsp;&nbsp;Shopping cart&nbsp;&nbsp;&nbsp;</a></li>
                     <li><a href="#">&nbsp;&nbsp;&nbsp;Contact&nbsp;&nbsp;&nbsp;</a></li>
                     <li><a href="#">&nbsp;&nbsp;&nbsp;About us&nbsp;&nbsp;&nbsp;</a></li>
                 </ul>
@@ -64,12 +64,18 @@
      alt="">
 
 
-<form class="needs-validation" novalidate style="margin-left: 300px; width: 600px;"
+<c:if test="${!empty requestScope.message}">
+    <p>${requestScope.message}</p>
+</c:if>
+
+<form class="needs-validation" novalidate style="margin-left: 300px; width: 600px;" action="/ECommerce/profile" method="post"
       oninput='up2.setCustomValidity(up2.value != up.value ? document.getElementById("validation").innerHTML = "pasword doesnot match" : "")' >
 
     <div class="form-input">
-        <label for="validationCustom01">User Name *</label>
-        <input type="text" class="form-control" id="validationCustom01" placeholder="" required pattern="[a-zA-Z]+"/>
+        <label for="validationCustomName">User Name *</label>
+        <input name="validationCustomName" type="text" class="form-control" id="validationCustomName" placeholder="" required pattern="[a-zA-Z]+"
+        value="${sessionScope.currentuser.username}"  />
+
 
         <div class="valid-feedback">
             Looks good!
@@ -80,9 +86,10 @@
     </div>
 
     <div class="form-input">
-        <label for="validationCustom02">Email *</label>
-        <input type="text" class="form-control" id="validationCustom02" placeholder="" required
-               pattern="^[\w-]+(\.[\w-]+)@([a-z0-9-]+(\.[a-z0-9-]+)?\.[a-z]{2,6}|(\d{1,3}\.){3}\d{1,3})(:\d{4})?$"/>
+        <label for="validationCustomEmail">Email *</label>
+        <input name="validationCustomEmail" type="text" class="form-control" id="validationCustomEmail" placeholder="" required
+               pattern="^[\w-]+(\.[\w-]+)@([a-z0-9-]+(\.[a-z0-9-]+)?\.[a-z]{2,6}|(\d{1,3}\.){3}\d{1,3})(:\d{4})?$"
+               value="${sessionScope.currentuser.email}"/>
         <div class="valid-feedback">
             Looks good!
         </div>
@@ -90,10 +97,12 @@
             Please enter valid email
         </div>
     </div>
+
     <div class="form-input">
         <label for="validationCustompassword">Password *</label>
-        <input type="password" class="form-control" id="validationCustompassword" placeholder="" required
-              name="up" pattern="^[a-zA-Z!@#$%-^&?_0-9]{8,40}$"/>
+        <input name="validationCustompassword" type="password" class="form-control" id="validationCustompassword" placeholder="" required
+              name="up" pattern="^[a-zA-Z!@#$%-^&?_0-9]{8,40}$"
+               value="${sessionScope.currentuser.password}"/>
         <div class="valid-feedback">
             Looks good!
         </div>
@@ -103,20 +112,22 @@
     </div>
     <div class="form-input">
         <label for="validationCustomConfirmpassword">Confirm Password *</label>
-        <input type="password"  class="form-control" id="validationCustomConfirmpassword"
-               placeholder="" required name="up2">
+        <input name="validationCustomConfirmpassword" type="password"  class="form-control" id="validationCustomConfirmpassword"
+               placeholder="" required name="up2"
+               value="${sessionScope.currentuser.password}"/>
         <div class="invalid-feedback" id="validation">
 
         </div>
     </div>
     <div class="form-input">
         <label for="validationjop">jop</label>
-        <input type="text" class="form-control" id="validationjop" placeholder="">
+        <input name="validationjop" type="text" class="form-control" id="validationjop" placeholder=""
+               value="${sessionScope.currentuser.jop}"/>
     </div>
     <div class="form-input">
-        <label for="validationCustominterists">interists</label>
-        <input type="text" class="form-control" id="validationCustominterists" placeholder="
-"/>
+        <label for="validationCustomAddress">address</label>
+        <input name="validationCustomAddress" type="text" class="form-control" id="validationCustomAddress" placeholder=""
+               value="${sessionScope.currentuser.address}"/>
 
     </div>
 

@@ -119,7 +119,7 @@ function getAllProductsName() {
         getNamesRequest = new ActiveXObject(Microsoft.XMLHTTP);
 
     getNamesRequest.onreadystatechange = handleNamesRequest;
-    getNamesRequest.open("GET", "../../getAllProductsName", true);
+    getNamesRequest.open("GET", "getAllProductsName", true);
     getNamesRequest.send(null);
 }
 

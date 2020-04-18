@@ -8,13 +8,15 @@ public interface UserService {
 
     int deleteUser(int id);
 
-    int updateUser(User user);
+    User updateUser(User user);
 
     User retriveUser(String mail, String password);
 
+    User retriveUserByID(int id);
+
     List<User> retriveAllUsers();
 
-    void createUser(User user);
+    User createUser(User user);
 
     List<String> allUsernames();
 
