@@ -37,6 +37,14 @@
         <url-pattern>/getAllProducts</url-pattern>
     </servlet-mapping>
 
+ <servlet>
+        <servlet-name>getAllProductsName</servlet-name>
+        <servlet-class>org.iti.controller.user.SearchForProductUsingName</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getAllProductsName</servlet-name>
+        <url-pattern>/getAllProductsName</url-pattern>
+    </servlet-mapping>
 
 
 </web-app>

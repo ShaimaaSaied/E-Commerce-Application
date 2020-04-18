@@ -55,4 +55,6 @@ public interface ProductDao {
     boolean updateProductPrice(int id, double price);
 
     boolean updateProductStock(int id, int stock);
+
+    List<String> searchForProductsName();
 }
