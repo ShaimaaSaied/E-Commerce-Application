@@ -29,4 +29,15 @@
     <welcome-file>signin_signup/html/SigninSignUp.html</welcome-file>
 </welcome-file-list>
 
+    <servlet>
+        <servlet-name>getAllProducts</servlet-name>
+        <servlet-class>org.iti.controller.user.GetAllProducts</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getAllProducts</servlet-name>
+        <url-pattern>/getAllProducts</url-pattern>
+    </servlet-mapping>
+
+
+
 </web-app>

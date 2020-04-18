@@ -8,7 +8,11 @@ import org.iti.service.interfaces.CartService;
 import java.util.List;
 
 public class CartIServicempl implements CartService {
-    CartDaoImpl cartDao = new CartDaoImpl();
+    CartDaoImpl cartDao = null;
+
+    public CartIServicempl() {
+        this.cartDao = new CartDaoImpl();
+    }
 
     @Override
     public int resetCart() {

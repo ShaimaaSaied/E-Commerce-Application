@@ -35,6 +35,14 @@ public class Product  implements java.io.Serializable {
        this.image = image;
        this.carts = carts;
     }
+
+
+    public Product(String productName, String description, double price, String image) {
+        this.productName = productName;
+        this.description = description;
+        this.price = price;
+        this.image = image;
+    }
    
     public Integer getProductId() {
         return this.productId;
@@ -93,9 +101,15 @@ public class Product  implements java.io.Serializable {
         this.carts = carts;
     }
 
-
-
-
+    @Override
+    public String toString() {
+        return "Product{" +
+                ", productName='" + productName + '\'' +
+                ", description='" + description + '\'' +
+                ", price=" + price +
+                ", image='" + image + '\'' +
+                '}';
+    }
 }
 
 

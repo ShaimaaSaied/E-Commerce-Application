@@ -11,7 +11,7 @@ import java.util.List;
 public class ProductDaoImpl implements ProductDao {
     private SessionFactory sessionFactory = null;
 
-    private final String RETRIVE_ALL_PRODUCTS = "from org.iti.model.entity.Product";
+    private final String RETRIVE_ALL_PRODUCTS = "select p.productName,p.price,p.description,p.image from org.iti.model.entity.Product p";
     private final String RETRIVE_PRODUCT_BY_ID = "from org.iti.model.entity.Product as product where product.productId =: product_id";
     private final String RETRIVE_PRODUCT_BY_NAME = "from org.iti.model.entity.Product as product where product.productName like : productName";
     private final String RETRIVE_PRODUCT_BY_PRICE = "from org.iti.model.entity.Product as product where product.price =: price";
