@@ -64,6 +64,22 @@
             <scope>provided</scope>
         </dependency>
 
+            <dependency>
+                <groupId>com.sun.faces</groupId>
+                <artifactId>jsf-api</artifactId>
+                <version>2.1.7</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sun.faces</groupId>
+                <artifactId>jsf-impl</artifactId>
+                <version>2.1.7</version>
+            </dependency>
+            <dependency>
+                <groupId>org.glassfish</groupId>
+                <artifactId>javax.faces</artifactId>
+                <version>2.3.9</version>
+            </dependency>
+
     </dependencies>
 
     <build>
@@ -73,7 +89,7 @@
                     <artifactId>tomcat7-maven-plugin</artifactId>
                     <version>2.2</version>
                     <configuration>
-                      <url>http://localhost:8088/manager/text</url>
+                      <url>http://localhost:9090/manager/text</url>
                       <server>TomcatServer</server>
                       <path>/e-commerce</path>
                     </configuration>
