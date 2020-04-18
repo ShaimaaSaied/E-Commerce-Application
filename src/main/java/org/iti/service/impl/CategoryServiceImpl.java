@@ -10,6 +10,10 @@ public class CategoryServiceImpl implements CategoryService {
 
     CategoryDaoImpl categoryDao = null;
 
+    public CategoryServiceImpl() {
+        this.categoryDao = new CategoryDaoImpl();
+    }
+
     @Override
     public List<Category> selectAllCategories() {
         return categoryDao.selectAllCategories();

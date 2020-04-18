@@ -18,10 +18,8 @@ public class GetAllProducts extends HttpServlet {
         ProductServiceImpl productService = new ProductServiceImpl();
         List<Product> productsList = productService.selectAllProduct();
 
-        String json = new Gson().toJson(productsList);
-
         response.setContentType("application/json");
         response.setCharacterEncoding("UTF-8");
-        response.getWriter().write(json);
+        response.getWriter().write(new Gson().toJson(productsList));
     }
 }

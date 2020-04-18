@@ -10,6 +10,9 @@ import java.util.List;
 public class ProductServiceImpl implements ProductService {
     ProductDaoImpl productDao = null;
 
+    public ProductServiceImpl(){
+        productDao = new ProductDaoImpl();
+    }
 
     @Override
     public List<Product> selectAllProduct() {

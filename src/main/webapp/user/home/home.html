@@ -12,7 +12,7 @@
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
-<!--    src/main/webapp/css/style.css-->
+    <!--    src/main/webapp/css/style.css-->
     <!-- Css Styles -->
 
     <link rel="stylesheet" href="../../css/bootstrap.min.css" type="text/css">
@@ -25,6 +25,8 @@
     <link rel="stylesheet" href="../../css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="../../css/style.css" type="text/css">
 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
 <body>
@@ -84,7 +86,7 @@
                                     <table>
                                         <tbody>
                                         <tr>
-                                            <td class="si-pic"><img src="img/select-product-1.jpg" alt=""></td>
+                                            <td class="si-pic"><!--<img src="img/select-product-1.jpg" alt="">--></td>
                                             <td class="si-text">
                                                 <div class="product-selected">
                                                     <p>$60.00 x 1</p>
@@ -96,7 +98,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="si-pic"><img src="img/select-product-2.jpg" alt=""></td>
+                                            <td class="si-pic"><!--<img src="img/select-product-2.jpg" alt="">--></td>
                                             <td class="si-text">
                                                 <div class="product-selected">
                                                     <p>$60.00 x 1</p>
@@ -176,28 +178,12 @@
                 </div>
 
             </div>
-            <div class="col-lg-9 order-1 order-lg-2">
+                <div class="col-lg-9 order-1 order-lg-2">
+                  <div class="product-list">
+                        <div id="products" class="row">
 
-
-                <div class="product-list">
-                    <div class="row">
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="product-item">
-                                <div class="pi-pic" >
-                                    <img src="img/products/product-1.jpg" alt="">
-                                    <ul>
-                                        <li class="w-icon active"><a href="#"><i class="icon_bag_alt"></i></a></li>
-                                    </ul>
-                                </div>
-                                <div class="pi-text">
-                                    <h5 id="product_name">Pure Pineapple</h5>
-                                    <div class="product-price">
-                                        $14.00
-                                    </div>
-                                </div>
-                            </div>
                         </div>
-                    </div>
+                  </div>
                 </div>
             </div>
         </div>
@@ -268,7 +254,7 @@
                         </i> by <a href="https://colorlib.com" target="_blank">ITI-java-developers</a>
                     </div>
                     <div class="payment-pic">
-                        <img src="img/payment-method.png" alt="">
+                        <!--<img src="img/payment-method.png" alt="">-->
                     </div>
                 </div>
             </div>
@@ -277,7 +263,7 @@
 </footer>
 <!-- Footer Section End -->
 
-<!-- Js Plugins -->
+<!-- Js Plugins
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery-ui.min.js"></script>
@@ -288,6 +274,20 @@
 <script src="js/jquery.slicknav.js"></script>
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/main.js"></script>
+-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+<script src=http://code.jquery.com/jquery-latest.min.js></script>
+
+<script src="home.js"></script>
 </body>
 
 </html>
