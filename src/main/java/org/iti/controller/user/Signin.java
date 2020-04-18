@@ -23,7 +23,7 @@ public class Signin extends HttpServlet {
         User user = userService.retriveUser(email, password);
         System.out.println("User : inside singin " + user);
         if (user != null) {
-            req.getRequestDispatcher("user/home/html/home.html").forward(req, resp);
+            resp.sendRedirect("user/home/home.html");
         } else {
             req.getRequestDispatcher("signin_signup/html/SigninSignUp.html").forward(req, resp);
         }

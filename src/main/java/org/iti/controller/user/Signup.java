@@ -28,7 +28,7 @@ public class Signup extends HttpServlet {
 
         // boolean validateMail = validation.isEmailUnique(email);
         boolean validateUsername = validation.isUsernameUnique(user1);
-
+        System.out.println(validateUsername+"validateUsername");
         PrintWriter out = resp.getWriter();
         out.println("{user:" + validateUsername + "}");
 
@@ -39,7 +39,7 @@ public class Signup extends HttpServlet {
             userService.createUser(user);
             System.out.println("User insert Successfully");
 
-            req.getRequestDispatcher("user/home/html/home.html").forward(req, resp);
+            resp.sendRedirect("user/home/home.html");
         } else {
             resp.sendRedirect("signin_signup/html/SigninSignUp.html?");
         }
