@@ -1,12 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ArtifactsWorkspaceSettings">
-    <artifacts-to-build>
-      <artifact name="E-Commerce-Application:war" />
-    </artifacts-to-build>
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="83ff69a3-d345-4ba9-a541-95019bb69808" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/admin/home/css/test.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/admin/home/html/test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/admin/home/js/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/logo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/signin_signup/css/test.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/signin_signup/html/test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/signin_signup/js/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/user/cart/css/test.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/user/cart/html/test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/user/cart/js/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/user/checkout/css/test.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/user/checkout/html/test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/user/checkout/js/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/user/home/css/test.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/user/home/html/test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/user/home/js/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/user/profile/css/test.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/user/profile/html/test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/user/profile/js/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,19 +38,11 @@
         <option value="CSS File" />
         <option value="HTML File" />
         <option value="JavaScript File" />
-        <option value="XHTML File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LogFilters">
-    <option name="FILTER_ERRORS" value="false" />
-    <option name="FILTER_WARNINGS" value="false" />
-    <option name="FILTER_INFO" value="true" />
-    <option name="FILTER_DEBUG" value="true" />
-    <option name="CUSTOM_FILTER" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -50,42 +58,42 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DefaultHtmlFileTemplate" value="XHTML File" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/images/admin-home" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/user/profile" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="org.iti.model.dao" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Shimaa Shokry\IdeaProjects\E-Commerce-Application\src\main\webapp\images\admin-home" />
-      <recent name="C:\Users\Shimaa Shokry\IdeaProjects\E-Commerce-Application\src\main\webapp" />
-      <recent name="C:\Users\Shimaa Shokry\IdeaProjects\E-Commerce-Application\src\main\webapp\user\cart\html" />
-      <recent name="C:\Users\Shimaa Shokry\IdeaProjects\E-Commerce-Application\src\main\webapp\user\profile" />
-      <recent name="C:\Users\Shimaa Shokry\IdeaProjects\E-Commerce-Application\src\main\webapp\user\home" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Shimaa Shokry\Documents\NetBeansProjects\E-Commerce_Application\src\main\webapp" />
       <recent name="C:\Users\Shimaa Shokry\Documents\NetBeansProjects\E-Commerce_Application\src\main\webapp\user" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="org.iti.model.dao" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Shimaa Shokry\IdeaProjects\E-Commerce-Application\src\main\webapp\user\profile" />
+      <recent name="C:\Users\Shimaa Shokry\IdeaProjects\E-Commerce-Application\src\main\webapp\user\home" />
+      <recent name="C:\Users\Shimaa Shokry\IdeaProjects\E-Commerce-Application\src\main\webapp\user\checkout" />
+      <recent name="C:\Users\Shimaa Shokry\IdeaProjects\E-Commerce-Application\src\main\webapp\user\cart" />
+      <recent name="C:\Users\Shimaa Shokry\IdeaProjects\E-Commerce-Application\src\main\webapp\signin_signup" />
+    </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.shopping-cart.html">
-    <configuration name="Tomcat 9.0.0.M17" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.0.M17" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+  <component name="RunManager">
+    <configuration name="e-commerce" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.0.M17" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:9090/E_Commerce_Application_war_exploded/" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="E-Commerce-Application:war exploded">
+        <artifact name="E-Commerce_Application:war exploded">
           <settings>
             <option name="CONTEXT_PATH" value="/E_Commerce_Application_war_exploded" />
           </settings>
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="Unnamed_E-Commerce-Application" />
-        <option name="JNDI_PORT" value="9080" />
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_E-Commerce_Application" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -93,7 +101,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="50889" />
+        <option name="DEBUG_PORT" value="63653" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -143,70 +151,17 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="E-Commerce-Application:war exploded" />
+          <artifact name="E-Commerce_Application:war exploded" />
         </option>
       </method>
     </configuration>
-    <configuration name="shopping-cart.html" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 9.0.0.M17" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:9090/user/cart/html/shopping-cart.html" />
-      <deployment>
-        <artifact name="E-Commerce-Application:war">
-          <settings>
-            <option name="CONTEXT_PATH" value="/E_Commerce_Application_war" />
-          </settings>
-        </artifact>
-      </deployment>
-      <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="shopping-cart_html_E-Commerce-Application" />
-      </server-settings>
-      <predefined_log_file enabled="true" id="Tomcat" />
-      <predefined_log_file enabled="true" id="Tomcat Catalina" />
-      <predefined_log_file id="Tomcat Manager" />
-      <predefined_log_file id="Tomcat Host Manager" />
-      <predefined_log_file id="Tomcat Localhost Access" />
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="BuildArtifacts" enabled="true">
-          <artifact name="E-Commerce-Application:war" />
-        </option>
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="Tomcat Server.Tomcat 9.0.0.M17" />
-      <item itemvalue="Tomcat Server.shopping-cart.html" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Tomcat Server.shopping-cart.html" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
       <list>
         <serviceView>
           <treeState>
-            <expand>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </treeState>
         </serviceView>
@@ -225,132 +180,36 @@
       <updated>1586528899265</updated>
       <workItem from="1586528902891" duration="10090000" />
       <workItem from="1586568471294" duration="548000" />
-      <workItem from="1586897385242" duration="3157000" />
-      <workItem from="1586908132196" duration="15925000" />
-      <workItem from="1587073065891" duration="382000" />
-      <workItem from="1587226254665" duration="4053000" />
     </task>
-    <task id="LOCAL-00001" summary="Admin Home">
-      <created>1587235021288</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1587235021288</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Admin Home" />
-    <option name="LAST_COMMIT_MESSAGE" value="Admin Home" />
-  </component>
   <component name="WindowStateProjectService">
-    <state x="57" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586898056827">
+    <state x="137" y="23" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586566720698">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="57" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1586898056827" />
+    <state x="137" y="23" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1586566720698" />
     <state x="484" y="277" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1586530287942">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="484" y="277" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1366.728@0.0.1366.728" timestamp="1586530287942" />
-    <state x="234" y="0" key="CommitChangelistDialog2" timestamp="1587235017048">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1586529447624">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="234" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1587235017048" />
-    <state width="905" height="200" key="GridCell.Tab.0.bottom" timestamp="1586899616660">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586529447624" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1586529447623">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="905" height="200" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586899616660" />
-    <state width="905" height="200" key="GridCell.Tab.0.center" timestamp="1586899616659">
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586529447623" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1586529447623">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="905" height="200" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586899616659" />
-    <state width="905" height="200" key="GridCell.Tab.0.left" timestamp="1586899616659">
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586529447623" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1586529447624">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="905" height="200" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586899616659" />
-    <state width="905" height="200" key="GridCell.Tab.0.right" timestamp="1586899616659">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="905" height="200" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586899616659" />
-    <state width="905" height="466" key="GridCell.Tab.1.bottom" timestamp="1586898560769">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="905" height="466" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586898560769" />
-    <state width="905" height="466" key="GridCell.Tab.1.center" timestamp="1586898560769">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="905" height="466" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1586898560769" />
-    <state width="905" height="466" key="GridCell.Tab.1.left" timestamp="1586898560769">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="905" height="466" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1586898560769" />
-    <state width="905" height="466" key="GridCell.Tab.1.right" timestamp="1586898560769">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="905" height="466" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1586898560769" />
-    <state width="905" height="466" key="GridCell.Tab.2.bottom" timestamp="1586898560769">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="905" height="466" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586898560769" />
-    <state width="905" height="466" key="GridCell.Tab.2.center" timestamp="1586898560769">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="905" height="466" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1586898560769" />
-    <state width="905" height="466" key="GridCell.Tab.2.left" timestamp="1586898560769">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="905" height="466" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1586898560769" />
-    <state width="905" height="466" key="GridCell.Tab.2.right" timestamp="1586898560769">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="905" height="466" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1586898560769" />
-    <state width="905" height="369" key="GridCell.Tab.3.bottom" timestamp="1586898189442">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="905" height="369" key="GridCell.Tab.3.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586898189442" />
-    <state width="905" height="369" key="GridCell.Tab.3.center" timestamp="1586898189441">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="905" height="369" key="GridCell.Tab.3.center/0.0.1366.728@0.0.1366.728" timestamp="1586898189441" />
-    <state width="905" height="369" key="GridCell.Tab.3.left" timestamp="1586898189441">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="905" height="369" key="GridCell.Tab.3.left/0.0.1366.728@0.0.1366.728" timestamp="1586898189441" />
-    <state width="905" height="369" key="GridCell.Tab.3.right" timestamp="1586898189442">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="905" height="369" key="GridCell.Tab.3.right/0.0.1366.728@0.0.1366.728" timestamp="1586898189442" />
-    <state width="905" height="369" key="GridCell.Tab.4.bottom" timestamp="1586898187684">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="905" height="369" key="GridCell.Tab.4.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586898187684" />
-    <state width="905" height="369" key="GridCell.Tab.4.center" timestamp="1586898187682">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="905" height="369" key="GridCell.Tab.4.center/0.0.1366.728@0.0.1366.728" timestamp="1586898187682" />
-    <state width="905" height="369" key="GridCell.Tab.4.left" timestamp="1586898187682">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="905" height="369" key="GridCell.Tab.4.left/0.0.1366.728@0.0.1366.728" timestamp="1586898187682" />
-    <state width="905" height="369" key="GridCell.Tab.4.right" timestamp="1586898187683">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="905" height="369" key="GridCell.Tab.4.right/0.0.1366.728@0.0.1366.728" timestamp="1586898187683" />
-    <state x="275" y="101" key="Vcs.Push.Dialog.v2" timestamp="1586738740708">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="275" y="101" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1586738740708" />
-    <state x="391" y="193" key="com.intellij.ide.util.TipDialog" timestamp="1587226254701">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="391" y="193" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1587226254701" />
-    <state x="357" y="168" key="git4idea.merge.GitPullDialog" timestamp="1587237825371">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="357" y="168" key="git4idea.merge.GitPullDialog/0.0.1366.728@0.0.1366.728" timestamp="1587237825371" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586529447624" />
   </component>
 </project>

@@ -8,7 +8,11 @@ import org.iti.service.interfaces.CartService;
 import java.util.List;
 
 public class CartIServicempl implements CartService {
-    CartDaoImpl cartDao = new CartDaoImpl();
+    CartDaoImpl cartDao = null;
+
+    public CartIServicempl() {
+        this.cartDao = new CartDaoImpl();
+    }
 
     @Override
     public int resetCart() {
@@ -39,4 +43,11 @@ public class CartIServicempl implements CartService {
     public boolean addProductToCart(int userId, int productId, int quantity) {
         return cartDao.addProductToCart(userId, productId,quantity);
     }
+
+    @Override
+    public boolean updateProductQuantityInCart(int userId, int productId, int quantity) {
+        return cartDao.updateProductQuantityInCart(userId,productId,quantity);
+    }
+
+
 }

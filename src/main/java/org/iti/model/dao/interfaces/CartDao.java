@@ -19,4 +19,6 @@ public interface CartDao {
 
     double getTotalPrice(int userId);
 
+    boolean updateProductQuantityInCart(int userId, int productId, int quantity);
+
 }
