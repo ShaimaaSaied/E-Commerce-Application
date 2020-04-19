@@ -23,7 +23,7 @@ public class DeleteProductFromCart extends HttpServlet {
         int productId = Integer.parseInt(request.getParameter("productId"));
         boolean addCart = cartDao.removeProductFromCart(id, productId);
 
-        String nextJSP = "/CartHandlerServlet";
+        String nextJSP = "";
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
         dispatcher.include(request, response);
     }
