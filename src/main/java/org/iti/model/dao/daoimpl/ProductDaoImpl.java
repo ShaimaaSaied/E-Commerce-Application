@@ -44,7 +44,7 @@ public class ProductDaoImpl implements ProductDao {
     public List<Product> selectProductByName(String name) {
         List<Product> productList = null;
         productList = sessionFactory.openSession().createQuery(RETRIVE_PRODUCT_BY_NAME).
-                setParameter("productName", "%" + name + "%").list();
+                setParameter("productName",  name + "%").list();
         return productList;
     }
 

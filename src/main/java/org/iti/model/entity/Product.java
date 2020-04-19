@@ -104,7 +104,7 @@ public class Product  implements java.io.Serializable {
     @Override
     public String toString() {
         return "Product{" +
-                ", productName='" + productName + '\'' +
+                " productName='" + productName + '\'' +
                 ", description='" + description + '\'' +
                 ", price=" + price +
                 ", image='" + image + '\'' +

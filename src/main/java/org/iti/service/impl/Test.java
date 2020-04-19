@@ -4,6 +4,6 @@ public class Test {
 
     public static void main(String[] args) {
         ProductServiceImpl productService=new ProductServiceImpl();
-        System.out.println(productService.searchForProductsName());
+        System.out.println(productService.selectProductByName("b"));
     }
 }
