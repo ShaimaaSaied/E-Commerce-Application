@@ -1,3 +1,4 @@
+<%@ page import="org.iti.model.entity.User" %>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -48,10 +49,13 @@
 
             <!-- profile part  -->
             <div class="ht-right">
-                <a href="#" class="profile-panel"><i class="fa fa-user"></i>UserName</a>
-
+                <a href="#" class="profile-panel"><i class="fa fa-user"></i>
+                    <% User user = (User) (request.getSession().getAttribute("currentuser"));%>
+                    <%=user.getUsername() %>
+                </a>
                 <div class="lan-selector">
-                    <div class="ddOutOfVision" id="countries_msddHolder" style="height: 0px; overflow: hidden; position: absolute;">
+                    <div class="ddOutOfVision" id="countries_msddHolder"
+                         style="height: 0px; overflow: hidden; position: absolute;">
                     </div>
                 </div>
             </div>
@@ -62,19 +66,19 @@
             <div class="row">
 
 
-<!--                <div class="col-lg-7 col-md-7">-->
-<!--                    <div class="advanced-search">-->
-<!--                        <form action="#" class="input-group">-->
-<!--                            <input type="text" placeholder="What do you need?">-->
-<!--                            <button type="button"><i class="ti-search"></i></button>-->
-<!--                        </form>-->
-<!--                    </div>-->
-<!--                </div>-->
+                <!--                <div class="col-lg-7 col-md-7">-->
+                <!--                    <div class="advanced-search">-->
+                <!--                        <form action="#" class="input-group">-->
+                <!--                            <input type="text" placeholder="What do you need?">-->
+                <!--                            <button type="button"><i class="ti-search"></i></button>-->
+                <!--                        </form>-->
+                <!--                    </div>-->
+                <!--                </div>-->
                 <div class="col-lg-3 text-right col-md-3">
                     <ul class="nav-right">
                         <li class="cart-icon"><a href="#">
-<!--                            <i class="icon_bag_alt"></i>-->
-<!--                            <span>3</span>-->
+                            <!--                            <i class="icon_bag_alt"></i>-->
+                            <!--                            <span>3</span>-->
                         </a>
                             <div class="cart-hover">
                                 <div class="select-items">
@@ -117,7 +121,7 @@
                                 </div>
                             </div>
                         </li>
-<!--                        <li class="cart-price">$150.00</li>-->
+                        <!--                        <li class="cart-price">$150.00</li>-->
                     </ul>
                 </div>
             </div>
@@ -146,7 +150,7 @@
 <!--        <div class="row">-->
 <!--            <div class="col-lg-12">-->
 <!--                <div class="breadcrumb-text product-more">-->
-<!--                    <a href="./home.html"><i class="fa fa-home"></i> Home</a>-->
+<!--                    <a href="./home.jsp"><i class="fa fa-home"></i> Home</a>-->
 <!--                    <a href="./shop.html">Shop</a>-->
 <!--                    <span>Shopping Cart</span>-->
 <!--                </div>-->
@@ -173,73 +177,73 @@
                             <th><i class="ti-close"></i></th>
                         </tr>
                         </thead>
-                        <tbody>
-                        <tr>
-                            <td class="cart-pic first-row"><img src="images/cart-page/product-1.jpg" alt=""></td>
-                            <td class="cart-title first-row">
-                                <h5>Pure Pineapple</h5>
-                            </td>
-                            <td class="p-price first-row">$60.00</td>
-                            <td class="qua-col first-row">
-                                <div class="quantity">
-                                    <div class="pro-qty">
-                                        <input type="text" value="1">
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="total-price first-row">$60.00</td>
-                            <td class="close-td first-row"><i class="ti-close"></i></td>
-                        </tr>
-                        <tr>
-                            <td class="cart-pic"><img src="images/cart-page/product-2.jpg" alt=""></td>
-                            <td class="cart-title">
-                                <h5>American lobster</h5>
-                            </td>
-                            <td class="p-price">$60.00</td>
-                            <td class="qua-col">
-                                <div class="quantity">
-                                    <div class="pro-qty">
-                                        <input type="text" value="1">
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="total-price">$60.00</td>
-                            <td class="close-td"><i class="ti-close"></i></td>
-                        </tr>
-                        <tr>
-                            <td class="cart-pic"><img src="images/cart-page/product-3.jpg" alt=""></td>
-                            <td class="cart-title">
-                                <h5>Guangzhou sweater</h5>
-                            </td>
-                            <td class="p-price">$60.00</td>
-                            <td class="qua-col">
-                                <div class="quantity">
-                                    <div class="pro-qty">
-                                        <input type="text" value="1">
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="total-price">$60.00</td>
-                            <td class="close-td"><i class="ti-close"></i></td>
-                        </tr>
+                        <tbody id="tableProductCart">
+                        <%--                        <tr>--%>
+                        <%--                            <td class="cart-pic first-row"><img src="images/cart-page/product-1.jpg" alt=""></td>--%>
+                        <%--                            <td class="cart-title first-row">--%>
+                        <%--                                <h5>Pure Pineapple</h5>--%>
+                        <%--                            </td>--%>
+                        <%--                            <td class="p-price first-row">$60.00</td>--%>
+                        <%--                            <td class="qua-col first-row">--%>
+                        <%--                                <div class="quantity">--%>
+                        <%--                                    <div class="pro-qty">--%>
+                        <%--                                        <input type="text" value="1">--%>
+                        <%--                                    </div>--%>
+                        <%--                                </div>--%>
+                        <%--                            </td>--%>
+                        <%--                            <td class="total-price first-row">$60.00</td>--%>
+                        <%--                            <td class="close-td first-row"><i class="ti-close"></i></td>--%>
+                        <%--                        </tr>--%>
+                        <%--                        <tr>--%>
+                        <%--                            <td class="cart-pic"><img src="images/cart-page/product-2.jpg" alt=""></td>--%>
+                        <%--                            <td class="cart-title">--%>
+                        <%--                                <h5>American lobster</h5>--%>
+                        <%--                            </td>--%>
+                        <%--                            <td class="p-price">$60.00</td>--%>
+                        <%--                            <td class="qua-col">--%>
+                        <%--                                <div class="quantity">--%>
+                        <%--                                    <div class="pro-qty">--%>
+                        <%--                                        <input type="text" value="1">--%>
+                        <%--                                    </div>--%>
+                        <%--                                </div>--%>
+                        <%--                            </td>--%>
+                        <%--                            <td class="total-price">$60.00</td>--%>
+                        <%--                            <td class="close-td"><i class="ti-close"></i></td>--%>
+                        <%--                        </tr>--%>
+                        <%--                        <tr>--%>
+                        <%--                            <td class="cart-pic"><img src="images/cart-page/product-3.jpg" alt=""></td>--%>
+                        <%--                            <td class="cart-title">--%>
+                        <%--                                <h5>Guangzhou sweater</h5>--%>
+                        <%--                            </td>--%>
+                        <%--                            <td class="p-price">$60.00</td>--%>
+                        <%--                            <td class="qua-col">--%>
+                        <%--                                <div class="quantity">--%>
+                        <%--                                    <div class="pro-qty">--%>
+                        <%--                                        <input type="text" value="1">--%>
+                        <%--                                    </div>--%>
+                        <%--                                </div>--%>
+                        <%--                            </td>--%>
+                        <%--                            <td class="total-price">$60.00</td>--%>
+                        <%--                            <td class="close-td"><i class="ti-close"></i></td>--%>
+                        <%--                        </tr>--%>
                         </tbody>
                     </table>
                 </div>
                 <div class="row">
-<!--                    <div class="col-lg-4">-->
-<!--                    <div class="col-lg-4">-->
-<!--                        <div class="cart-buttons">-->
-<!--                            <a href="#" class="primary-btn continue-shop">Continue shopping</a>-->
-<!--                            <a href="#" class="primary-btn up-cart">Update cart</a>-->
-<!--                        </div>-->
-<!--                        <div class="discount-coupon">-->
-<!--                            <h6>Discount Codes</h6>-->
-<!--                            <form action="#" class="coupon-form">-->
-<!--                                <input type="text" placeholder="Enter your codes">-->
-<!--                                <button type="submit" class="site-btn coupon-btn">Apply</button>-->
-<!--                            </form>-->
-<!--                        </div>-->
-<!--                    </div>-->
+                    <!--                    <div class="col-lg-4">-->
+                    <!--                    <div class="col-lg-4">-->
+                    <!--                        <div class="cart-buttons">-->
+                    <!--                            <a href="#" class="primary-btn continue-shop">Continue shopping</a>-->
+                    <!--                            <a href="#" class="primary-btn up-cart">Update cart</a>-->
+                    <!--                        </div>-->
+                    <!--                        <div class="discount-coupon">-->
+                    <!--                            <h6>Discount Codes</h6>-->
+                    <!--                            <form action="#" class="coupon-form">-->
+                    <!--                                <input type="text" placeholder="Enter your codes">-->
+                    <!--                                <button type="submit" class="site-btn coupon-btn">Apply</button>-->
+                    <!--                            </form>-->
+                    <!--                        </div>-->
+                    <!--                    </div>-->
                     <div class="col-lg-4 offset-lg-4">
                         <div class="proceed-checkout">
                             <ul>
@@ -258,9 +262,9 @@
 
 <!-- Partner Logo Section Begin -->
 <div class="partner-logo">
-        <div class="container">
-        </div>
+    <div class="container">
     </div>
+</div>
 </div>
 <!-- Partner Logo Section End -->
 
@@ -278,10 +282,10 @@
                         <li>Email: online-shope@iti.org</li>
                     </ul>
                     <div class="footer-social">
-                        <a ><i class="fa fa-facebook"></i></a>
-                        <a ><i class="fa fa-instagram"></i></a>
-                        <a ><i class="fa fa-twitter"></i></a>
-                        <a ><i class="fa fa-pinterest"></i></a>
+                        <a><i class="fa fa-facebook"></i></a>
+                        <a><i class="fa fa-instagram"></i></a>
+                        <a><i class="fa fa-twitter"></i></a>
+                        <a><i class="fa fa-pinterest"></i></a>
                     </div>
                 </div>
             </div>
@@ -340,16 +344,31 @@
 <!-- Footer Section End -->
 
 <!-- Js Plugins -->
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery-ui.min.js"></script>
-<script src="js/jquery.countdown.min.js"></script>
-<script src="js/jquery.nice-select.min.js"></script>
-<script src="js/jquery.zoom.min.js"></script>
-<script src="js/jquery.dd.min.js"></script>
-<script src="js/jquery.slicknav.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/main.js"></script>
+<%--<script src="js/jquery-3.3.1.min.js"></script>--%>
+<%--<script src="js/bootstrap.min.js"></script>--%>
+<%--<script src="js/jquery-ui.min.js"></script>--%>
+<%--<script src="js/jquery.countdown.min.js"></script>--%>
+<%--<script src="js/jquery.nice-select.min.js"></script>--%>
+<%--<script src="js/jquery.zoom.min.js"></script>--%>
+<%--<script src="js/jquery.dd.min.js"></script>--%>
+<%--<script src="js/jquery.slicknav.js"></script>--%>
+<%--<script src="js/owl.carousel.min.js"></script>--%>
+<%--<script src="js/main.js"></script>--%>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+<script src=http://code.jquery.com/jquery-latest.min.js></script>
+<script src="user/cart/cart.js"></script>
+
+
 </body>
 
 </html>

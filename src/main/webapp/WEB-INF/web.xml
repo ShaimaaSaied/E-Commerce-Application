@@ -56,6 +56,23 @@
         <url-pattern>/searchProducts</url-pattern>
     </servlet-mapping>
 
+<servlet>
+        <servlet-name>getAllProductsFromCart</servlet-name>
+        <servlet-class>org.iti.controller.user.GetCartProducts</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getAllProductsFromCart</servlet-name>
+        <url-pattern>/getAllProductsFromCart</url-pattern>
+    </servlet-mapping>
+
+<servlet>
+        <servlet-name>AddProductToCart</servlet-name>
+        <servlet-class>org.iti.controller.user.AddProductToCart</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddProductToCart</servlet-name>
+        <url-pattern>/AddProductToCart</url-pattern>
+    </servlet-mapping>
 
 
 </web-app>
