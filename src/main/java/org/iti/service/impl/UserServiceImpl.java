@@ -21,7 +21,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public int updateUser(User user) {
+    public User updateUser(User user) {
         return userDao.updateUser(user);
     }
 
@@ -31,13 +31,18 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public User retriveUserByID(int id) {
+        return null;
+    }
+
+    @Override
     public List<User> retriveAllUsers() {
         return userDao.retriveAllUsers();
     }
 
     @Override
-    public void createUser(User user) {
-        userDao.createUser(user);
+    public User createUser(User user) {
+       return  userDao.createUser(user);
     }
 
     @Override

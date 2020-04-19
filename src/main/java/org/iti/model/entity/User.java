@@ -49,7 +49,15 @@ public class User  implements java.io.Serializable {
        this.role = role;
        this.carts = carts;
     }
-   
+
+    public User(String username, String password, String jop, String email, String address) {
+        this.username = username;
+        this.password = password;
+        this.jop = jop;
+        this.email = email;
+        this.address = address;
+    }
+
     public Integer getUserId() {
         return this.userId;
     }

@@ -19,6 +19,7 @@ public class ProductDaoImpl implements ProductDao {
     private final String DELETE_PRODUCT_BY_ID = "delete from org.iti.model.entity.Product where productId=:productId";
     private final String UPDATE_PRODUCT_PRICE = "update org.iti.model.entity.Product set price=:price where productId=:productId";
     private final String UPDATE_PRODUCT_STOCK = "update org.iti.model.entity.Product set stock=:stock where productId=:productId";
+    private final String RETRIVE_ALL_PRODUCTS_NAME = "SELECT product.productName from org.iti.model.entity.Product as product";
 
     public ProductDaoImpl() {
         sessionFactory = DBConnection.getInstance();
@@ -44,6 +45,13 @@ public class ProductDaoImpl implements ProductDao {
         List<Product> productList = null;
         productList = sessionFactory.openSession().createQuery(RETRIVE_PRODUCT_BY_NAME).
                 setParameter("productName", "%" + name + "%").list();
+        return productList;
+    }
+
+    @Override
+    public List<String> searchForProductsName() {
+        List<String> productList = null;
+        productList = sessionFactory.openSession().createQuery(RETRIVE_ALL_PRODUCTS_NAME).list();
         return productList;
     }
 

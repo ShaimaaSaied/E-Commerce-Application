@@ -6,7 +6,7 @@ function getAllProducts(){
         request = new ActiveXObject(Microsoft.XMLHTTP);
 
     request.onreadystatechange = handleRequest;
-    request.open("GET", "../../getAllProducts", true);
+    request.open("GET", "getAllProducts", true);
     request.send(null);
 }
 var jsonList;
