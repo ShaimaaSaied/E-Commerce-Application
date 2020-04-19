@@ -40,12 +40,22 @@
 
  <servlet>
         <servlet-name>getAllProductsName</servlet-name>
-        <servlet-class>org.iti.controller.user.SearchForProductUsingName</servlet-class>
+        <servlet-class>org.iti.controller.user.getAllProductsNames</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>getAllProductsName</servlet-name>
         <url-pattern>/getAllProductsName</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>searchProducts</servlet-name>
+        <servlet-class>org.iti.controller.user.SearchForProduct</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>searchProducts</servlet-name>
+        <url-pattern>/searchProducts</url-pattern>
+    </servlet-mapping>
+
 
 
 </web-app>

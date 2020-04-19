@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-public class SearchForProductUsingName extends HttpServlet {
+public class getAllProductsNames extends HttpServlet {
 
 
     protected void doGet(HttpServletRequest req, HttpServletResponse response) throws ServletException, IOException {
@@ -25,7 +25,9 @@ public class SearchForProductUsingName extends HttpServlet {
         String myListOfJson = json.toJson(list);
         System.out.println("myListOfJson : SearchForProductUsingName \n" + myListOfJson);
         response.getWriter().println(myListOfJson);
-
     }
+
+
+
 
 }
