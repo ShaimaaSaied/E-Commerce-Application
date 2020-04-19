@@ -23,6 +23,9 @@ public class UserDaoImpl implements UserDao {
     private final String RETRIVE_ALL_MAIL = "select email FROM org.iti.model.entity.User";
     private final String RETRIVE_ALL_USERNAME = "select username FROM org.iti.model.entity.User";
 
+    private final String RETRIVE_USER_BY_ID = "from org.iti.model.entity.User as u where u.userId=:user_id";
+
+
     public UserDaoImpl() {
         sessionFactory = DBConnection.getInstance();
     }
@@ -38,23 +41,24 @@ public class UserDaoImpl implements UserDao {
     }
 
     @Override
-    public int updateUser(User user) {
+    public User updateUser(User user) {
         Session session = sessionFactory.openSession();
         session.beginTransaction();
-        Query query = session.createQuery(UPDATE_USER).
-                setParameter("firstName", user.getFirstName())
-                .setParameter("lastName", user.getLastName())
-                .setParameter("username", user.getUsername())
-                .setParameter("password", user.getPassword())
-                .setParameter("email", user.getEmail())
-                .setParameter("address", user.getAddress())
-                .setParameter("jop", user.getJop())
-                .setParameter("role", user.getRole())
-                .setParameter("userId", user.getUserId());
-        int result = query.executeUpdate();
+//        Query query = session.createQuery(UPDATE_USER).
+//                setParameter("firstName", user.getFirstName())
+//                .setParameter("lastName", user.getLastName())
+//                .setParameter("username", user.getUsername())
+//                .setParameter("password", user.getPassword())
+//                .setParameter("email", user.getEmail())
+//                .setParameter("address", user.getAddress())
+//                .setParameter("jop", user.getJop())
+//                .setParameter("role", user.getRole())
+//                .setParameter("userId", user.getUserId());
+        session.merge(user);
+//        int result = query.executeUpdate();
         session.getTransaction().commit();
         System.out.println("update Successfully");
-        return result;
+        return user;
     }
 
     @Override
@@ -66,6 +70,14 @@ public class UserDaoImpl implements UserDao {
     }
 
     @Override
+    public User retriveUserByID(int id) {
+        User user = null;
+        user = (User) sessionFactory.openSession().createQuery(RETRIVE_USER_BY_ID).
+                setParameter("user_id",id).uniqueResult();
+        return user;
+    }
+
+    @Override
     public List<User> retriveAllUsers() {
         List<User> list = null;
         list = sessionFactory.openSession().createQuery(RETRIVE_ALL_USERS).list();
@@ -73,13 +85,16 @@ public class UserDaoImpl implements UserDao {
     }
 
 
+
+
     @Override
-    public void createUser(User user) {
+    public User createUser(User user) {
         Session session = sessionFactory.openSession();
         session.beginTransaction();
         session.persist(user);
         session.getTransaction().commit();
         System.out.println("insert Successfully");
+        return user;
     }
 
     @Override

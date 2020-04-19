@@ -29,29 +29,16 @@
 
     </style>
     <script src=http://code.jquery.com/jquery-latest.min.js></script>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Title</title>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-            crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-            crossorigin="anonymous"></script>
-    <!-- Css Styles -->
-    <link rel="stylesheet" href="../../../css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="../../../css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="../../../css/themify-icons.css" type="text/css">
-    <link rel="stylesheet" href="../../../css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="../../../css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="../../../css/nice-select.css" type="text/css">
-    <link rel="stylesheet" href="../../../css/jquery-ui.min.css" type="text/css">
-    <link rel="stylesheet" href="../../../css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="../../../css/style.css" type="text/css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/themify-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 
 <body>
@@ -62,11 +49,11 @@
         <div class="container">
             <nav class="nav-menu mobile-menu">
                 <ul>
-                    <li><a href="home.html">&nbsp;&nbsp;&nbsp;Home&nbsp;&nbsp;&nbsp;</a></li>
-                    <li><a href="./profile.html">&nbsp;&nbsp;&nbsp;Profile&nbsp;&nbsp;&nbsp;</a></li>
-                    <li><a href="./shopping-cart">&nbsp;&nbsp;&nbsp;Shopping cart&nbsp;&nbsp;&nbsp;</a></li>
-                    <li><a href="./contact.html">&nbsp;&nbsp;&nbsp;Contact&nbsp;&nbsp;&nbsp;</a></li>
-                    <li><a href="./contact.html">&nbsp;&nbsp;&nbsp;About us&nbsp;&nbsp;&nbsp;</a></li>
+                    <li><a href="/ECommerce/home">&nbsp;&nbsp;&nbsp;Home&nbsp;&nbsp;&nbsp;</a></li>
+                    <li><a href="/ECommerce/profile">&nbsp;&nbsp;&nbsp;Profile&nbsp;&nbsp;&nbsp;</a></li>
+                    <li><a href="/ECommerce/cart">&nbsp;&nbsp;&nbsp;Shopping cart&nbsp;&nbsp;&nbsp;</a></li>
+                    <li><a href="#">&nbsp;&nbsp;&nbsp;Contact&nbsp;&nbsp;&nbsp;</a></li>
+                    <li><a href="#">&nbsp;&nbsp;&nbsp;About us&nbsp;&nbsp;&nbsp;</a></li>
                 </ul>
             </nav>
             <!--            <div id="mobile-menu-wrap"></div>-->
@@ -77,12 +64,18 @@
      alt="">
 
 
-<form class="needs-validation" novalidate style="margin-left: 300px; width: 600px;"
+<c:if test="${!empty requestScope.message}">
+    <p>${requestScope.message}</p>
+</c:if>
+
+<form class="needs-validation" novalidate style="margin-left: 300px; width: 600px;" action="/ECommerce/profile" method="post"
       oninput='up2.setCustomValidity(up2.value != up.value ? document.getElementById("validation").innerHTML = "pasword doesnot match" : "")' >
 
     <div class="form-input">
-        <label for="validationCustom01">User Name *</label>
-        <input type="text" class="form-control" id="validationCustom01" placeholder="" required pattern="[a-zA-Z]+"/>
+        <label for="validationCustomName">User Name *</label>
+        <input name="validationCustomName" type="text" class="form-control" id="validationCustomName" placeholder="" required pattern="[a-zA-Z]+"
+        value="${sessionScope.currentuser.username}"  />
+
 
         <div class="valid-feedback">
             Looks good!
@@ -93,9 +86,10 @@
     </div>
 
     <div class="form-input">
-        <label for="validationCustom02">Email *</label>
-        <input type="text" class="form-control" id="validationCustom02" placeholder="" required
-               pattern="^[\w-]+(\.[\w-]+)@([a-z0-9-]+(\.[a-z0-9-]+)?\.[a-z]{2,6}|(\d{1,3}\.){3}\d{1,3})(:\d{4})?$"/>
+        <label for="validationCustomEmail">Email *</label>
+        <input name="validationCustomEmail" type="text" class="form-control" id="validationCustomEmail" placeholder="" required
+               pattern="^[\w-]+(\.[\w-]+)@([a-z0-9-]+(\.[a-z0-9-]+)?\.[a-z]{2,6}|(\d{1,3}\.){3}\d{1,3})(:\d{4})?$"
+               value="${sessionScope.currentuser.email}"/>
         <div class="valid-feedback">
             Looks good!
         </div>
@@ -103,10 +97,12 @@
             Please enter valid email
         </div>
     </div>
+
     <div class="form-input">
         <label for="validationCustompassword">Password *</label>
-        <input type="password" class="form-control" id="validationCustompassword" placeholder="" required
-              name="up" pattern="^[a-zA-Z!@#$%-^&?_0-9]{8,40}$"/>
+        <input name="validationCustompassword" type="password" class="form-control" id="validationCustompassword" placeholder="" required
+              name="up" pattern="^[a-zA-Z!@#$%-^&?_0-9]{8,40}$"
+               value="${sessionScope.currentuser.password}"/>
         <div class="valid-feedback">
             Looks good!
         </div>
@@ -116,24 +112,22 @@
     </div>
     <div class="form-input">
         <label for="validationCustomConfirmpassword">Confirm Password *</label>
-        <input type="password"  class="form-control" id="validationCustomConfirmpassword"
+        <input name="validationCustomConfirmpassword" type="password"  class="form-control" id="validationCustomConfirmpassword"
                placeholder="" required name="up2"
-        <%--               pattern="^[a-zA-Z!@#$%-^&?_0-9]{8,40}$"/>--%>/>
-<%--        <div class="valid-feedback">--%>
-
-<%--        </div>--%>
+               value="${sessionScope.currentuser.password}"/>
         <div class="invalid-feedback" id="validation">
 
         </div>
     </div>
     <div class="form-input">
         <label for="validationjop">jop</label>
-        <input type="text" class="form-control" id="validationjop" placeholder="">
+        <input name="validationjop" type="text" class="form-control" id="validationjop" placeholder=""
+               value="${sessionScope.currentuser.jop}"/>
     </div>
     <div class="form-input">
-        <label for="validationCustominterists">interists</label>
-        <input type="text" class="form-control" id="validationCustominterists" placeholder="
-"/>
+        <label for="validationCustomAddress">address</label>
+        <input name="validationCustomAddress" type="text" class="form-control" id="validationCustomAddress" placeholder=""
+               value="${sessionScope.currentuser.address}"/>
 
     </div>
 

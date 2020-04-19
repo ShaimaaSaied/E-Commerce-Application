@@ -22,4 +22,5 @@ public interface ProductService {
 
     boolean updateProductStock(int id, int stock);
 
+    List<String> searchForProductsName();
 }

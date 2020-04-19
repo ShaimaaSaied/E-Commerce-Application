@@ -10,6 +10,9 @@ import java.util.List;
 public class ProductServiceImpl implements ProductService {
     ProductDaoImpl productDao = null;
 
+    public ProductServiceImpl() {
+        productDao = new ProductDaoImpl();
+    }
 
     @Override
     public List<Product> selectAllProduct() {
@@ -49,5 +52,10 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public boolean updateProductStock(int id, int stock) {
         return productDao.updateProductStock(id, stock);
+    }
+
+    @Override
+    public List<String> searchForProductsName() {
+        return productDao.searchForProductsName();
     }
 }

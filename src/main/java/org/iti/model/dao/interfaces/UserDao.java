@@ -8,14 +8,15 @@ public interface UserDao {
 
     int deleteUser(int id);
 
-    int updateUser(User user);
+    User updateUser(User user);
 
     User retriveUser(String mail, String password);
 
     List<User> retriveAllUsers();
 
+    User retriveUserByID(int id);
 
-    void createUser(User user);
+    User createUser(User user);
 
     List<String> allUsernames();
 
