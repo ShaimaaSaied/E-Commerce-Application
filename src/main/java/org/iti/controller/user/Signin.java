@@ -30,9 +30,12 @@ public class Signin extends HttpServlet {
         User user = userService.retriveUser(email, password);
         System.out.println("User : inside singin " + user);
         if (user != null) {
-            req.getSession().setAttribute("currentuser",user);
-            resp.sendRedirect("/ECommerce/home");
-
+            if (user.getRole().equalsIgnoreCase("user")){
+                req.getSession().setAttribute("currentuser",user);
+                resp.sendRedirect("/ECommerce/home");
+            } else {
+                resp.sendRedirect("/ECommerce/adminhome");
+            }
         } else {
             req.getRequestDispatcher("signin_signup/html/SigninSignUp.html").forward(req, resp);
         }
