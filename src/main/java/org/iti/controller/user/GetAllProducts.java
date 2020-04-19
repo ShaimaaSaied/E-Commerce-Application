@@ -16,7 +16,7 @@ public class GetAllProducts extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         ProductServiceImpl productService = new ProductServiceImpl();
-        List<Product> productsList = productService.selectAllProduct();
+        List<Product> productsList = productService.selectAllProductSpesificField();
 
         response.setContentType("application/json");
         response.setCharacterEncoding("UTF-8");

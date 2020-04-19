@@ -57,4 +57,6 @@ public interface ProductDao {
     boolean updateProductStock(int id, int stock);
 
     List<String> searchForProductsName();
+
+    List<Product> selectAllProductSpesificField();
 }
