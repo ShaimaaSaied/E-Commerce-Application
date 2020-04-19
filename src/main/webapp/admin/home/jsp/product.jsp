@@ -22,17 +22,49 @@
             padding: 8px;
         }
 
-        tr:nth-child(even){background-color: #f2f2f2}
+        tr:nth-child(even) {
+            background-color: #f2f2f2
+        }
 
         th {
-            background-color:  #e7ab3c;
+            background-color: #e7ab3c;
             color: white;
+        }
+
+        .deletebtn {
+            background-color: #e7ab3c;
+            border: none;
+            color: white;
+            padding: 12px 16px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+        /* Darker background on mouse-over */
+        .deletebtn:hover {
+            background-color: red;
+        }
+        .updatebtn {
+            background-color: #e7ab3c;
+            border: none;
+            color: white;
+            padding: 12px 16px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+        /* Darker background on mouse-over */
+        .updatebtn:hover {
+            background-color: #00cc00   ;
         }
     </style>
 </head>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <body>
 <%@include file="header.jsp" %>
+<h1 style="text-align: center">Product Records</h1>
 <table class="table">
     <thead>
     <tr>
@@ -42,6 +74,8 @@
         <th>Product Price</th>
         <th>Product Stock</th>
         <th>Product Image</th>
+        <th>Delete Option</th>
+        <th>Edit Option</th>
     </tr>
     </thead>
     <tbody>
@@ -58,7 +92,12 @@
                     <td><c:out value="${product.price}"></c:out></td>
                     <td><c:out value="${product.stock}"></c:out></td>
                     <td><c:out value="${product.image}"></c:out></td>
+                    <td><a href="deleteProduct?id=${product.productId}" class="deletebtn"></a>
+                    </td>
+                    <td><a href="updateAdminProduct?id=${product.productId}" class="updatebtn">Edit</a>
+                    </td>
                 </tr>
+
             </c:forEach>
         </c:otherwise>
     </c:choose>

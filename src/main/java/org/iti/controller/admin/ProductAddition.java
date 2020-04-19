@@ -1,4 +1,6 @@
 package org.iti.controller.admin;
 
-public class ProductAddition {
+import javax.servlet.http.HttpServlet;
+
+public class ProductAddition extends HttpServlet {
 }
