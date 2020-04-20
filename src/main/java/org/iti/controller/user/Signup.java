@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(name="register", urlPatterns = "/register")
+@WebServlet(name = "register", urlPatterns = "/register")
 public class Signup extends HttpServlet {
 
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -34,23 +34,25 @@ public class Signup extends HttpServlet {
 
         // boolean validateMail = validation.isEmailUnique(email);
         boolean validateUsername = validation.isUsernameUnique(user1);
-        System.out.println(validateUsername+"validateUsername");
+        System.out.println(validateUsername + "validateUsername");
         PrintWriter out = resp.getWriter();
         out.println("{user:" + validateUsername + "}");
 
         if (validateUsername) {
             User user = new User(username, password, email, Integer.parseInt(creditLimit));
             user.setRole("User");
-            user=userService.createUser(user);
-            if(user.getUserId()>0){
-                req.getSession().setAttribute("currentuser",user);
+            user = userService.createUser(user);
+            if (user.getUserId() > 0) {
+                req.getSession().setAttribute("currentuser", user);
             }
 
             System.out.println("User insert Successfully");
 
-            resp.sendRedirect("user/home/home.html");
+            resp.sendRedirect("/ECommerce/home");
         } else {
             resp.sendRedirect("signin_signup/html/SigninSignUp.html?");
+
+
         }
 
 

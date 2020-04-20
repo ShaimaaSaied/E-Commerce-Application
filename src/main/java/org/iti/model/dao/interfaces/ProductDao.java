@@ -64,4 +64,6 @@ public interface ProductDao {
      * @return boolean
      */
     boolean updateProduct(Product product);
+
+    List<Product> selectAllProductSpesificField();
 }

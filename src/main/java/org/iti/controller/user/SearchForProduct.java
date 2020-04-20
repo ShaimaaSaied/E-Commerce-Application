@@ -1,5 +1,6 @@
 package org.iti.controller.user;
 
+import com.fasterxml.classmate.GenericType;
 import com.google.gson.Gson;
 import org.iti.model.entity.Product;
 import org.iti.service.impl.ProductServiceImpl;
@@ -30,8 +31,8 @@ public class SearchForProduct extends HttpServlet {
         response.setContentType("application/json");
         response.setCharacterEncoding("UTF-8");
         System.out.println("in doget");
-        Gson json = new Gson();
-        String myJson = json.toJson(products);
+        Gson json = new Gson();    //error in json
+        String myJson = json.toJson(products, new GenericType<List<Product>>() {});
         System.out.println("myJson : selectProductByName \n" + myJson);
         response.getWriter().println(myJson);
     }

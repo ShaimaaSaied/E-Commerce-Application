@@ -23,8 +23,8 @@ public class CartDaoImpl implements CartDao {
     private final String DELETE_ALL_FROM_CART = "DELETE FROM org.iti.model.entity.Cart";
     private final String BUY_PRODUCT_FROM_CART = "UPDATE org.iti.model.entity.Cart c SET c.purchased=:bought " +
             "WHERE c.product.productId=:product_id and c.user.userId=:user_id";
-    private final String UPDATE_PRODUCT_QUANTITY_IN_CART="UPDATE org.iti.model.entity.Cart c SET c.quantity=:quantity " +
-           "WHERE c.product.productId=:product_id and c.user.userId=:user_id" ;
+    private final String UPDATE_PRODUCT_QUANTITY_IN_CART = "UPDATE org.iti.model.entity.Cart c SET c.quantity=:quantity " +
+            "WHERE c.product.productId=:product_id and c.user.userId=:user_id";
 
     public CartDaoImpl() {
         sessionFactory = DBConnection.getInstance();
@@ -53,7 +53,7 @@ public class CartDaoImpl implements CartDao {
         Session session = sessionFactory.openSession();
         session.beginTransaction();
 
-        if(session.get(Cart.class, new CartId(productId, userId)) != null){
+        if (session.get(Cart.class, new CartId(userId, productId)) != null) {
             throw new RuntimeException("Duplicate Entry to cart table");
         }
 
@@ -61,13 +61,12 @@ public class CartDaoImpl implements CartDao {
         byte[] deleted = new BigInteger("0", 2).toByteArray();
         Product product = (Product) session.get(Product.class, productId);
         User user = (User) session.get(User.class, userId);
-        Cart cart = new Cart(new CartId(productId, userId), product, user, quantity, purchased, deleted);
+        Cart cart = new Cart(new CartId(userId, productId), product, user, quantity, purchased, deleted);
 
         session.save(cart);
 
         session.getTransaction().commit();
-
-        if(session.get(Cart.class, new CartId(productId, userId)) != null)
+        if (session.get(Cart.class, new CartId(userId, productId)) != null)
             return true;
 
         return false;
@@ -138,12 +137,12 @@ public class CartDaoImpl implements CartDao {
         Session session = sessionFactory.openSession();
         session.beginTransaction();
         int result = session.createQuery(UPDATE_PRODUCT_QUANTITY_IN_CART)
-                .setParameter("user_id",userId)
-                .setParameter("product_id",productId)
-                .setParameter("quantity",quantity)
+                .setParameter("user_id", userId)
+                .setParameter("product_id", productId)
+                .setParameter("quantity", quantity)
                 .executeUpdate();
         session.getTransaction().commit();
-        return (result==1);
+        return (result == 1);
     }
 
 }

@@ -63,4 +63,9 @@ public class ProductServiceImpl implements ProductService {
     public boolean updateProduct(Product product) {
         return productDao.updateProduct(product);
     }
+
+    @Override
+    public List<Product> selectAllProductSpesificField() {
+        return productDao.selectAllProductSpesificField();
+    }
 }
