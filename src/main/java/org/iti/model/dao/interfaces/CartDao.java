@@ -15,7 +15,7 @@ public interface CartDao {
 
     boolean buyProductFromCart(int userId, int productId);
 
-    int deleteAllFromCart();
+    int deleteAllFromCart(int userID);
 
     double getTotalPrice(int userId);
 

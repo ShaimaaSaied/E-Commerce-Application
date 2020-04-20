@@ -15,8 +15,8 @@ public class CartIServicempl implements CartService {
     }
 
     @Override
-    public int resetCart() {
-        return cartDao.deleteAllFromCart();
+    public int resetCart(int userId) {
+        return cartDao.deleteAllFromCart(userId);
     }
 
     @Override

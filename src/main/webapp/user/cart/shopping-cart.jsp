@@ -204,7 +204,11 @@
                                             </div>
                                         </td>
                                         <td class="total-price first-row"><c:out value="${product.price}"></c:out></td>
-                                        <td class="close-td first-row"><i class="ti-close"></i></td>
+                                        <td class="close-td first-row">
+                                            <a href="/ECommerce/DeleteProductFromCart?id=${product.productId}">
+                                                <i class="ti-close"></i>
+                                            </a>
+                                        </td>
                                     </tr>
                                 </c:forEach>
                             </c:otherwise>

@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface CartService {
 
-    int resetCart();
+    int resetCart(int userId);
 
     double getTotalPrice(int userId);
 

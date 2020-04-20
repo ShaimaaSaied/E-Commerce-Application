@@ -21,7 +21,7 @@ public class CartDaoImpl implements CartDao {
     private final String DELETE_PRODUCT_FROM_CART = "DELETE FROM org.iti.model.entity.Cart c WHERE c.product.productId=:product_id and c.user.userId=:user_id";
     private final String GET_TOTAL_PRICE = "SELECT SUM(c.quantity*c.product.price) FROM org.iti.model.entity.Cart c " +
             "WHERE c.id.userId=:user_id GROUP BY c.user.userId";
-    private final String DELETE_ALL_FROM_CART = "DELETE FROM org.iti.model.entity.Cart";
+    private final String DELETE_ALL_FROM_CART = "DELETE FROM org.iti.model.entity.Cart c WHERE c.user.userId=:user_id";
     private final String BUY_PRODUCT_FROM_CART = "UPDATE org.iti.model.entity.Cart c SET c.purchased=:bought " +
             "WHERE c.product.productId=:product_id and c.user.userId=:user_id";
     private final String UPDATE_PRODUCT_QUANTITY_IN_CART = "UPDATE org.iti.model.entity.Cart c SET c.quantity=:quantity " +
@@ -116,10 +116,10 @@ public class CartDaoImpl implements CartDao {
      * @return boolean
      */
     @Override
-    public int deleteAllFromCart() {
+    public int deleteAllFromCart(int userID) {
         Session session = sessionFactory.openSession();
         session.beginTransaction();
-        int result = session.createQuery(DELETE_ALL_FROM_CART).executeUpdate();
+        int result = session.createQuery(DELETE_ALL_FROM_CART).setParameter("user_id",userID).executeUpdate();
         session.getTransaction().commit();
         System.out.println("delete Successfully");
         return result;
