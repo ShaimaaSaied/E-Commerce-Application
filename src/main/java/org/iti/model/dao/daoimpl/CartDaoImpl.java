@@ -10,13 +10,14 @@ import org.iti.model.entity.Product;
 import org.iti.model.entity.User;
 
 import java.math.BigInteger;
+import java.util.ArrayList;
 import java.util.List;
 
 public class CartDaoImpl implements CartDao {
 
     private SessionFactory sessionFactory = null;
 
-    private final String SELECT_ALL_PRODUCTS_FROM_CART = "SELECT c.product FROM org.iti.model.entity.Cart c WHERE c.user.userId=:user_id";
+    private final String SELECT_ALL_PRODUCTS_FROM_CART = "select c.product FROM org.iti.model.entity.Cart c WHERE c.user.userId=:user_id";
     private final String DELETE_PRODUCT_FROM_CART = "DELETE FROM org.iti.model.entity.Cart c WHERE c.product.productId=:product_id and c.user.userId=:user_id";
     private final String GET_TOTAL_PRICE = "SELECT SUM(c.quantity*c.product.price) FROM org.iti.model.entity.Cart c " +
             "WHERE c.id.userId=:user_id GROUP BY c.user.userId";
@@ -38,7 +39,8 @@ public class CartDaoImpl implements CartDao {
      */
     @Override
     public List<Product> selectAllProductsFromCart(int userId) {
-        return sessionFactory.openSession().createQuery(SELECT_ALL_PRODUCTS_FROM_CART).setParameter("user_id", userId).list();
+       return (List<Product>)sessionFactory.openSession().createQuery(SELECT_ALL_PRODUCTS_FROM_CART).setParameter("user_id", userId).list();
+
     }
 
     /**
@@ -144,5 +146,6 @@ public class CartDaoImpl implements CartDao {
         session.getTransaction().commit();
         return (result == 1);
     }
+
 
 }

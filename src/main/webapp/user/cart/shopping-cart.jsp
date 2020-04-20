@@ -1,4 +1,7 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="org.iti.model.entity.User" %>
+<%@ page import="org.iti.model.entity.Product" %>
+<%@ page import="java.util.List" %>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -177,55 +180,36 @@
                             <th><i class="ti-close"></i></th>
                         </tr>
                         </thead>
+                        <% %>
                         <tbody id="tableProductCart">
-                        <%--                        <tr>--%>
-                        <%--                            <td class="cart-pic first-row"><img src="images/cart-page/product-1.jpg" alt=""></td>--%>
-                        <%--                            <td class="cart-title first-row">--%>
-                        <%--                                <h5>Pure Pineapple</h5>--%>
-                        <%--                            </td>--%>
-                        <%--                            <td class="p-price first-row">$60.00</td>--%>
-                        <%--                            <td class="qua-col first-row">--%>
-                        <%--                                <div class="quantity">--%>
-                        <%--                                    <div class="pro-qty">--%>
-                        <%--                                        <input type="text" value="1">--%>
-                        <%--                                    </div>--%>
-                        <%--                                </div>--%>
-                        <%--                            </td>--%>
-                        <%--                            <td class="total-price first-row">$60.00</td>--%>
-                        <%--                            <td class="close-td first-row"><i class="ti-close"></i></td>--%>
-                        <%--                        </tr>--%>
-                        <%--                        <tr>--%>
-                        <%--                            <td class="cart-pic"><img src="images/cart-page/product-2.jpg" alt=""></td>--%>
-                        <%--                            <td class="cart-title">--%>
-                        <%--                                <h5>American lobster</h5>--%>
-                        <%--                            </td>--%>
-                        <%--                            <td class="p-price">$60.00</td>--%>
-                        <%--                            <td class="qua-col">--%>
-                        <%--                                <div class="quantity">--%>
-                        <%--                                    <div class="pro-qty">--%>
-                        <%--                                        <input type="text" value="1">--%>
-                        <%--                                    </div>--%>
-                        <%--                                </div>--%>
-                        <%--                            </td>--%>
-                        <%--                            <td class="total-price">$60.00</td>--%>
-                        <%--                            <td class="close-td"><i class="ti-close"></i></td>--%>
-                        <%--                        </tr>--%>
-                        <%--                        <tr>--%>
-                        <%--                            <td class="cart-pic"><img src="images/cart-page/product-3.jpg" alt=""></td>--%>
-                        <%--                            <td class="cart-title">--%>
-                        <%--                                <h5>Guangzhou sweater</h5>--%>
-                        <%--                            </td>--%>
-                        <%--                            <td class="p-price">$60.00</td>--%>
-                        <%--                            <td class="qua-col">--%>
-                        <%--                                <div class="quantity">--%>
-                        <%--                                    <div class="pro-qty">--%>
-                        <%--                                        <input type="text" value="1">--%>
-                        <%--                                    </div>--%>
-                        <%--                                </div>--%>
-                        <%--                            </td>--%>
-                        <%--                            <td class="total-price">$60.00</td>--%>
-                        <%--                            <td class="close-td"><i class="ti-close"></i></td>--%>
-                        <%--                        </tr>--%>
+                        <c:choose>
+                            <c:when test="${empty requestScope.CartProducts}">
+                                <c:out value="List is empty"></c:out>
+                            </c:when>
+                            <c:otherwise>
+                                <c:forEach items="${requestScope.CartProducts}" var="product">
+
+                                    <tr>
+                                        <td hidden id="productIdDeleted" class="p-price first-row"><c:out value="${product.productId}"></c:out></td>
+                                        <td class="cart-pic first-row"><img src='+<c:out value="${product.image}"></c:out>+' alt=""></td>
+                                        <td class="cart-title">
+                                            <h5><c:out value="${product.productName}"></c:out></h5>
+                                        </td>
+                                        <td class="p-price first-row"><c:out value="${product.price}"></c:out></td>
+                                        <td class="qua-col first-row">
+                                            <div class="quantity">
+                                                <div class="pro-qty">
+                                                    <input type="text" placeholder="">
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="total-price first-row"><c:out value="${product.price}"></c:out></td>
+                                        <td class="close-td first-row"><i class="ti-close"></i></td>
+                                    </tr>
+                                </c:forEach>
+                            </c:otherwise>
+                        </c:choose>
+
                         </tbody>
                     </table>
                 </div>
@@ -366,7 +350,7 @@
         crossorigin="anonymous"></script>
 
 <script src=http://code.jquery.com/jquery-latest.min.js></script>
-<script src="user/cart/cart.js"></script>
+<%--<script src="user/cart/cart.js"></script>--%>
 
 
 </body>
