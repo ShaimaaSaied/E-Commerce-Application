@@ -30,27 +30,40 @@
             margin: 10px;
             margin-left: 20px ;
         }
+        .updatebtn {
+            background-color: #e7ab3c;
+            border: none;
+            color: white;
+            padding: 12px 16px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+        /* Darker background on mouse-over */
+        .updatebtn:hover {
+            background-color: #00cc00   ;
+        }
     </style>
 </head>
 <body>
 <%@include file="header.jsp" %>
 <br>
-<form method="post" action="updateAdminProduct">
+<form method="post" action="/ECommerce/updateAdminProduct" enctype="multipart/form-data">
     <div>
-        <span>Product Id: </span>
-        <input class="inputTextCustom" type="text" value="${selectedProduct.productId}">
+        <input id="id" name="id" style="margin-left: 20px" class="inputTextCustom" type="hidden" value="${selectedProduct.productId}">
         <span>Product Name: </span>
-        <input class="inputTextCustom" type="text" value="${selectedProduct.productName}"><br>
+        <input id="pname" name="pname" class="inputTextCustom" type="text" value="${selectedProduct.productName}">
         <span>Product Description: </span>
-        <input class="inputTextCustom" type="text" value="${selectedProduct.description}">
+        <input id="pdescription" class="inputTextCustom" type="text" value="${selectedProduct.description}"><br>
         <span>Product Price: </span>
-        <input class="inputTextCustom" type="text" value="${selectedProduct.price}"><br>
+        <input id="pprice" name="price" style="margin-left: 20px" class="inputTextCustom" type="number" value="${selectedProduct.price}">
         <span>Product Stock: </span>
-        <input class="inputTextCustom" type="text" value="${selectedProduct.stock}"><br>
+        <input id="pstock" name="stock" class="inputTextCustom" type="number" value="${selectedProduct.stock}"><br>
         <span>Product Image: </span>
-        <input class="inputTextCustom" type="text" value="${selectedProduct.image}">
-        <span>Product Category: </span>
-        <input class="inputTextCustom" type="text" value="${selectedProduct.category.categoryName}"><br>
+        <input id="pimage" class="inputTextCustom" type="text" value="${selectedProduct.image}">
+        <span>Product Category Id: </span>
+        <input id="pcategory" style="margin-left: 20px" class="inputTextCustom" type="number" value="${selectedProduct.category.categoryId}"><br>
         <input type="submit" class="updatebtn" value="Update">
         <a href="product.jsp" class="updatebtn">Back</a>
     </div>

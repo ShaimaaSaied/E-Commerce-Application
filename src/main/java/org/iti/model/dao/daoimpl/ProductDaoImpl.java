@@ -2,6 +2,8 @@ package org.iti.model.dao.daoimpl;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
+import org.iti.controller.admin.UpdateProduct;
 import org.iti.model.confg.DBConnection;
 import org.iti.model.dao.interfaces.ProductDao;
 import org.iti.model.entity.Product;
@@ -22,6 +24,9 @@ public class ProductDaoImpl implements ProductDao {
     private final String UPDATE_PRODUCT_PRICE = "update org.iti.model.entity.Product set price=:price where productId=:productId";
     private final String UPDATE_PRODUCT_STOCK = "update org.iti.model.entity.Product set stock=:stock where productId=:productId";
     private final String RETRIVE_ALL_PRODUCTS_NAME = "SELECT product.productName from org.iti.model.entity.Product as product";
+    private final String UPDATE_PRODUCT = "update org.iti.model.entity.Product set productName=:productName," +
+            "description=:description, price=:price, stock=:stock, image=:image" +
+            "where productId=:productId";
 
     public ProductDaoImpl() {
         sessionFactory = DBConnection.getInstance();
@@ -47,7 +52,7 @@ public class ProductDaoImpl implements ProductDao {
     public List<Product> selectProductByName(String name) {
         List<Product> productList = null;
         productList = sessionFactory.openSession().createQuery(RETRIVE_PRODUCT_BY_NAME).
-                setParameter("productName",  name + "%").list();
+                setParameter("productName", name + "%").list();
         return productList;
     }
 
@@ -56,6 +61,27 @@ public class ProductDaoImpl implements ProductDao {
         List<String> productList = null;
         productList = sessionFactory.openSession().createQuery(RETRIVE_ALL_PRODUCTS_NAME).list();
         return productList;
+    }
+
+    @Override
+    public boolean updateProduct(Product product) {
+        Session session = sessionFactory.openSession();
+        session.beginTransaction();
+        Query query = session.createQuery(UPDATE_PRODUCT).
+                setParameter("productId", product.getProductId())
+                .setParameter("productName", product.getProductName())
+                .setParameter("description", product.getDescription())
+                .setParameter("price", product.getPrice())
+                .setParameter("stock", product.getStock())
+                .setParameter("image", product.getImage());
+        int result = query.executeUpdate();
+        session.getTransaction().commit();
+
+        if (result > 0) {
+            return true;
+        }
+
+        return false;
     }
 
     @Override

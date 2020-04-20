@@ -57,4 +57,11 @@ public interface ProductDao {
     boolean updateProductStock(int id, int stock);
 
     List<String> searchForProductsName();
+
+    /***
+     * admin can update = product
+     * @param product
+     * @return boolean
+     */
+    boolean updateProduct(Product product);
 }

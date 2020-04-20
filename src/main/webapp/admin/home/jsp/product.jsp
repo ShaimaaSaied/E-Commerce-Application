@@ -17,9 +17,9 @@
             width: 100%;
         }
 
-        th, td {
+        td {
             text-align: left;
-            padding: 8px;
+            padding: 25px;
         }
 
         tr:nth-child(even) {
@@ -27,6 +27,8 @@
         }
 
         th {
+            text-align: left;
+            padding: 8px;
             background-color: #e7ab3c;
             color: white;
         }
@@ -59,11 +61,29 @@
         .updatebtn:hover {
             background-color: #00cc00   ;
         }
+        a{
+            margin: 10px;
+        }
+        .addbtn{
+            background-color: #e7ab3c;
+            border: none;
+            color: white;
+            padding: 12px 16px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 3px;
+            margin-top: 30px;
+        }
+        .addbtn:hover {
+            background-color: gray;
+        }
     </style>
 </head>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <body>
 <%@include file="header.jsp" %>
+<br><br>
+<a href="admin/home/jsp/addproduct.jsp" class="addbtn">Add New Product</a>
 <h1 style="text-align: center">Product Records</h1>
 <table class="table">
     <thead>
@@ -92,7 +112,7 @@
                     <td><c:out value="${product.price}"></c:out></td>
                     <td><c:out value="${product.stock}"></c:out></td>
                     <td><c:out value="${product.image}"></c:out></td>
-                    <td><a href="deleteProduct?id=${product.productId}" class="deletebtn"></a>
+                    <td><a href="deleteProduct?id=${product.productId}" class="deletebtn">Delete</a>
                     </td>
                     <td><a href="updateAdminProduct?id=${product.productId}" class="updatebtn">Edit</a>
                     </td>
