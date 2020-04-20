@@ -12,14 +12,19 @@
     <style>
         table {
             border-collapse: collapse;
-            border: 1px solid #777;
+            border: 1px solid #ececf6;
             font-size: 20px;
             width: 100%;
         }
 
         td {
             text-align: left;
-            padding: 25px;
+            padding-left: 12px;
+            padding-right: 12px;
+            padding-top: 16px;
+            padding-bottom: 16px;
+            font-size: 15px;
+            font-weight: 500;
         }
 
         tr:nth-child(even) {
@@ -28,17 +33,18 @@
 
         th {
             text-align: left;
-            padding: 8px;
-            background-color: #e7ab3c;
+            padding: 7px;
+            background-color: #ffc107;
             color: white;
+            font-size: 17px;
         }
 
         .deletebtn {
-            background-color: #e7ab3c;
+            background-color: #ffc107;
             border: none;
             color: white;
             padding: 12px 16px;
-            font-size: 16px;
+            font-size: 15px;
             cursor: pointer;
             border-radius: 3px;
         }
@@ -48,11 +54,11 @@
             background-color: red;
         }
         .updatebtn {
-            background-color: #e7ab3c;
+            background-color: #ffc107;
             border: none;
             color: white;
             padding: 12px 16px;
-            font-size: 16px;
+            font-size: 15px;
             cursor: pointer;
             border-radius: 3px;
         }
@@ -63,9 +69,10 @@
         }
         a{
             margin: 10px;
+            text-decoration-line: none;
         }
         .addbtn{
-            background-color: #e7ab3c;
+            background-color: #ffc107;
             border: none;
             color: white;
             padding: 12px 16px;
@@ -123,5 +130,8 @@
     </c:choose>
     </tbody>
 </table>
+<br>
+<a href="admin/home/jsp/addproduct.jsp" class="addbtn">Add New Product</a>
+<br><br>
 </body>
 </html>

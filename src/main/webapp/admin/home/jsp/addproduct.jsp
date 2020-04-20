@@ -30,7 +30,7 @@
             <label>Product Description</label>
             <textarea placeholder="Product Description" name="ProductDescription"></textarea>
             <input type="submit" value="Add Product">
-            <a href="product.jsp">Back</a>
+            <a href="/ECommerce/adminproduct">Back</a>
         </form>
     </div>
 </div>

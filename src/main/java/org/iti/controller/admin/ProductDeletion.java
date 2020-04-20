@@ -29,7 +29,7 @@ public class ProductDeletion extends HttpServlet {
             request.getSession().setAttribute("AlertMessage", "canot Delete product ..An Error occure");
 
             request.getSession().setAttribute("AlertType", "danger");
-            response.sendRedirect("AdminProductServlet");
+            response.sendRedirect("admin/home/jsp/product.jsp");
 
         }
 

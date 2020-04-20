@@ -12,7 +12,7 @@
         }
 
         label {
-            font-weight: 700px;
+            font-weight: 700;
             font-size: 16px;
             margin-bottom: 7px;
             margin-top: 7px;
