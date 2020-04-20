@@ -41,12 +41,17 @@ public class CartIServicempl implements CartService {
 
     @Override
     public boolean addProductToCart(int userId, int productId, int quantity) {
-        return cartDao.addProductToCart(userId, productId,quantity);
+        return cartDao.addProductToCart(userId, productId, quantity);
     }
 
     @Override
     public boolean updateProductQuantityInCart(int userId, int productId, int quantity) {
-        return cartDao.updateProductQuantityInCart(userId,productId,quantity);
+        return cartDao.updateProductQuantityInCart(userId, productId, quantity);
+    }
+
+    @Override
+    public int getQuantityOfProductInCart(int userId, int productId) {
+        return cartDao.getQuantityOfProductInCart(userId, productId);
     }
 
 

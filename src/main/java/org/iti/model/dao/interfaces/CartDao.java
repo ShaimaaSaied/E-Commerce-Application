@@ -11,7 +11,7 @@ public interface CartDao {
 
     boolean addProductToCart(int userId, int productId, int quantity);
 
-    boolean removeProductFromCart(int userId,int productId);
+    boolean removeProductFromCart(int userId, int productId);
 
     boolean buyProductFromCart(int userId, int productId);
 
@@ -21,4 +21,5 @@ public interface CartDao {
 
     boolean updateProductQuantityInCart(int userId, int productId, int quantity);
 
+    int getQuantityOfProductInCart(int userId, int productId);
 }
