@@ -1,7 +1,11 @@
 package org.iti.model.dao.daoimpl;
 
+import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.criterion.Projection;
+import org.hibernate.criterion.ProjectionList;
+import org.hibernate.criterion.Projections;
 import org.iti.model.confg.DBConnection;
 import org.iti.model.dao.interfaces.ProductDao;
 import org.iti.model.entity.Product;
@@ -48,7 +52,7 @@ public class ProductDaoImpl implements ProductDao {
     public List<Product> selectProductByName(String name) {
         List<Product> productList = null;
         productList = sessionFactory.openSession().createQuery(RETRIVE_PRODUCT_BY_NAME).
-                setParameter("productName",  name + "%").list();
+                setParameter("productName", name + "%").list();
         return productList;
     }
 
@@ -86,16 +90,17 @@ public class ProductDaoImpl implements ProductDao {
 
     @Override
     public boolean deleteProduct(int id) {
-        Session session = sessionFactory.openSession();
-        session.beginTransaction();
-        int row = session.createQuery(DELETE_PRODUCT_BY_ID).setParameter("stock", id).executeUpdate();
-        if (row == 1) {
-            session.getTransaction().commit();
-            System.out.println("delete Successfully");
-            return true;
-        } else {
-            return false;
-        }
+//        Session session = sessionFactory.openSession();
+//        session.beginTransaction();
+//        //int row = session.createQuery(DELETE_PRODUCT_BY_ID).setParameter("stock", id).executeUpdate();
+//        if (row == 1) {
+//            session.getTransaction().commit();
+//            System.out.println("delete Successfully");
+//            return true;
+//        } else {
+//            return false;
+//        }
+        return false;
     }
 
     @Override
@@ -125,11 +130,13 @@ public class ProductDaoImpl implements ProductDao {
             return false;
         }
     }
+
     @Override
     public List<Product> selectAllProductSpesificField() {
         List<Product> productList = null;
         productList = sessionFactory.openSession().createQuery(RETRIVE_ALL_PRODUCTS_WITH_SPESIFIC_FIELD).list();
         return productList;
+
     }
 
 }
