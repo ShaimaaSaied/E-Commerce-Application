@@ -178,7 +178,7 @@
                 <ul>
                     <li><a href="/ECommerce/home">&nbsp;&nbsp;&nbsp;Home&nbsp;&nbsp;&nbsp;</a></li>
                     <li><a href="/ECommerce/profile">&nbsp;&nbsp;&nbsp;Profile&nbsp;&nbsp;&nbsp;</a></li>
-                    <li><a href="/ECommerce/cart">&nbsp;&nbsp;&nbsp;Shopping cart&nbsp;&nbsp;&nbsp;</a></li>
+                    <li><a href="/ECommerce/GetCartProducts">&nbsp;&nbsp;&nbsp;Shopping cart&nbsp;&nbsp;&nbsp;</a></li>
                     <li><a href="#">&nbsp;&nbsp;&nbsp;Contact&nbsp;&nbsp;&nbsp;</a></li>
                     <li><a href="#">&nbsp;&nbsp;&nbsp;About us&nbsp;&nbsp;&nbsp;</a></li>
                 </ul>
@@ -321,7 +321,6 @@
         crossorigin="anonymous"></script>
 
 <script src=http://code.jquery.com/jquery-latest.min.js></script>
-
 
 
 <script src="user/home/home.js"></script>
