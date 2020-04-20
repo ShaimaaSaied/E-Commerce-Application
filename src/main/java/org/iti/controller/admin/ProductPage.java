@@ -12,17 +12,13 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-@WebServlet(name="adminproduct",urlPatterns = {"/adminproduct"})
+@WebServlet(name = "adminproduct", urlPatterns = {"/adminproduct"})
 public class ProductPage extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         ProductServiceImpl productService = new ProductServiceImpl();
         List<Product> productsList = productService.selectAllProduct();
-        System.out.println(productsList);
-//        for (Product p : productsList){
-//            System.out.println(p);
-//        }
-       req.setAttribute("listOfProduct", productsList);
+        req.setAttribute("listOfProduct", productsList);
         req.getRequestDispatcher("admin/home/jsp/product.jsp").forward(req, resp);
     }
 }

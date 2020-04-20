@@ -58,5 +58,12 @@ public interface ProductDao {
 
     List<String> searchForProductsName();
 
+    /***
+     * admin can update = product
+     * @param product
+     * @return boolean
+     */
+    boolean updateProduct(Product product);
+
     List<Product> selectAllProductSpesificField();
 }

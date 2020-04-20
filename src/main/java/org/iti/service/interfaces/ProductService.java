@@ -25,4 +25,6 @@ public interface ProductService {
     List<String> searchForProductsName();
 
     List<Product> selectAllProductSpesificField();
+
+    boolean updateProduct(Product product);
 }
