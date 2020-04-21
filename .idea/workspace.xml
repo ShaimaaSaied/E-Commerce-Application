@@ -7,33 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83ff69a3-d345-4ba9-a541-95019bb69808" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/E-Commerce-Application.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/E-Commerce_Application.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iti/controller/admin/UpdateProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iti/controller/admin/UpdateProduct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iti/controller/admin/ViewUserProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iti/controller/admin/ViewUserProfile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iti/controller/user/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iti/controller/user/Profile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iti/controller/user/SearchForProducts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iti/controller/user/SearchForProducts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iti/model/confg/DBConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iti/model/confg/DBConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iti/model/dao/daoimpl/CartDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iti/model/dao/daoimpl/CartDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iti/model/dao/daoimpl/CategoryDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iti/model/dao/daoimpl/CategoryDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iti/model/dao/daoimpl/ProductDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iti/model/dao/daoimpl/ProductDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iti/model/dao/daoimpl/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iti/model/dao/daoimpl/UserDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iti/model/dao/interfaces/ProductDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iti/model/dao/interfaces/ProductDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iti/model/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iti/model/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iti/service/impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iti/service/impl/ProductServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iti/service/interfaces/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iti/service/interfaces/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/home/jsp/addproduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/home/jsp/addproduct.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/home/jsp/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/home/jsp/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/home/jsp/product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/home/jsp/product.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/home/jsp/updateproduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/home/jsp/updateproduct.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/home/jsp/userProfileAtAdmin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/home/jsp/userProfileAtAdmin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/home/jsp/viewUser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/home/jsp/viewUser.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/user/home/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/user/home/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/user/home/jsp/search.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/user/home/jsp/SearchResult.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -303,7 +277,7 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
@@ -328,7 +302,7 @@
       <updated>1586528899265</updated>
       <workItem from="1586528902891" duration="10090000" />
       <workItem from="1586568471294" duration="548000" />
-      <workItem from="1587373152071" duration="36995000" />
+      <workItem from="1587373152071" duration="37493000" />
     </task>
     <task id="LOCAL-00001" summary="Admin Product">
       <created>1587310329839</created>
@@ -372,7 +346,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587411602197</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Update product in admin works correctly now (by Shimaa) and css is updated (by Radwa) and Search by name (by Sara)">
+      <created>1587491828147</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1587491828147</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -384,7 +365,8 @@
     <MESSAGE value="Admin Update Product" />
     <MESSAGE value="Admin View User Profile" />
     <MESSAGE value="update product Dao Implementation" />
-    <option name="LAST_COMMIT_MESSAGE" value="update product Dao Implementation" />
+    <MESSAGE value="Update product in admin works correctly now (by Shimaa) and css is updated (by Radwa) and Search by name (by Sara)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update product in admin works correctly now (by Shimaa) and css is updated (by Radwa) and Search by name (by Sara)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="26" key="#Assign_Data_Sources" timestamp="1587432448937">
@@ -403,10 +385,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="484" y="277" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1366.728@0.0.1366.728" timestamp="1586530287942" />
-    <state x="210" y="0" key="CommitChangelistDialog2" timestamp="1587411599536">
+    <state x="82" y="0" key="CommitChangelistDialog2" timestamp="1587491967162">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="210" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1587411599536" />
+    <state x="82" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1587491967162" />
     <state x="105" y="61" key="DiffContextDialog" timestamp="1587411497167">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -519,10 +501,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="494" y="284" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1587419601653" />
-    <state x="357" y="168" key="git4idea.merge.GitPullDialog" timestamp="1587411620704">
+    <state x="357" y="168" key="git4idea.merge.GitPullDialog" timestamp="1587491924214">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="357" y="168" key="git4idea.merge.GitPullDialog/0.0.1366.728@0.0.1366.728" timestamp="1587411620704" />
+    <state x="357" y="168" key="git4idea.merge.GitPullDialog/0.0.1366.728@0.0.1366.728" timestamp="1587491924214" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1587391781544">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
