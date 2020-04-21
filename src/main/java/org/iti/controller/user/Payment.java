@@ -23,50 +23,57 @@ public class Payment extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         CartService cartService = new CartIServicempl();
         UserService userService = new UserServiceImpl();
+        ProductService productService = new ProductServiceImpl();
+
         User currentuser = (User) req.getSession().getAttribute("currentuser");
         System.out.println(currentuser + " inside checkOut ");
 
         List<Product> allProductsFromCart = cartService.getAllProductsFromCart(currentuser.getUserId());
-        //check stock
-        for( Product product:allProductsFromCart) {
-            int quantity = cartService.getQuantityOfProductInCart(currentuser.getUserId(), product.getProductId());
-            if(product.getStock()< quantity)
-            {
-                req.setAttribute("paymentMsg", "Invalid quantity!");
-                req.getRequestDispatcher("user/cart/shopping-cart.jsp").forward(req, resp);
+        if(allProductsFromCart.size() != 0) {
+            //check stock
+            for (Product product : allProductsFromCart) {
+
+                int quantity = cartService.getQuantityOfProductInCart(currentuser.getUserId(), product.getProductId());
+                if (product.getStock() < quantity) {
+                    req.getSession().setAttribute("paymentMsg", "Invalid quantity!");
+                    System.out.println("***********");
+                    req.getRequestDispatcher("GetCartProducts").forward(req, resp);
+                    System.out.println("after forward");
+                } else {
+                    System.out.println(product.getProductName() + " stock is okay");
+                }
             }
-            else
-            {
-                System.out.println(product.getProductName()+" stock is okay");
+
+            double totalPrice = (double) cartService.getTotalPrice(currentuser.getUserId());
+            System.out.println("total price " + totalPrice);
+            double creditLimit = currentuser.getCreditLimit();
+            System.out.println("creditLimit " + creditLimit);
+
+            //check creditlimit
+            if (creditLimit - totalPrice < 0) {
+                req.getSession().setAttribute("paymentMsg", "Credit Limit is not enough!");
+                req.getRequestDispatcher("GetCartProducts").forward(req, resp);
+            } else {
+                System.out.println("credit limit is okay");
             }
-        }
 
-        double totalPrice =(double) cartService.getTotalPrice(currentuser.getUserId());
-        double creditLimit = currentuser.getCreditLimit();
+            //update stock
+            for (Product product : allProductsFromCart) {
+                int quantity = cartService.getQuantityOfProductInCart(currentuser.getUserId(), product.getProductId());
+                System.out.println("update stock in product:  " + productService.updateProductStock(product.getProductId(), product.getStock() - quantity));
+            }
 
-        //check creditlimit
-        if(creditLimit-totalPrice < 0) {
-            req.setAttribute("paymentMsg", "Credit Limit is not enough!");
-            req.getRequestDispatcher("user/cart/shopping-cart.jsp").forward(req, resp);
-        }
-        else{
-            System.out.println("credit limit is okay");
-        }
+            //update CreditLimit
+            System.out.println("new credit" + (currentuser.getCreditLimit() - totalPrice));
+            currentuser.setCreditLimit((int) (currentuser.getCreditLimit() - totalPrice));
+            System.out.println("update CreditLmit:  " + userService.updateUser(currentuser));
 
-        System.out.println(cartService.resetCart(currentuser.getUserId()));
-        //update stock
-        for( Product product:allProductsFromCart) {
-            int quantity = cartService.getQuantityOfProductInCart(currentuser.getUserId(), product.getProductId());
-            System.out.println(cartService.updateProductQuantityInCart(currentuser.getUserId(),
-                                                                        product.getProductId(),
-                                                                product.getStock()-quantity));
-        }
-        //update CreditLimit
-        currentuser.setCreditLimit((int)(currentuser.getCreditLimit()- totalPrice));
-        System.out.println(userService.updateUser(currentuser));
+            //reset cart
+            System.out.println("reset Cart: " + cartService.resetCart(currentuser.getUserId()));
 
-        req.setAttribute("paymentMsg", "Purchasing done Successfully");
-        req.getRequestDispatcher("user/cart/shopping-cart.jsp").forward(req, resp);
+            req.getSession().setAttribute("paymentMsg", "Purchasing done Successfully");
+        }
+        req.getRequestDispatcher("GetCartProducts").forward(req, resp);
 
     }
 }

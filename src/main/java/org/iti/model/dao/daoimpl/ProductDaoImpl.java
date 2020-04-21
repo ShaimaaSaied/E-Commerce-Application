@@ -114,7 +114,7 @@ public class ProductDaoImpl implements ProductDao {
     public boolean deleteProduct(int id) {
         Session session = sessionFactory.openSession();
         session.beginTransaction();
-        int row = session.createQuery(DELETE_PRODUCT_BY_ID).setParameter("stock", id).executeUpdate();
+        int row = session.createQuery(DELETE_PRODUCT_BY_ID).setParameter("productId", id).executeUpdate();
         if (row == 1) {
             session.getTransaction().commit();
             System.out.println("delete Successfully");

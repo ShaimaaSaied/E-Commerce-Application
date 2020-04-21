@@ -22,6 +22,9 @@ public class GetCartProducts extends HttpServlet {
     Map<Product, Integer> productQuantityMap = new HashMap<>();
 
     protected void doGet(HttpServletRequest req, HttpServletResponse response) throws ServletException, IOException {
+
+
+        System.out.println("-------------------start");
         CartService cartService = new CartIServicempl();
         User currentuser = (User) req.getSession().getAttribute("currentuser");
         System.out.println(currentuser + " inside AddProductToCart ");
@@ -38,6 +41,7 @@ public class GetCartProducts extends HttpServlet {
         System.out.println("////////////////////////////////////////");
         System.out.println(productQuantityMap);
         req.setAttribute("CartProducts", productQuantityMap);
+        System.out.println("-----------------end");
         req.getRequestDispatcher("user/cart/shopping-cart.jsp").forward(req, response);
 
 

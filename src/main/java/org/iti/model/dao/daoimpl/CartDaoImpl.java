@@ -152,7 +152,7 @@ public class CartDaoImpl implements CartDao {
 
     @Override
     public int getQuantityOfProductInCart(int userId, int productId) {
-        return(int) sessionFactory.openSession().createQuery(GET_QUANTITY_OF_PRODUCT).setParameter("user_id", userId).setParameter("product_id",productId).uniqueResult();
+        return(int) sessionFactory.openSession().createQuery(GET_QUANTITY_OF_PRODUCT).setParameter("product_id",productId).setParameter("user_id", userId).uniqueResult();
     }
 
 

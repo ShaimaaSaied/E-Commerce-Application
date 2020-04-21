@@ -18,7 +18,7 @@ public class UserDaoImpl implements UserDao {
     private final String DELETE_USER = "delete from org.iti.model.entity.User where userId=:user_id";
     private final String UPDATE_USER = "update org.iti.model.entity.User u set u.firstName=:firstName," +
             "u.lastName=:lastName, u.username=:username, u.password=:password,u.email=:email,u.address=:address," +
-            "u.jop=:jop ,u.role=:role where u.userId=:userId";
+            "u.jop=:jop ,u.role=:role ,u.creditLimit=:creditLimit where u.userId=:userId";
 
     private final String RETRIVE_ALL_MAIL = "select email FROM org.iti.model.entity.User";
     private final String RETRIVE_ALL_USERNAME = "select username FROM org.iti.model.entity.User";
@@ -53,7 +53,8 @@ public class UserDaoImpl implements UserDao {
                 .setParameter("address", user.getAddress())
                 .setParameter("jop", user.getJop())
                 .setParameter("role", user.getRole())
-                .setParameter("userId", user.getUserId());
+                .setParameter("userId", user.getUserId())
+                .setParameter("creditLimit", user.getCreditLimit());
 //        session.merge(user);
         int result = query.executeUpdate();
         session.getTransaction().commit();

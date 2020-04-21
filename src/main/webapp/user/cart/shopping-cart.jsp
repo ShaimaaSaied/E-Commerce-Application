@@ -184,11 +184,11 @@
                         <tbody id="tableProductCart">
                         <c:choose>
                             <c:when test="${empty requestScope.CartProducts}">
-                                <c:out value="List is empty"></c:out>
-                            </c:when>
-                            <c:otherwise>
-                                <c:forEach var="entry" items="${requestScope.CartProducts}">
-                                    <%--                                    <tr><td><c:out value="${entry.key}"/></td> <td><c:out value="${entry.value}"/> </td></tr>--%>
+                                <%--    <c:out value="List is empty"></c:out>--%>
+                              </c:when>
+                              <c:otherwise>
+                                  <c:forEach var="entry" items="${requestScope.CartProducts}">
+                                      <%--                                    <tr><td><c:out value="${entry.key}"/></td> <td><c:out value="${entry.value}"/> </td></tr>--%>
                                     <tr>
                                         <td class="cart-pic first-row"><img
                                                 src='+<c:out value="${entry.key.image}"></c:out>+' alt=""></td>
@@ -246,12 +246,22 @@
                     <div class="col-lg-4 offset-lg-4">
                         <div class="proceed-checkout">
                             <ul>
-
-                                <li class="cart-total">Total <span><%=request.getAttribute("totalPrice")%></span></li>
+                                <c:choose>
+                                    <c:when test="${empty requestScope.totalPrice}">
+                                        <li class="cart-total">Total <span>0.0 LE</span></li>
+                                    </c:when>
+                                    <c:otherwise>
+                                        <li class="cart-total">Total <span><%=request.getAttribute("totalPrice")%> LE</span></li>
+                                    </c:otherwise>
+                                </c:choose>
                             </ul>
-                            <a href="checkOut" class="proceed-btn">Purchase</a>
-                            <div id="checkOut" style="color:#e7ab3c;font-weight: bold;margin-left:50px;font-size:200%">
-                                <%=request.getAttribute("paymentMsg")%>
+                            <a id="purchaseBtn" href="checkOut" class="proceed-btn">Purchase</a>
+                            <div id="checkOut" style="color:#e7ab3c;font-weight: bold;margin-left:50px;font-size:130%">
+                                <c:choose>
+                                    <c:when test="${not empty sessionScope.paymentMsg}">
+                                            <%=request.getSession().getAttribute("paymentMsg")%>
+                                    </c:when>
+                                </c:choose>
                             </div>
                         </div>
                     </div>
@@ -347,6 +357,16 @@
         crossorigin="anonymous"></script>
 
 <script src=http://code.jquery.com/jquery-latest.min.js></script>
+
+<script>
+    $(document).ready(function () {
+        $("#purchaseBtn").click(
+            function () {
+                $("#purchaseBtn").attr("disabled", true);
+            }
+        );
+    });
+</script>
 
 </body>
 
