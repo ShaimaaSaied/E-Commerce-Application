@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface CartService {
 
-    int resetCart();
+    int resetCart(int userId);
 
     double getTotalPrice(int userId);
 
@@ -19,4 +19,6 @@ public interface CartService {
     boolean addProductToCart(int userId, int productId, int quantity);
 
     boolean updateProductQuantityInCart(int userId, int productId, int quantity);
+
+    int getQuantityOfProductInCart(int userId, int productId);
 }

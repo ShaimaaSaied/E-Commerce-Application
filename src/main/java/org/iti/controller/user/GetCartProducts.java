@@ -13,21 +13,34 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @WebServlet(name = "GetCartProducts", urlPatterns = "/GetCartProducts")
 public class GetCartProducts extends HttpServlet {
+    Map<Product, Integer> productQuantityMap = new HashMap<>();
 
     protected void doGet(HttpServletRequest req, HttpServletResponse response) throws ServletException, IOException {
         CartService cartService = new CartIServicempl();
-
         User currentuser = (User) req.getSession().getAttribute("currentuser");
         System.out.println(currentuser + " inside AddProductToCart ");
         List<Product> allProductsFromCart = cartService.getAllProductsFromCart(currentuser.getUserId());
         System.out.println(allProductsFromCart);
-
-        req.setAttribute("CartProducts", allProductsFromCart);
+        productQuantityMap.clear();
+        for (Product product : allProductsFromCart) {
+            int quantity = cartService.getQuantityOfProductInCart(currentuser.getUserId(), product.getProductId());
+            productQuantityMap.put(product, quantity);
+        }
+        double totalPrice = cartService.getTotalPrice(currentuser.getUserId());
+        req.setAttribute("totalPrice", totalPrice);
+        System.out.println(totalPrice);
+        System.out.println("////////////////////////////////////////");
+        System.out.println(productQuantityMap);
+        req.setAttribute("CartProducts", productQuantityMap);
         req.getRequestDispatcher("user/cart/shopping-cart.jsp").forward(req, response);
 
+
     }
+
 }

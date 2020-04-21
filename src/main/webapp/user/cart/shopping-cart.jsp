@@ -176,35 +176,50 @@
                             <th class="p-name">Product Name</th>
                             <th>Price</th>
                             <th>Quantity</th>
+                            <th>Stock</th>
                             <th>Total</th>
                             <th><i class="ti-close"></i></th>
                         </tr>
                         </thead>
-                        <% %>
                         <tbody id="tableProductCart">
                         <c:choose>
                             <c:when test="${empty requestScope.CartProducts}">
                                 <c:out value="List is empty"></c:out>
                             </c:when>
                             <c:otherwise>
-                                <c:forEach items="${requestScope.CartProducts}" var="product">
-
+                                <c:forEach var="entry" items="${requestScope.CartProducts}">
+                                    <%--                                    <tr><td><c:out value="${entry.key}"/></td> <td><c:out value="${entry.value}"/> </td></tr>--%>
                                     <tr>
-                                        <td hidden id="productIdDeleted" class="p-price first-row"><c:out value="${product.productId}"></c:out></td>
-                                        <td class="cart-pic first-row"><img src='+<c:out value="${product.image}"></c:out>+' alt=""></td>
+                                        <td class="cart-pic first-row"><img
+                                                src='+<c:out value="${entry.key.image}"></c:out>+' alt=""></td>
                                         <td class="cart-title">
-                                            <h5><c:out value="${product.productName}"></c:out></h5>
+                                            <h5><c:out value="${entry.key.productName}"></c:out></h5>
                                         </td>
-                                        <td class="p-price first-row"><c:out value="${product.price}"></c:out></td>
+                                        <td class="p-price first-row"><c:out value="${entry.key.price}"></c:out></td>
                                         <td class="qua-col first-row">
                                             <div class="quantity">
                                                 <div class="pro-qty">
-                                                    <input type="text" placeholder="">
+                                                    <input type="text" value='${entry.value}'>
                                                 </div>
                                             </div>
                                         </td>
-                                        <td class="total-price first-row"><c:out value="${product.price}"></c:out></td>
-                                        <td class="close-td first-row"><i class="ti-close"></i></td>
+                                        <td class="qua-col first-row">
+                                            <div class="quantity">
+                                                <div class="pro-qty">
+                                                    <span ><c:out value="${entry.key.stock}"></c:out></span>
+                                                </div>
+                                            </div>
+                                        </td>
+
+
+
+                                        <td class="total-price first-row"><c:out
+                                                value="${entry.key.price*entry.value}"></c:out></td>
+                                        <td class="close-td first-row">
+                                            <a href="/ECommerce/DeleteProductFromCart?id=${entry.key.productId}">
+                                                <i class="ti-close"></i>
+                                            </a>
+                                        </td>
                                     </tr>
                                 </c:forEach>
                             </c:otherwise>
@@ -231,10 +246,13 @@
                     <div class="col-lg-4 offset-lg-4">
                         <div class="proceed-checkout">
                             <ul>
-                                <li class="subtotal">Subtotal <span>$240.00</span></li>
-                                <li class="cart-total">Total <span>$240.00</span></li>
+
+                                <li class="cart-total">Total <span><%=request.getAttribute("totalPrice")%></span></li>
                             </ul>
-                            <a href="#" class="proceed-btn">PROCEED TO CHECK OUT</a>
+                            <a href="checkOut" class="proceed-btn">Purchase</a>
+                            <div id="checkOut" style="color:#e7ab3c;font-weight: bold;margin-left:50px;font-size:200%">
+                                <%=request.getAttribute("paymentMsg")%>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -291,18 +309,7 @@
                     </ul>
                 </div>
             </div>
-            <!--
-                        <div class="col-lg-4">
-                            <div class="newslatter-item">
-                                <h5>Get Latest Updates </h5>
-                                <p>Get E-mail updates about our latest shop and special offers.</p>
-                                <form action="#" class="subscribe-form">
-                                    <input type="text" placeholder="Enter Your Mail">
-                                    <button type="button">Subscribe</button>
-                                </form>
-                            </div>
-                        </div>
-            -->
+
         </div>
     </div>
     <div class="copyright-reserved">
@@ -327,17 +334,7 @@
 </footer>
 <!-- Footer Section End -->
 
-<!-- Js Plugins -->
-<%--<script src="js/jquery-3.3.1.min.js"></script>--%>
-<%--<script src="js/bootstrap.min.js"></script>--%>
-<%--<script src="js/jquery-ui.min.js"></script>--%>
-<%--<script src="js/jquery.countdown.min.js"></script>--%>
-<%--<script src="js/jquery.nice-select.min.js"></script>--%>
-<%--<script src="js/jquery.zoom.min.js"></script>--%>
-<%--<script src="js/jquery.dd.min.js"></script>--%>
-<%--<script src="js/jquery.slicknav.js"></script>--%>
-<%--<script src="js/owl.carousel.min.js"></script>--%>
-<%--<script src="js/main.js"></script>--%>
+
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -350,8 +347,6 @@
         crossorigin="anonymous"></script>
 
 <script src=http://code.jquery.com/jquery-latest.min.js></script>
-<%--<script src="user/cart/cart.js"></script>--%>
-
 
 </body>
 

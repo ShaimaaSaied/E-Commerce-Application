@@ -288,7 +288,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="copyright-text">
+                    <div class="copyright-text">pro
                         Copyright &copy;<script>
                         document.write(new Date().getFullYear());
 

@@ -29,7 +29,7 @@ function viewProducts() {
         $("#products").append("<div class='col-lg-4 col-sm-6'>\n" +
             "                            <div class='product-item'>\n" +
             "                                <div class='pi-pic' >\n" +
-            "                                   <div  id='productid'>" + product[4] + "</div>"+
+            "                                   <div hidden id='productid'>" + product[4] + "</div>"+
             "                                    <img src=" + product[3] + " alt='picture'>\n" +
             "                                    <ul>\n" +
             "                                        <li class='w-icon active'>" +

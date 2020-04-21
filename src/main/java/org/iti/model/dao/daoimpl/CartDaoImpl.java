@@ -21,11 +21,12 @@ public class CartDaoImpl implements CartDao {
     private final String DELETE_PRODUCT_FROM_CART = "DELETE FROM org.iti.model.entity.Cart c WHERE c.product.productId=:product_id and c.user.userId=:user_id";
     private final String GET_TOTAL_PRICE = "SELECT SUM(c.quantity*c.product.price) FROM org.iti.model.entity.Cart c " +
             "WHERE c.id.userId=:user_id GROUP BY c.user.userId";
-    private final String DELETE_ALL_FROM_CART = "DELETE FROM org.iti.model.entity.Cart";
+    private final String DELETE_ALL_FROM_CART = "DELETE FROM org.iti.model.entity.Cart c WHERE c.user.userId=:user_id";
     private final String BUY_PRODUCT_FROM_CART = "UPDATE org.iti.model.entity.Cart c SET c.purchased=:bought " +
             "WHERE c.product.productId=:product_id and c.user.userId=:user_id";
     private final String UPDATE_PRODUCT_QUANTITY_IN_CART = "UPDATE org.iti.model.entity.Cart c SET c.quantity=:quantity " +
             "WHERE c.product.productId=:product_id and c.user.userId=:user_id";
+    private final String GET_QUANTITY_OF_PRODUCT="SELECT c.quantity from org.iti.model.entity.Cart c WHERE c.product.productId=:product_id and c.user.userId=:user_id";
 
     public CartDaoImpl() {
         session = DBConnection.getInstance();
@@ -127,7 +128,9 @@ public class CartDaoImpl implements CartDao {
      */
     @Override
     public double getTotalPrice(int userId) {
-        return (double) session.createQuery(GET_TOTAL_PRICE).setParameter("user_id", userId).uniqueResult();
+        if(this.selectAllProductsFromCart(userId).size() != 0)
+            return (double) session.createQuery(GET_TOTAL_PRICE).setParameter("user_id", userId).uniqueResult();
+        return 0 ;
     }
 
     @Override
