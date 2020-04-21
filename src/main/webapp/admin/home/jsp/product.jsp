@@ -34,13 +34,13 @@
         th {
             text-align: left;
             padding: 7px;
-            background-color: #ffc107;
+            background-color: #e7ab3c;
             color: white;
             font-size: 17px;
         }
 
         .deletebtn {
-            background-color: #ffc107;
+            background-color: #e7ab3c;
             border: none;
             color: white;
             padding: 12px 16px;
@@ -51,10 +51,10 @@
 
         /* Darker background on mouse-over */
         .deletebtn:hover {
-            background-color: red;
+            background-color: black;
         }
         .updatebtn {
-            background-color: #ffc107;
+            background-color: #e7ab3c;
             border: none;
             color: white;
             padding: 12px 16px;
@@ -65,14 +65,14 @@
 
         /* Darker background on mouse-over */
         .updatebtn:hover {
-            background-color: #00cc00   ;
+            background-color: black   ;
         }
         a{
             margin: 10px;
             text-decoration-line: none;
         }
         .addbtn{
-            background-color: #ffc107;
+            background-color: #e7ab3c;
             border: none;
             color: white;
             padding: 12px 16px;
@@ -82,7 +82,7 @@
             margin-top: 30px;
         }
         .addbtn:hover {
-            background-color: gray;
+            background-color: black;
         }
     </style>
 </head>

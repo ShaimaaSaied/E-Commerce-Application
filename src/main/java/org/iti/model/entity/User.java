@@ -1,5 +1,6 @@
 package org.iti.model.entity;
 
+import javax.persistence.NamedQueries;
 import java.util.HashSet;
 import java.util.Set;
 

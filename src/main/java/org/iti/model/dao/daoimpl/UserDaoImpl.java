@@ -1,8 +1,6 @@
 package org.iti.model.dao.daoimpl;
 
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.query.Query;
 import org.iti.model.confg.DBConnection;
 import org.iti.model.dao.interfaces.UserDao;
 import org.iti.model.entity.User;
@@ -11,9 +9,9 @@ import java.util.List;
 
 public class UserDaoImpl implements UserDao {
 
-    private SessionFactory sessionFactory = null;
+    private Session session = null;
 
-    private final String RETRIVE_USER_BY_EMAIL_AND_PASSWORD = "from org.iti.model.entity.User as u where u.email=:name and u.password=:pass";
+    private final String RETRIVE_USER_BY_EMAIL_AND_PASSWORD = "SELECT  u from org.iti.model.entity.User u where u.email=:name and u.password=:pass";
     private final String RETRIVE_ALL_USERS = "FROM org.iti.model.entity.User";
     private final String DELETE_USER = "delete from org.iti.model.entity.User where userId=:user_id";
     private final String UPDATE_USER = "update org.iti.model.entity.User u set u.firstName=:firstName," +
@@ -27,12 +25,11 @@ public class UserDaoImpl implements UserDao {
 
 
     public UserDaoImpl() {
-        sessionFactory = DBConnection.getInstance();
+        session = DBConnection.getInstance();
     }
 
     @Override
     public int deleteUser(int id) {
-        Session session = sessionFactory.openSession();
         session.beginTransaction();
         int res = session.createQuery(DELETE_USER).setParameter("user_id", id).executeUpdate();
         session.getTransaction().commit();
@@ -42,7 +39,6 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public User updateUser(User user) {
-        Session session = sessionFactory.openSession();
         session.beginTransaction();
         Query query = session.createQuery(UPDATE_USER).
                 setParameter("firstName", user.getFirstName())
@@ -65,7 +61,7 @@ public class UserDaoImpl implements UserDao {
     @Override
     public User retriveUser(String mail, String password) {
         User user = null;
-        user = (User) sessionFactory.openSession().createQuery(RETRIVE_USER_BY_EMAIL_AND_PASSWORD).
+        user = (User) session.createQuery(RETRIVE_USER_BY_EMAIL_AND_PASSWORD).
                 setParameter("name", mail).setParameter("pass", password).uniqueResult();
         return user;
     }
@@ -73,7 +69,7 @@ public class UserDaoImpl implements UserDao {
     @Override
     public User retriveUserByID(int id) {
         User user = null;
-        user = (User) sessionFactory.openSession().createQuery(RETRIVE_USER_BY_ID).
+        user = (User) session.createQuery(RETRIVE_USER_BY_ID).
                 setParameter("user_id",id).uniqueResult();
         return user;
     }
@@ -81,7 +77,7 @@ public class UserDaoImpl implements UserDao {
     @Override
     public List<User> retriveAllUsers() {
         List<User> list = null;
-        list = sessionFactory.openSession().createQuery(RETRIVE_ALL_USERS).list();
+        list = session.createQuery(RETRIVE_ALL_USERS).list();
         return list;
     }
 
@@ -90,7 +86,6 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public User createUser(User user) {
-        Session session = sessionFactory.openSession();
         session.beginTransaction();
         session.persist(user);
         session.getTransaction().commit();
@@ -100,13 +95,13 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public List<String> allUsernames() {
-        List<String> username = sessionFactory.openSession().createQuery(RETRIVE_ALL_USERNAME).list();
+        List<String> username = session.createQuery(RETRIVE_ALL_USERNAME).list();
         return username;
     }
 
     @Override
     public List<String> allEmails() {
-        List<String> mails = sessionFactory.openSession().createQuery(RETRIVE_ALL_MAIL).list();
+        List<String> mails = session.createQuery(RETRIVE_ALL_MAIL).list();
         return mails;
     }
 }

@@ -20,7 +20,7 @@ public class Profile extends HttpServlet {
 
         User user= (User) req.getSession().getAttribute("currentuser");
         if(user!=null){
-            req.getRequestDispatcher("user/profile/userProfileAtAdmin.jsp").include(req, resp);
+            req.getRequestDispatcher("user/profile/profile.jsp").include(req, resp);
         }else
         {
             req.getRequestDispatcher("signin_signup/html/SigninSignUp.html").forward(req, resp);
@@ -64,7 +64,7 @@ public class Profile extends HttpServlet {
 
 
             }
-            req.getRequestDispatcher("user/profile/userProfileAtAdmin.jsp").include(req, resp);
+            req.getRequestDispatcher("user/profile/profile.jsp").include(req, resp);
 
         }
 }

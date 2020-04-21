@@ -33,13 +33,13 @@
         th {
             text-align: left;
             padding: 7px;
-            background-color: #ffc107;
+            background-color: #e7ab3c;
             color: white;
             font-size: 17px;
         }
 
         .rolebtn {
-            background-color: #ffc107;
+            background-color: #e7ab3c;
             border: none;
             color: white;
             padding: 12px 16px;
@@ -50,10 +50,10 @@
 
         /* Darker background on mouse-over */
         .rolebtn:hover {
-            background-color: dodgerblue;
+            background-color: black;
         }
         .viewbtn {
-            background-color: #ffc107;
+            background-color: #e7ab3c;
             border: none;
             color: white;
             padding: 12px 16px;
@@ -64,7 +64,7 @@
 
         /* Darker background on mouse-over */
         .viewbtn:hover {
-            background-color: deeppink;
+            background-color: black;
         }
         a{
             margin: 10px;
