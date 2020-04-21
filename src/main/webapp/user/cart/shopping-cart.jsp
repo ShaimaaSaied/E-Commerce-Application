@@ -176,6 +176,7 @@
                             <th class="p-name">Product Name</th>
                             <th>Price</th>
                             <th>Quantity</th>
+                            <th>Stock</th>
                             <th>Total</th>
                             <th><i class="ti-close"></i></th>
                         </tr>
@@ -199,10 +200,18 @@
                                             <div class="quantity">
                                                 <div class="pro-qty">
                                                     <input type="text" value='${entry.value}'>
-
                                                 </div>
                                             </div>
                                         </td>
+                                        <td class="qua-col first-row">
+                                            <div class="quantity">
+                                                <div class="pro-qty">
+                                                    <span ><c:out value="${entry.key.stock}"></c:out></span>
+                                                </div>
+                                            </div>
+                                        </td>
+
+
 
                                         <td class="total-price first-row"><c:out
                                                 value="${entry.key.price*entry.value}"></c:out></td>
@@ -240,9 +249,9 @@
 
                                 <li class="cart-total">Total <span><%=request.getAttribute("totalPrice")%></span></li>
                             </ul>
-                            <a href="#" class="proceed-btn">PROCEED TO CHECK OUT</a>
-                            <div id="checkOut" style="color:#e7ab3c;font-weight: bold;margin-left:100px;font-size:200%">
-                                checkOut:
+                            <a href="checkOut" class="proceed-btn">Purchase</a>
+                            <div id="checkOut" style="color:#e7ab3c;font-weight: bold;margin-left:50px;font-size:200%">
+                                <%=request.getAttribute("paymentMsg")%>
                             </div>
                         </div>
                     </div>

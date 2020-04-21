@@ -44,18 +44,18 @@ public class UserDaoImpl implements UserDao {
     public User updateUser(User user) {
         Session session = sessionFactory.openSession();
         session.beginTransaction();
-//        Query query = session.createQuery(UPDATE_USER).
-//                setParameter("firstName", user.getFirstName())
-//                .setParameter("lastName", user.getLastName())
-//                .setParameter("username", user.getUsername())
-//                .setParameter("password", user.getPassword())
-//                .setParameter("email", user.getEmail())
-//                .setParameter("address", user.getAddress())
-//                .setParameter("jop", user.getJop())
-//                .setParameter("role", user.getRole())
-//                .setParameter("userId", user.getUserId());
-        session.merge(user);
-//        int result = query.executeUpdate();
+        Query query = session.createQuery(UPDATE_USER).
+                setParameter("firstName", user.getFirstName())
+                .setParameter("lastName", user.getLastName())
+                .setParameter("username", user.getUsername())
+                .setParameter("password", user.getPassword())
+                .setParameter("email", user.getEmail())
+                .setParameter("address", user.getAddress())
+                .setParameter("jop", user.getJop())
+                .setParameter("role", user.getRole())
+                .setParameter("userId", user.getUserId());
+//        session.merge(user);
+        int result = query.executeUpdate();
         session.getTransaction().commit();
         System.out.println("update Successfully");
         return user;

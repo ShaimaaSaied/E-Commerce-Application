@@ -132,7 +132,9 @@ public class CartDaoImpl implements CartDao {
      */
     @Override
     public double getTotalPrice(int userId) {
-        return (double) sessionFactory.openSession().createQuery(GET_TOTAL_PRICE).setParameter("user_id", userId).uniqueResult();
+        if(this.selectAllProductsFromCart(userId).size() != 0)
+            return (double) sessionFactory.openSession().createQuery(GET_TOTAL_PRICE).setParameter("user_id", userId).uniqueResult();
+        return 0 ;
     }
 
     @Override
