@@ -5,6 +5,7 @@ import org.iti.model.entity.Product;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -12,8 +13,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+@WebServlet(name="searchByName",urlPatterns = {"/searchByName"})
 public class SearchForProducts extends HttpServlet {
-    List<Product> product = new ArrayList<>();
+    List<Product> products = new ArrayList<>();
     ProductDaoImpl productDao = new ProductDaoImpl();
 
 
@@ -21,32 +23,23 @@ public class SearchForProducts extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
+        String productName = "";
+        System.out.println(request.getParameter("search"));
         if (request.getParameter("search") != null) {
-            String productName = request.getParameter("search");
-
+            productName = request.getParameter("search");
             System.out.println(productName);
-
-            product = productDao.selectProductByName(productName);
-
-            System.out.println(product.size());
+            products = productDao.selectProductByName(productName);
+            System.out.println(products.size());
+            System.out.println(products);
+            request.setAttribute("productsFromSearch", products);
 
         } else {
-            System.out.println("else");
-            double min = Integer.parseInt(request.getParameter("down"));
-            System.out.println(min);
-            double max = Integer.parseInt(request.getParameter("up"));
-            System.out.println(max);
-
-
-            System.out.println("sizeof product" + product.size());
-
+            request.setAttribute("NotFound","Keyword" + productName + "Does not match any products");
         }
 
-        request.setAttribute("allProducts", product);
-
-
-        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("");
+        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/user/home/jsp/SearchResult.jsp");
         dispatcher.forward(request, response);
+
     }
 
 }

@@ -477,7 +477,7 @@ ol {
 	padding-left: 20px;
 }
 
-.inner-header .advanced-search .input-group button {
+.inner-header .advanced-search .input-group input[type=submit] {
 	font-size: 16px;
 	color: #ffffff;
 	position: absolute;

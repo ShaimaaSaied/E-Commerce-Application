@@ -46,6 +46,57 @@
             background-color: DodgerBlue !important;
             color: #ffffff;
         }
+
+        .topnav {
+            overflow: hidden;
+            background-color: #e9e9e9;
+        }
+
+
+        .topnav .search-container {
+            float: left;
+        }
+
+        .topnav input[type=text] {
+            padding: 6px;
+            margin-top: 8px;
+            font-size: 17px;
+            border: none;
+        }
+
+        .topnav .search-container input[type=submit] {
+            float: right;
+            padding: 6px 10px;
+            margin-top: 8px;
+            margin-right: 16px;
+            background: #ddd;
+            font-size: 17px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .topnav .search-container input[type=submit]:hover {
+            background: #ccc;
+        }
+
+        @media screen and (max-width: 600px) {
+            .topnav .search-container {
+                float: none;
+            }
+
+            .topnav a, .topnav input[type=text], .topnav .search-container input[type=submit] {
+                float: none;
+                display: block;
+                text-align: left;
+                width: 100%;
+                margin: 0;
+                padding: 14px;
+            }
+
+            .topnav input[type=text] {
+                border: 1px solid #ccc;
+            }
+        }
     </style>
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
@@ -67,6 +118,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <body>
 <!-- Page Preloder -->
@@ -108,14 +161,27 @@
         <div class="inner-header">
             <div class="row">
 
+
                 <div class="col-lg-7 col-md-7">
+
+                    <div class="topnav">
+                        <div class="search-container">
+                            <form action="/action_page.php">
+                                <input type="text" placeholder="Search.." name="search">
+                                <input type="submit"></input>
+                            </form>
+                        </div>
+                    </div>
+
                     <div class="advanced-search">
+                        <div class="search-container">
                         <form autocomplete="off" class="input-group" action="/ECommerce/searchByName" method="get">
                             <div class="autocomplete">
                                 <input type="text" placeholder="What product do you need?" id="search" name="search">
                             </div>
-                            <input type="submit"><i class="ti-search" id="searchBtn"></i>Search</input>
+                            <input type="submit">Search</input>
                         </form>
+                    </div>
                     </div>
                 </div>
                 <div class="col-lg-3 text-right col-md-3">
@@ -223,16 +289,85 @@
                 </div>
 
             </div>
+
             <div class="col-lg-9 order-1 order-lg-2">
                 <div class="product-list">
                     <div id="products" class="row">
+                        <%--            search--%>
+                        <c:choose>
+                            <c:when test="${empty requestScope.productsFromSearch}">
+                                <c:out value="This Keyword does not match any products"></c:out>
+                            </c:when>
+                            <c:otherwise>
+                                <c:forEach items="${requestScope.productsFromSearch}" var="product">
+                                    <div class='col-lg-4 col-sm-6'>
+                                        <div class='product-item'>
+                                            <div class='pi-pic'>
+                                                <div id='productid'> ${product.productId} </div>
 
+                                                <img src="${product.image}" alt='picture'>
+                                                <ul>
+                                                    <li class='w-icon active'>
+                                                        <form>
+                                                            <input onclick='cart()' type='button' value='Add to cart'
+                                                                   id='addToCartBtn'
+                                                                   class='btn btn-warning'/>
+                                                        </form>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            <div class='pi-text'>
+                                                <h5 id='product_name'>${product.productName}</h5>
+                                                <div class='product-price'>
+                                                        ${product.price} LE
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </c:forEach>
+                            </c:otherwise>
+                        </c:choose>
+                        <%--            End Search --%>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    </div>
+
+    <%--    <c:choose>--%>
+    <%--        <c:when test="${empty requestScope.productsFromSearch}">--%>
+    <%--            <c:out value="This Keyword does not match any products"></c:out>--%>
+    <%--        </c:when>--%>
+    <%--        <c:otherwise>--%>
+    <%--            <c:forEach items="${requestScope.productsFromSearch}" var="product">--%>
+    <%--                <div class='col-lg-4 col-sm-6'>--%>
+    <%--                    <div class='product-item'>--%>
+    <%--                        <div class='pi-pic'>--%>
+    <%--                            <div id='productid'> ${product.productId} </div>--%>
+
+    <%--                            <img src="${product.image}" alt='picture'>--%>
+    <%--                            <ul>--%>
+    <%--                                <li class='w-icon active'>--%>
+    <%--                                    <form>--%>
+    <%--                                        <input onclick='cart()' type='button' value='Add to cart' id='addToCartBtn'--%>
+    <%--                                               class='btn btn-warning'/>--%>
+    <%--                                    </form>--%>
+    <%--                                </li>--%>
+    <%--                            </ul>--%>
+    <%--                        </div>--%>
+
+    <%--                        <div class='pi-text'>--%>
+    <%--                            <h5 id='product_name'>${product.productName}</h5>--%>
+    <%--                            <div class='product-price'>--%>
+    <%--                                    ${product.price} LE--%>
+    <%--                            </div>--%>
+    <%--                        </div>--%>
+    <%--                    </div>--%>
+    <%--                </div>--%>
+    <%--            </c:forEach>--%>
+    <%--        </c:otherwise>--%>
+    <%--    </c:choose>--%>
 </section>
 <!-- Product Shop Section End -->
 
@@ -321,10 +456,7 @@
 
 <script src=http://code.jquery.com/jquery-latest.min.js></script>
 
-
-<script src="user/home/home.js"></script>
 <script src="user/home/viewSuggestions.js"></script>
-<%--<script src="user/home/search.js"></script>--%>
 
 </body>
 

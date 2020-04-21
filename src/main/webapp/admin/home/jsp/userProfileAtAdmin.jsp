@@ -6,7 +6,7 @@
     <style>
 
         .backbtn {
-            background-color: #ffc107;
+            background-color: #e7ab3c;
             border: none;
             color: white;
             padding: 12px 16px;
@@ -17,11 +17,11 @@
 
         /* Darker background on mouse-over */
         .backbtn:hover {
-            background-color: gray;
+            background-color: black;
         }
 
         button:hover {
-            background-color: #ffc107;
+            background-color: #e7ab3c;
             padding-top: 10px;
         }
 
@@ -30,7 +30,7 @@
             font-size: 16px;
             margin-bottom: 7px;
             margin-top: 7px;
-            color: #ffc107;
+            color: #e7ab3c;
         }
 
 

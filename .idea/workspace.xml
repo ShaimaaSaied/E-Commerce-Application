@@ -7,13 +7,75 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83ff69a3-d345-4ba9-a541-95019bb69808" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/E-Commerce-Application.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/E-Commerce_Application.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iti/controller/admin/UpdateProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iti/controller/admin/UpdateProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iti/controller/admin/ViewUserProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iti/controller/admin/ViewUserProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iti/controller/user/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iti/controller/user/Profile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iti/controller/user/SearchForProducts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iti/controller/user/SearchForProducts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iti/model/confg/DBConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iti/model/confg/DBConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iti/model/dao/daoimpl/CartDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iti/model/dao/daoimpl/CartDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iti/model/dao/daoimpl/CategoryDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iti/model/dao/daoimpl/CategoryDaoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/iti/model/dao/daoimpl/ProductDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iti/model/dao/daoimpl/ProductDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iti/model/dao/daoimpl/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iti/model/dao/daoimpl/UserDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iti/model/dao/interfaces/ProductDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iti/model/dao/interfaces/ProductDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iti/model/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iti/model/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iti/service/impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iti/service/impl/ProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iti/service/interfaces/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iti/service/interfaces/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/home/jsp/addproduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/home/jsp/addproduct.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/home/jsp/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/home/jsp/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/home/jsp/product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/home/jsp/product.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/home/jsp/updateproduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/home/jsp/updateproduct.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/home/jsp/userProfileAtAdmin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/home/jsp/userProfileAtAdmin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/home/jsp/viewUser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/home/jsp/viewUser.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/user/home/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/user/home/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/user/home/jsp/search.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/user/home/jsp/SearchResult.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL - ecommerce_app@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL - ecommerce_app@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL - ecommerce_app@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="ecommerce_app: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL - ecommerce_app@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="ecommerce_app: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="product: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+    </expand>
+    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -51,12 +113,17 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/admin/home/jsp" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -236,7 +303,11 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:MySQL - ecommerce_app@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
             <select />
@@ -257,7 +328,7 @@
       <updated>1586528899265</updated>
       <workItem from="1586528902891" duration="10090000" />
       <workItem from="1586568471294" duration="548000" />
-      <workItem from="1587373152071" duration="15578000" />
+      <workItem from="1587373152071" duration="36995000" />
     </task>
     <task id="LOCAL-00001" summary="Admin Product">
       <created>1587310329839</created>
@@ -294,7 +365,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587393916238</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="update product Dao Implementation">
+      <created>1587411602197</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1587411602197</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -305,13 +383,18 @@
     <MESSAGE value="Admin Product edit gui" />
     <MESSAGE value="Admin Update Product" />
     <MESSAGE value="Admin View User Profile" />
-    <option name="LAST_COMMIT_MESSAGE" value="Admin View User Profile" />
+    <MESSAGE value="update product Dao Implementation" />
+    <option name="LAST_COMMIT_MESSAGE" value="update product Dao Implementation" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="137" y="23" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587295077049">
+    <state x="275" y="26" key="#Assign_Data_Sources" timestamp="1587432448937">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="137" y="23" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1587295077049" />
+    <state x="275" y="26" key="#Assign_Data_Sources/0.0.1366.728@0.0.1366.728" timestamp="1587432448937" />
+    <state x="-4" y="10" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587432340032">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="-4" y="10" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1587432340032" />
     <state x="488" y="74" key="#com.intellij.ide.util.MemberChooser" timestamp="1587336463126">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -320,58 +403,62 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="484" y="277" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1366.728@0.0.1366.728" timestamp="1586530287942" />
-    <state x="210" y="0" key="CommitChangelistDialog2" timestamp="1587393912793">
+    <state x="210" y="0" key="CommitChangelistDialog2" timestamp="1587411599536">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="210" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1587393912793" />
-    <state width="1023" height="57" key="GridCell.Tab.0.bottom" timestamp="1587394210643">
+    <state x="210" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1587411599536" />
+    <state x="105" y="61" key="DiffContextDialog" timestamp="1587411497167">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1023" height="57" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1587394210643" />
-    <state width="1023" height="57" key="GridCell.Tab.0.center" timestamp="1587394210643">
+    <state x="105" y="61" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1587411497167" />
+    <state width="1023" height="196" key="GridCell.Tab.0.bottom" timestamp="1587491576955">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1023" height="57" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1587394210643" />
-    <state width="1023" height="57" key="GridCell.Tab.0.left" timestamp="1587394210643">
+    <state width="1023" height="196" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1587491576955" />
+    <state width="1023" height="196" key="GridCell.Tab.0.center" timestamp="1587491576955">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1023" height="57" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1587394210643" />
-    <state width="1023" height="57" key="GridCell.Tab.0.right" timestamp="1587394210643">
+    <state width="1023" height="196" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1587491576955" />
+    <state width="1023" height="196" key="GridCell.Tab.0.left" timestamp="1587491576954">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1023" height="57" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1587394210643" />
-    <state width="1023" height="57" key="GridCell.Tab.1.bottom" timestamp="1587394210644">
+    <state width="1023" height="196" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1587491576954" />
+    <state width="1023" height="196" key="GridCell.Tab.0.right" timestamp="1587491576955">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1023" height="57" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1587394210644" />
-    <state width="1023" height="57" key="GridCell.Tab.1.center" timestamp="1587394210644">
+    <state width="1023" height="196" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1587491576955" />
+    <state width="1023" height="196" key="GridCell.Tab.1.bottom" timestamp="1587491576955">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1023" height="57" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1587394210644" />
-    <state width="1023" height="57" key="GridCell.Tab.1.left" timestamp="1587394210644">
+    <state width="1023" height="196" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1587491576955" />
+    <state width="1023" height="196" key="GridCell.Tab.1.center" timestamp="1587491576955">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1023" height="57" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1587394210644" />
-    <state width="1023" height="57" key="GridCell.Tab.1.right" timestamp="1587394210644">
+    <state width="1023" height="196" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1587491576955" />
+    <state width="1023" height="196" key="GridCell.Tab.1.left" timestamp="1587491576955">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1023" height="57" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1587394210644" />
-    <state width="1023" height="57" key="GridCell.Tab.2.bottom" timestamp="1587394210644">
+    <state width="1023" height="196" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1587491576955" />
+    <state width="1023" height="196" key="GridCell.Tab.1.right" timestamp="1587491576955">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1023" height="57" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1587394210644" />
-    <state width="1023" height="57" key="GridCell.Tab.2.center" timestamp="1587394210644">
+    <state width="1023" height="196" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1587491576955" />
+    <state width="1023" height="196" key="GridCell.Tab.2.bottom" timestamp="1587491576956">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1023" height="57" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1587394210644" />
-    <state width="1023" height="57" key="GridCell.Tab.2.left" timestamp="1587394210644">
+    <state width="1023" height="196" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1587491576956" />
+    <state width="1023" height="196" key="GridCell.Tab.2.center" timestamp="1587491576955">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1023" height="57" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1587394210644" />
-    <state width="1023" height="57" key="GridCell.Tab.2.right" timestamp="1587394210644">
+    <state width="1023" height="196" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1587491576955" />
+    <state width="1023" height="196" key="GridCell.Tab.2.left" timestamp="1587491576955">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1023" height="57" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1587394210644" />
+    <state width="1023" height="196" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1587491576955" />
+    <state width="1023" height="196" key="GridCell.Tab.2.right" timestamp="1587491576956">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1023" height="196" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1587491576956" />
     <state width="905" height="200" key="GridCell.Tab.3.bottom" timestamp="1587285175387">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -404,6 +491,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="905" height="200" key="GridCell.Tab.4.right/0.0.1366.728@0.0.1366.728" timestamp="1587285174027" />
+    <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1587432352102">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1366.728@0.0.1366.728" timestamp="1587432352102" />
     <state x="129" y="61" key="MergeDialog" timestamp="1587367327604">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -412,6 +503,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="395" y="82" key="MultipleFileMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1587367327612" />
+    <state x="163" y="0" key="SettingsEditor" timestamp="1587432013872">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1587432013872" />
     <state x="275" y="101" key="Vcs.Push.Dialog.v2" timestamp="1587394247690">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -420,10 +515,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="391" y="193" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1587373857054" />
-    <state x="357" y="168" key="git4idea.merge.GitPullDialog" timestamp="1587411443194">
+    <state x="494" y="284" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1587419601653">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="357" y="168" key="git4idea.merge.GitPullDialog/0.0.1366.728@0.0.1366.728" timestamp="1587411443194" />
+    <state x="494" y="284" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1587419601653" />
+    <state x="357" y="168" key="git4idea.merge.GitPullDialog" timestamp="1587411620704">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="357" y="168" key="git4idea.merge.GitPullDialog/0.0.1366.728@0.0.1366.728" timestamp="1587411620704" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1587391781544">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

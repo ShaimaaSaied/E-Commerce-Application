@@ -31,7 +31,7 @@
             margin-left: 20px ;
         }
         .updatebtn {
-            background-color: #ffc107;
+            background-color: #e7ab3c;
             border: none;
             color: white;
             padding: 12px 16px;
@@ -42,11 +42,11 @@
 
         /* Darker background on mouse-over */
         .updatebtn:hover {
-            background-color: #00cc00   ;
+            background-color: black   ;
         }
 
         .backbtn{
-            background-color: #ffc107;
+            background-color: #e7ab3c;
             border: none;
             color: white;
             padding: 12px 16px;
@@ -55,28 +55,28 @@
             border-radius: 3px;
         }
         .backbtn:hover{
-            background-color: gray;
+            background-color: black;
         }
     </style>
 </head>
 <body>
 <%@include file="header.jsp" %>
 <br>
-<form method="post" action="/ECommerce/updateAdminProduct" enctype="multipart/form-data">
+<form method="post" action="/ECommerce/updateAdminProduct"enctype="multipart/form-data">
     <div>
-        <input id="id" name="id" style="margin-left: 20px" class="inputTextCustom" type="hidden" value="${selectedProduct.productId}">
+        <input id="id" name="id" style="margin-left: 20px" class="inputTextCustom" type="hidden" value="${requestScope.selectedProduct.productId}">
         <span>Product Name: </span>
-        <input id="pname" name="pname" class="inputTextCustom" type="text" value="${selectedProduct.productName}">
+        <input id="pname" name="pname" class="inputTextCustom" type="text" value="${requestScope.selectedProduct.productName}">
         <span>Product Description: </span>
-        <input id="pdescription" class="inputTextCustom" type="text" value="${selectedProduct.description}"><br>
+        <input id="pdescription" name="pdescription" class="inputTextCustom" type="text" value="${requestScope.selectedProduct.description}"><br>
         <span>Product Price: </span>
-        <input id="pprice" name="price" style="margin-left: 20px" class="inputTextCustom" type="number" value="${selectedProduct.price}">
+        <input id="pprice" name="pprice" style="margin-left: 20px" class="inputTextCustom" type="number" value="${requestScope.selectedProduct.price}">
         <span>Product Stock No: </span>
-        <input id="pstock" name="stock" class="inputTextCustom" type="number" value="${selectedProduct.stock}"><br>
+        <input id="pstock" name="pstock" class="inputTextCustom" type="number" value="${requestScope.selectedProduct.stock}"><br>
         <span>Product Image: </span>
-        <input id="pimage" class="inputTextCustom" type="text" value="${selectedProduct.image}">
+        <input id="pimage" name="pimage" class="inputTextCustom" type="text" value="${requestScope.selectedProduct.image}">
         <span>Product Category Id: </span>
-        <input id="pcategory" style="margin-left: 20px" class="inputTextCustom" type="number" value="${selectedProduct.category.categoryId}"><br>
+        <input id="pcategory" name="pcategory" style="margin-left: 20px" class="inputTextCustom" type="number" value="${requestScope.selectedProduct.category.categoryId}"><br>
         <input type="submit" class="updatebtn" value="Update">
         <a href="/ECommerce/adminproduct" class="backbtn">Back</a>
     </div>

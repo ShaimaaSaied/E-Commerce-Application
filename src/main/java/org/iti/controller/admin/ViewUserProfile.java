@@ -23,7 +23,7 @@ public class ViewUserProfile extends HttpServlet {
         User selectedUser = new UserServiceImpl().retriveUserByID(id);
         if (selectedUser != null) {
             request.getSession().setAttribute("selectedUser", selectedUser);
-            response.sendRedirect("admin/home/jsp/userProfileAtAdmin.jsp");
+            request.getRequestDispatcher("admin/home/jsp/userProfileAtAdmin.jsp").include(request,response);
         }
     }
 }

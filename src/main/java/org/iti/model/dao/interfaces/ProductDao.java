@@ -61,9 +61,9 @@ public interface ProductDao {
     /***
      * admin can update = product
      * @param product
-     * @return boolean
+     * @return Product
      */
-    boolean updateProduct(Product product);
+    Product updateProduct(Product product);
 
     List<Product> selectAllProductSpesificField();
 }

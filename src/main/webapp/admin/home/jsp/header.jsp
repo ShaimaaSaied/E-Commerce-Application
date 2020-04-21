@@ -45,7 +45,7 @@
         }
 
         .header a.active {
-            background-color: #ffc107;
+            background-color: #e7ab3c;
             color: white;
         }
 

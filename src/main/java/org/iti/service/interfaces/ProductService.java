@@ -26,5 +26,5 @@ public interface ProductService {
 
     List<Product> selectAllProductSpesificField();
 
-    boolean updateProduct(Product product);
+    Product updateProduct(Product product);
 }
