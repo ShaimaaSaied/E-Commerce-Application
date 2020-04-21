@@ -1,6 +1,7 @@
 package org.iti.model.dao.daoimpl;
 
 import org.hibernate.Session;
+import org.hibernate.query.Query;
 import org.iti.model.confg.DBConnection;
 import org.iti.model.dao.interfaces.UserDao;
 import org.iti.model.entity.User;

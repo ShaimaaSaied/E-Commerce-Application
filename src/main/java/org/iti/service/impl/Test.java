@@ -9,6 +9,6 @@ public class Test {
         CartIServicempl cartIServicempl = new CartIServicempl();
 // System.out.println(cartIServicempl.Get(18));
 //        System.out.println(cartIServicempl.addProductToCart(18, 3, 3));
-        System.out.println(cartIServicempl.deleteProductFromCart(2,2));
+        System.out.println(cartIServicempl.getQuantityOfProductInCart(1,5));
     }
 }
