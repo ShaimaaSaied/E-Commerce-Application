@@ -112,9 +112,9 @@
                     <div class="advanced-search">
                         <form autocomplete="off" class="input-group" action="/ECommerce/searchByName" method="get">
                             <div class="autocomplete">
-                                <input type="text" placeholder="What product do you need?" id="search" name="search">
+                                <input type="text" placeholder="What do you need?" id="search" name="search">
                             </div>
-                            <input type="submit"><i class="ti-search" id="searchBtn"></i>Search</input>
+<%--                            <input type="submit"><i class="ti-search" id="searchBtn"></i>Search</input>--%>
                         </form>
                     </div>
                 </div>

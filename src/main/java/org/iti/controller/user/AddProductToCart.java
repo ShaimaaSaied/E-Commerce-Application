@@ -17,15 +17,16 @@ public class AddProductToCart extends HttpServlet {
 
     protected void doPost(HttpServletRequest req, HttpServletResponse response) throws ServletException, IOException {
         CartService cartService = new CartIServicempl();
-        String productid = req.getParameter("productid");
-        System.out.println("productid : " + productid);
+        String productid = req.getParameter("id");
+        System.out.println("id : " + productid);
         response.setContentType("application/json");
         response.setCharacterEncoding("UTF-8");
         User currentuser = (User) req.getSession().getAttribute("currentuser");
-        System.out.println("currentuser inside AddProductToCart : "+ currentuser.getUserId());
+        System.out.println("currentuser inside AddProductToCart : " + currentuser.getUserId());
         boolean res = cartService.addProductToCart(currentuser.getUserId(), Integer.parseInt(productid), 1);
         System.out.println("addProductInCartRes :" + res);
         // productid always 1
+        req.getRequestDispatcher("user/home/home.jsp").forward(req, response);
     }
 
 }

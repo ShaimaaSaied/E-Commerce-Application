@@ -56,7 +56,8 @@ public class CartDaoImpl implements CartDao {
         session.beginTransaction();
 
         if (session.get(Cart.class, new CartId(userId, productId)) != null) {
-            throw new RuntimeException("Duplicate Entry to cart table");
+            return false;
+//            throw new RuntimeException("Duplicate Entry to cart table");
         }
 
         byte[] purchased = new BigInteger("0", 2).toByteArray();
@@ -68,6 +69,7 @@ public class CartDaoImpl implements CartDao {
         session.save(cart);
 
         session.getTransaction().commit();
+
         if (session.get(Cart.class, new CartId(userId, productId)) != null)
             return true;
 
