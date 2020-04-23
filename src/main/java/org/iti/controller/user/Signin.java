@@ -11,11 +11,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name="login", urlPatterns = "/login")
+@WebServlet(name = "login", urlPatterns = "/login")
 public class Signin extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("signin_signup/html/SigninSignUp.html").include(req, resp);
+        req.getRequestDispatcher("signin_signup/html/SigninSignUp.jsp").include(req, resp);
 
     }
 
@@ -30,14 +30,15 @@ public class Signin extends HttpServlet {
         User user = userService.retriveUser(email, password);
         System.out.println("User : inside singin " + user);
         if (user != null) {
-            if (user.getRole().equalsIgnoreCase("user")){
-                req.getSession().setAttribute("currentuser",user);
+            if (user.getRole().equalsIgnoreCase("user")) {
+                req.getSession().setAttribute("currentuser", user);
                 resp.sendRedirect("/ECommerce/home");
             } else {
                 resp.sendRedirect("/ECommerce/adminhome");
             }
         } else {
-            req.getRequestDispatcher("signin_signup/html/SigninSignUp.html").forward(req, resp);
+            req.setAttribute("message", "Invalid Email or Password");
+            req.getRequestDispatcher("signin_signup/html/SigninSignUp.jsp").forward(req, resp);
         }
     }
 }

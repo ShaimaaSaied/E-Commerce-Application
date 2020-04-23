@@ -52,7 +52,7 @@
 
             <!-- profile part  -->
             <div class="ht-right">
-                <a href="#" class="profile-panel"><i class="fa fa-user"></i>
+                <a href="/ECommerce/profile" class="profile-panel"><i class="fa fa-user"></i>
                     <% User user = (User) (request.getSession().getAttribute("currentuser"));%>
                     <%=user.getUsername() %>
                 </a>

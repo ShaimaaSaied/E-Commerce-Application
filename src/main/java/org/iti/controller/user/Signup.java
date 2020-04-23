@@ -17,7 +17,7 @@ import java.io.PrintWriter;
 public class Signup extends HttpServlet {
 
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("signin_signup/html/SigninSignUp.html").include(req, resp);
+        req.getRequestDispatcher("signin_signup/html/SigninSignUp.jsp").include(req, resp);
     }
 
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -50,7 +50,7 @@ public class Signup extends HttpServlet {
 
             resp.sendRedirect("/ECommerce/home");
         } else {
-            resp.sendRedirect("signin_signup/html/SigninSignUp.html?");
+            resp.sendRedirect("signin_signup/html/SigninSignUp.jsp?");
 
 
         }

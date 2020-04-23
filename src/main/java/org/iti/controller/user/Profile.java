@@ -23,7 +23,7 @@ public class Profile extends HttpServlet {
             req.getRequestDispatcher("user/profile/profile.jsp").include(req, resp);
         }else
         {
-            req.getRequestDispatcher("signin_signup/html/SigninSignUp.html").forward(req, resp);
+            req.getRequestDispatcher("signin_signup/html/SigninSignUp.jsp").forward(req, resp);
 
         }
 

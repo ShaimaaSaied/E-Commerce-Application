@@ -15,7 +15,7 @@ import java.util.List;
 
 public class CartDaoImpl implements CartDao {
 
-    private Session session = null;
+    private SessionFactory sessionFactory = null;
 
     private final String SELECT_ALL_PRODUCTS_FROM_CART = "select c.product FROM org.iti.model.entity.Cart c WHERE c.user.userId=:user_id";
     private final String DELETE_PRODUCT_FROM_CART = "DELETE FROM org.iti.model.entity.Cart c WHERE c.product.productId=:product_id and c.user.userId=:user_id";
@@ -26,10 +26,10 @@ public class CartDaoImpl implements CartDao {
             "WHERE c.product.productId=:product_id and c.user.userId=:user_id";
     private final String UPDATE_PRODUCT_QUANTITY_IN_CART = "UPDATE org.iti.model.entity.Cart c SET c.quantity=:quantity " +
             "WHERE c.product.productId=:product_id and c.user.userId=:user_id";
-    private final String GET_QUANTITY_OF_PRODUCT="SELECT c.quantity from org.iti.model.entity.Cart c WHERE c.product.productId=:product_id and c.user.userId=:user_id";
+    private final String GET_QUANTITY_OF_PRODUCT = "SELECT c.quantity from org.iti.model.entity.Cart c WHERE c.product.productId=:product_id and c.user.userId=:user_id";
 
     public CartDaoImpl() {
-        session = DBConnection.getInstance();
+        sessionFactory = DBConnection.getInstance();
     }
 
     /**
@@ -40,7 +40,7 @@ public class CartDaoImpl implements CartDao {
      */
     @Override
     public List<Product> selectAllProductsFromCart(int userId) {
-       return (List<Product>)session.createQuery(SELECT_ALL_PRODUCTS_FROM_CART).setParameter("user_id", userId).list();
+        return (List<Product>) sessionFactory.openSession().createQuery(SELECT_ALL_PRODUCTS_FROM_CART).setParameter("user_id", userId).list();
 
     }
 
@@ -53,6 +53,7 @@ public class CartDaoImpl implements CartDao {
      */
     @Override
     public boolean addProductToCart(int userId, int productId, int quantity) {
+        Session session = sessionFactory.openSession();
         session.beginTransaction();
 
         if (session.get(Cart.class, new CartId(userId, productId)) != null) {
@@ -85,6 +86,7 @@ public class CartDaoImpl implements CartDao {
      */
     @Override
     public boolean removeProductFromCart(int userId, int productId) {
+        Session session = sessionFactory.openSession();
         session.beginTransaction();
         int result = session.createQuery(DELETE_PRODUCT_FROM_CART).setParameter("user_id", userId).setParameter("product_id", productId).executeUpdate();
         session.getTransaction().commit();
@@ -101,6 +103,7 @@ public class CartDaoImpl implements CartDao {
      */
     @Override
     public boolean buyProductFromCart(int userId, int productId) {
+        Session session = sessionFactory.openSession();
         session.beginTransaction();
         byte[] bval = new BigInteger("1", 2).toByteArray();
         int result = session.createQuery(BUY_PRODUCT_FROM_CART).setParameter("bought", bval).setParameter("user_id", userId).setParameter("product_id", productId).executeUpdate();
@@ -117,8 +120,9 @@ public class CartDaoImpl implements CartDao {
      */
     @Override
     public int deleteAllFromCart(int userID) {
+        Session session = sessionFactory.openSession();
         session.beginTransaction();
-        int result = session.createQuery(DELETE_ALL_FROM_CART).setParameter("user_id",userID).executeUpdate();
+        int result = session.createQuery(DELETE_ALL_FROM_CART).setParameter("user_id", userID).executeUpdate();
         session.getTransaction().commit();
         System.out.println("delete Successfully");
         return result;
@@ -130,13 +134,14 @@ public class CartDaoImpl implements CartDao {
      */
     @Override
     public double getTotalPrice(int userId) {
-        if(this.selectAllProductsFromCart(userId).size() != 0)
-            return (double) session.createQuery(GET_TOTAL_PRICE).setParameter("user_id", userId).uniqueResult();
-        return 0 ;
+        if (this.selectAllProductsFromCart(userId).size() != 0)
+            return (double) sessionFactory.openSession().createQuery(GET_TOTAL_PRICE).setParameter("user_id", userId).uniqueResult();
+        return 0;
     }
 
     @Override
     public boolean updateProductQuantityInCart(int userId, int productId, int quantity) {
+        Session session = sessionFactory.openSession();
         session.beginTransaction();
         int result = session.createQuery(UPDATE_PRODUCT_QUANTITY_IN_CART)
                 .setParameter("user_id", userId)
@@ -149,7 +154,7 @@ public class CartDaoImpl implements CartDao {
 
     @Override
     public int getQuantityOfProductInCart(int userId, int productId) {
-        return(int) session.createQuery(GET_QUANTITY_OF_PRODUCT).setParameter("product_id",productId).setParameter("user_id", userId).uniqueResult();
+        return (int) sessionFactory.openSession().createQuery(GET_QUANTITY_OF_PRODUCT).setParameter("product_id", productId).setParameter("user_id", userId).uniqueResult();
     }
 
 

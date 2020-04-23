@@ -91,7 +91,7 @@
             </div>
             <!-- profile part  -->
             <div class="ht-right">
-                <a href="#" class="profile-panel"><i class="fa fa-user"></i>
+                <a href="/ECommerce/profile" class="profile-panel"><i class="fa fa-user"></i>
                     <% User user = (User) (request.getSession().getAttribute("currentuser"));%>
                     <%=user.getUsername() %>
                 </a>
@@ -114,7 +114,8 @@
                             <div class="autocomplete">
                                 <input type="text" placeholder="What do you need?" id="search" name="search">
                             </div>
-<%--                            <input type="submit"><i class="ti-search" id="searchBtn"></i>Search</input>--%>
+                            <button type="button"><i class="ti-search" id="searchBtn"></i></button>
+                            <%--                            <input type="submit"><i class="ti-search" id="searchBtn"></i>Search</input>--%>
                         </form>
                     </div>
                 </div>
@@ -290,9 +291,9 @@
                 <div class="col-lg-12">
                     <div class="copyright-text">pro
                         Copyright &copy;<script>
-                        document.write(new Date().getFullYear());
+                            document.write(new Date().getFullYear());
 
-                    </script>
+                        </script>
                         All rights reserved | This Application is made with
                         <i class="fa fa-heart-o" aria-hidden="true">
 

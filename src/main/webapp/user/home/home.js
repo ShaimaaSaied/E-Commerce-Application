@@ -51,7 +51,7 @@ function viewProducts() {
 
 
 $(document).ready(function () {
-    setInterval(getAllProducts,2000)
+   // setInterval(getAllProducts,2000)
     getAllProducts();
 });
 

@@ -1,14 +1,16 @@
 package org.iti.model.dao.daoimpl;
 
 import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.iti.model.confg.DBConnection;
 import org.iti.model.dao.interfaces.ProductDao;
 import org.iti.model.entity.Product;
+
 import javax.persistence.TypedQuery;
 import java.util.List;
 
 public class ProductDaoImpl implements ProductDao {
-    private Session session = null;
+    private SessionFactory sessionFactory = null;
 
     private final String RETRIVE_ALL_PRODUCTS = "select p from org.iti.model.entity.Product p";
     private final String RETRIVE_PRODUCT_BY_ID = "from org.iti.model.entity.Product as product where product.productId =: product_id";
@@ -25,13 +27,13 @@ public class ProductDaoImpl implements ProductDao {
             "where productId=:productId";
 
     public ProductDaoImpl() {
-        session = DBConnection.getInstance();
+        sessionFactory = DBConnection.getInstance();
     }
 
     @Override
     public List<Product> selectAllProduct() {
         List<Product> productList = null;
-        TypedQuery<Product> typedQuery = session.createQuery(RETRIVE_ALL_PRODUCTS, Product.class);
+        TypedQuery<Product> typedQuery = sessionFactory.openSession().createQuery(RETRIVE_ALL_PRODUCTS, Product.class);
         productList = typedQuery.getResultList();
         return productList;
     }
@@ -39,7 +41,7 @@ public class ProductDaoImpl implements ProductDao {
     @Override
     public Product selectProductById(int id) {
         Product product = null;
-        product = (Product) session.createQuery(RETRIVE_PRODUCT_BY_ID).
+        product = (Product) sessionFactory.openSession().createQuery(RETRIVE_PRODUCT_BY_ID).
                 setParameter("product_id", id).uniqueResult();
         return product;
     }
@@ -47,20 +49,21 @@ public class ProductDaoImpl implements ProductDao {
     @Override
     public List<Product> selectProductByName(String name) {
         List<Product> productList = null;
-        productList = session.createQuery(RETRIVE_PRODUCT_BY_NAME).
-                setParameter("productName",  name + "%").list();
+        productList = sessionFactory.openSession().createQuery(RETRIVE_PRODUCT_BY_NAME).
+                setParameter("productName", name + "%").list();
         return productList;
     }
 
     @Override
     public List<String> searchForProductsName() {
         List<String> productList = null;
-        productList = session.createQuery(RETRIVE_ALL_PRODUCTS_NAME).list();
+        productList = sessionFactory.openSession().createQuery(RETRIVE_ALL_PRODUCTS_NAME).list();
         return productList;
     }
 
     @Override
     public Product updateProduct(Product product) {
+        Session session = sessionFactory.openSession();
         session.beginTransaction();
 //        Query query = session.createQuery(UPDATE_PRODUCT).
 //                setParameter("productId", product.getProductId())
@@ -84,7 +87,7 @@ public class ProductDaoImpl implements ProductDao {
     @Override
     public List<Product> selectProductByPrice(double price) {
         List<Product> productList = null;
-        productList = session.createQuery(RETRIVE_PRODUCT_BY_PRICE).
+        productList = sessionFactory.openSession().createQuery(RETRIVE_PRODUCT_BY_PRICE).
                 setParameter("price", price).list();
         return productList;
     }
@@ -92,13 +95,14 @@ public class ProductDaoImpl implements ProductDao {
     @Override
     public List<Product> selectProductByCategory(String categoryName) {
         List<Product> productList = null;
-        productList = session.createQuery(RETRIVE_PRODUCT_BY_CATEGORY).
+        productList = sessionFactory.openSession().createQuery(RETRIVE_PRODUCT_BY_CATEGORY).
                 setParameter("categoryName", "%" + categoryName + "%").list();
         return productList;
     }
 
     @Override
     public void addProduct(Product product) {
+        Session session = sessionFactory.openSession();
         session.beginTransaction();
         session.persist(product);
         session.getTransaction().commit();
@@ -107,6 +111,7 @@ public class ProductDaoImpl implements ProductDao {
 
     @Override
     public boolean deleteProduct(int id) {
+        Session session = sessionFactory.openSession();
         session.beginTransaction();
         int row = session.createQuery(DELETE_PRODUCT_BY_ID).setParameter("productId", id).executeUpdate();
         if (row == 1) {
@@ -120,6 +125,7 @@ public class ProductDaoImpl implements ProductDao {
 
     @Override
     public boolean updateProductPrice(int id, double price) {
+        Session session = sessionFactory.openSession();
         session.beginTransaction();
         int row = session.createQuery(UPDATE_PRODUCT_PRICE).setParameter("productId", id).setParameter("price", price).executeUpdate();
         if (row == 1) {
@@ -133,6 +139,7 @@ public class ProductDaoImpl implements ProductDao {
 
     @Override
     public boolean updateProductStock(int id, int stock) {
+        Session session = sessionFactory.openSession();
         session.beginTransaction();
         int row = session.createQuery(UPDATE_PRODUCT_STOCK).setParameter("productId", id).setParameter("stock", stock).executeUpdate();
         if (row == 1) {
@@ -143,10 +150,11 @@ public class ProductDaoImpl implements ProductDao {
             return false;
         }
     }
+
     @Override
     public List<Product> selectAllProductSpesificField() {
         List<Product> productList = null;
-        productList = session.createQuery(RETRIVE_ALL_PRODUCTS_WITH_SPESIFIC_FIELD).list();
+        productList = sessionFactory.openSession().createQuery(RETRIVE_ALL_PRODUCTS_WITH_SPESIFIC_FIELD).list();
         return productList;
     }
 
