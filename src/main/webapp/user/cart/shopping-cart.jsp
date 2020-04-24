@@ -199,7 +199,10 @@
                                         <td class="qua-col first-row">
                                             <div class="quantity">
                                                 <div class="pro-qty">
-                                                    <input type="text" value='${entry.value}'>
+                                                    <form id="numberForm${entry.key.productId}" method="post" action="UpdateQuantity">
+                                                        <input onchange="document.getElementById('numberForm${entry.key.productId}').submit();" onKeyDown="return false" name="quantityInput${entry.key.productId}" type="number" value='${entry.value}' min="1" max="${entry.key.stock}">
+                                                        <input hidden type="text" name="productId" value="${entry.key.productId}"/>
+                                                    </form>
                                                 </div>
                                             </div>
                                         </td>

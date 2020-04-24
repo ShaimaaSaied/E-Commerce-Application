@@ -23,7 +23,6 @@ public class GetCartProducts extends HttpServlet {
 
     protected void doGet(HttpServletRequest req, HttpServletResponse response) throws ServletException, IOException {
 
-
         System.out.println("-------------------start");
         CartService cartService = new CartIServicempl();
         User currentuser = (User) req.getSession().getAttribute("currentuser");
@@ -44,7 +43,10 @@ public class GetCartProducts extends HttpServlet {
         System.out.println("-----------------end");
         req.getRequestDispatcher("user/cart/shopping-cart.jsp").forward(req, response);
 
-
     }
 
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        resp.sendRedirect("GetCartProducts");
+    }
 }
