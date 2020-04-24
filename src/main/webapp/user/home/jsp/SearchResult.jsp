@@ -299,10 +299,9 @@
                                                 <img src="${product.image}" alt='picture'>
                                                 <ul>
                                                     <li class='w-icon active'>
-                                                        <form>
-                                                            <input onclick='cart()' type='button' value='Add to cart'
-                                                                   id='addToCartBtn'
-                                                                   class='btn btn-warning'/>
+                                                        <form action="AddProductToCart?id=${product.productId}" method='post'>
+                                                            <input  type='submit' value='Add to cart'
+                                                                   id='addToCartBtn' class='btn btn-warning'/>
                                                         </form>
                                                     </li>
                                                 </ul>

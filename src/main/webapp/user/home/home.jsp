@@ -91,10 +91,14 @@
             </div>
             <!-- profile part  -->
             <div class="ht-right">
-                <a href="/ECommerce/profile" class="profile-panel"><i class="fa fa-user"></i>
-                    <% User user = (User) (request.getSession().getAttribute("currentuser"));%>
-                    <%=user.getUsername() %>
-                </a>
+                <div>
+                    <a href="/ECommerce/profile" class="profile-panel"><i class="fa fa-user"></i>
+                        <% User user = (User) (request.getSession().getAttribute("currentuser"));%>
+                        <%=user.getUsername() %>
+                    </a>
+                    <a href="/ECommerce/adminlogout" style="margin: 15px; color: #e7ab3c "><i
+                            class="fa fa-fw fa-sign-out "></i> Sign Out</a>
+                </div>
 
                 <div class="lan-selector">
                     <div class="ddOutOfVision" id="countries_msddHolder"
@@ -112,9 +116,12 @@
                     <div class="advanced-search" style="width: fit-content">
                         <form autocomplete="off" class="input-group">
                             <div class="autocomplete">
-                                <input type="text" placeholder="What do you need?" id="search" name="search" style="width: 400px; color: gray">
+                                <input type="text" placeholder="What do you need?" id="search" name="search"
+                                       style="width: 400px; color: gray">
                             </div>
-                            <a style="padding: 10px; background-color: #e7ab3c; margin-left: 50px; color: white; text-decoration-line: none; cursor: pointer" onclick="this.href='/ECommerce/searchByName?search='+document.getElementById('search').value" ><i class="ti-search" id="searchBtn"></i></a>
+                            <a style="padding: 10px; background-color: #e7ab3c; margin-left: 50px; color: white; text-decoration-line: none; cursor: pointer"
+                               onclick="this.href='/ECommerce/searchByName?search='+document.getElementById('search').value"><i
+                                    class="ti-search" id="searchBtn"></i></a>
                             <%--                            <input type="submit"><i class="ti-search" id="searchBtn"></i>Search</input>--%>
                         </form>
                     </div>
@@ -285,6 +292,8 @@
             </div>
         </div>
     </div>
+
+
     <div class="copyright-reserved">
         <div class="container">
             <div class="row">
@@ -306,6 +315,9 @@
             </div>
         </div>
     </div>
+
+    <%--    _______________________--%>
+
 </footer>
 <!-- Footer Section End -->
 
