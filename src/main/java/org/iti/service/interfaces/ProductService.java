@@ -27,4 +27,6 @@ public interface ProductService {
     List<Product> selectAllProductSpesificField();
 
     Product updateProduct(Product product);
+
+    List<Product> searchForProductByCategory(String categoryName);
 }

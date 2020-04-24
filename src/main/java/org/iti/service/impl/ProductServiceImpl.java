@@ -68,4 +68,9 @@ public class ProductServiceImpl implements ProductService {
     public List<Product> selectAllProductSpesificField() {
         return productDao.selectAllProductSpesificField();
     }
+
+    @Override
+    public List<Product> searchForProductByCategory(String categoryName) {
+        return productDao.selectProductByCategory(categoryName);
+    }
 }
