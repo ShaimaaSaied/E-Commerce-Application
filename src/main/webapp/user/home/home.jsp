@@ -173,7 +173,10 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="cart-price">$150.00</li>
+                        <li class="cart-price">
+                            <% User user1 = (User) (request.getSession().getAttribute("currentuser"));%>
+                            <%=user1.getCreditLimit() %>LE
+                        </li>
                     </ul>
                 </div>
             </div>
