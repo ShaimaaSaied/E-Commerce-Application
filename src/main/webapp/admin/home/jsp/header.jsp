@@ -81,7 +81,7 @@
     <div class="header-right">
         <a href="/ECommerce/adminhome" class="active"><i class="fa fa-fw fa-home"></i> Home</a>
         <a href="/ECommerce/adminUsers"><i class="fa fa-fw fa-user"></i> View Clients</a>
-        <a href="/ECommerce/adminproduct"><i class="fa fa-fw fa-product-hunt"></i> Add Product</a>
+        <a href="/ECommerce/adminproduct"><i class="fa fa-fw fa-product-hunt"></i> Product</a>
         <a href="/ECommerce/adminlogout"><i class="fa fa-fw fa-sign-out "></i> Sign Out</a>
     </div>
 </div>

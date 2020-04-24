@@ -131,7 +131,6 @@
     </tbody>
 </table>
 <br>
-<a href="admin/home/jsp/addproduct.jsp" class="addbtn">Add New Product</a>
 <br><br>
 </body>
 </html>
