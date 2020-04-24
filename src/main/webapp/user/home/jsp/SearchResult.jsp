@@ -393,10 +393,13 @@
             </div>
             <div class="col-lg-2 offset-lg-1">
                 <div class="footer-widget">
-                    <h5>Information</h5>
+                    <h5>About us</h5>
                     <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Complaint</a></li>
+                        <li style="color: white">Mariam</li>
+                        <li style="color: white">Sara</li>
+                        <li style="color: white">Shaimaa Shokry</li>
+                        <li style="color: white">shaimaa Saied</li>
+                        <li style="color: white">Radwa</li>
                     </ul>
                 </div>
             </div>
@@ -404,8 +407,8 @@
                 <div class="footer-widget">
                     <h5>My Account</h5>
                     <ul>
-                        <li><a href="#">My Account</a></li>
-                        <li><a href="#">Shopping Cart</a></li>
+                        <li><a href="/ECommerce/profile">My Account</a></li>
+                        <li><a href="/ECommerce/GetCartProducts">Shopping Cart</a></li>
                     </ul>
                 </div>
             </div>
