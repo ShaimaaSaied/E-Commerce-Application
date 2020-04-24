@@ -161,28 +161,18 @@
     <div class="container">
         <div class="inner-header">
             <div class="row">
-
-
                 <div class="col-lg-7 col-md-7">
-
-                    <div class="topnav">
-                        <div class="search-container">
-                            <form action="/action_page.php">
-                                <input type="text" placeholder="Search.." name="search">
-                                <input type="submit"></input>
-                            </form>
-                        </div>
-                    </div>
-
-                    <div class="advanced-search">
-                        <div class="search-container">
-                        <form autocomplete="off" class="input-group" action="/ECommerce/searchByName" method="get">
+                    <div class="advanced-search" style="width: fit-content">
+                        <form autocomplete="off" class="input-group">
                             <div class="autocomplete">
-                                <input type="text" placeholder="What product do you need?" id="search" name="search">
+                                <input type="text" placeholder="What do you need?" id="search" name="search"
+                                       style="width: 400px; color: gray">
                             </div>
-                            <input type="submit">Search</input>
+                            <a style="padding: 10px; background-color: #e7ab3c; margin-left: 50px; color: white; text-decoration-line: none; cursor: pointer"
+                               onclick="this.href='/ECommerce/searchByName?search='+document.getElementById('search').value"><i
+                                    class="ti-search" id="searchBtn"></i></a>
+                            <%--                            <input type="submit"><i class="ti-search" id="searchBtn"></i>Search</input>--%>
                         </form>
-                    </div>
                     </div>
                 </div>
                 <div class="col-lg-3 text-right col-md-3">

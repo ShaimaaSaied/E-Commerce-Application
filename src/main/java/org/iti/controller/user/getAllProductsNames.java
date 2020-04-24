@@ -23,7 +23,7 @@ public class getAllProductsNames extends HttpServlet {
         List<String> list = productService.searchForProductsName();
         Gson json = new Gson();
         String myListOfJson = json.toJson(list);
-        System.out.println("myListOfJson : SearchForProductUsingName \n" + myListOfJson);
+//        System.out.println("myListOfJson : SearchForProductUsingName \n" + myListOfJson);
         response.getWriter().println(myListOfJson);
     }
 

@@ -109,12 +109,12 @@
             <div class="row">
 
                 <div class="col-lg-7 col-md-7">
-                    <div class="advanced-search">
-                        <form autocomplete="off" class="input-group" action="/ECommerce/searchByName" method="get">
+                    <div class="advanced-search" style="width: fit-content">
+                        <form autocomplete="off" class="input-group">
                             <div class="autocomplete">
-                                <input type="text" placeholder="What do you need?" id="search" name="search">
+                                <input type="text" placeholder="What do you need?" id="search" name="search" style="width: 400px; color: gray">
                             </div>
-                            <button type="button"><i class="ti-search" id="searchBtn"></i></button>
+                            <a style="padding: 10px; background-color: #e7ab3c; margin-left: 50px; color: white; text-decoration-line: none; cursor: pointer" onclick="this.href='/ECommerce/searchByName?search='+document.getElementById('search').value" ><i class="ti-search" id="searchBtn"></i></a>
                             <%--                            <input type="submit"><i class="ti-search" id="searchBtn"></i>Search</input>--%>
                         </form>
                     </div>

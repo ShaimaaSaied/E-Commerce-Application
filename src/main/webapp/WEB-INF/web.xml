@@ -26,7 +26,7 @@
 <!--    </servlet-mapping>-->
 
 <welcome-file-list>
-    <welcome-file>signin_signup/html/SigninSignUp.html</welcome-file>
+    <welcome-file>signin_signup/html/SigninSignUp.jsp</welcome-file>
 </welcome-file-list>
 
     <servlet>
