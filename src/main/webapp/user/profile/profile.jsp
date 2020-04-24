@@ -64,28 +64,29 @@
      alt="">
 
 
-
-
-<form class="needs-validation" novalidate style="margin-left: 300px; width: 600px;" action="/ECommerce/profile" method="post"
-      oninput='up2.setCustomValidity(up2.value != up.value ? document.getElementById("validation").innerHTML = "pasword doesnot match" : "")' >
+<form class="needs-validation" novalidate style="margin-left: 300px; width: 600px;" action="/ECommerce/profile"
+      method="post"
+      oninput='up2.setCustomValidity(up2.value != up.value ? document.getElementById("validation").innerHTML = "pasword doesnot match" : "")'>
 
     <div class="form-input">
         <label for="validationCustomName">User Name *</label>
-        <input name="validationCustomName" type="text" class="form-control" id="validationCustomName" placeholder="" required pattern="[a-zA-Z]+"
-        value="${sessionScope.currentuser.username}"  />
+        <input name="validationCustomName" type="text" class="form-control" id="validationCustomName" placeholder=""
+               required pattern="[a-zA-Z]+"
+               value="${sessionScope.currentuser.username}"/>
 
 
         <div class="valid-feedback">
             Looks good!
         </div>
         <div class="invalid-feedback">
-            Please enter a username.
+            Please enter valid username.
         </div>
     </div>
 
     <div class="form-input">
         <label for="validationCustomEmail">Email *</label>
-        <input name="validationCustomEmail" type="text" class="form-control" id="validationCustomEmail" placeholder="" required
+        <input name="validationCustomEmail" type="text" class="form-control" id="validationCustomEmail" placeholder=""
+               required
                pattern="^[\w-]+(\.[\w-]+)@([a-z0-9-]+(\.[a-z0-9-]+)?\.[a-z]{2,6}|(\d{1,3}\.){3}\d{1,3})(:\d{4})?$"
                value="${sessionScope.currentuser.email}"/>
         <div class="valid-feedback">
@@ -98,8 +99,9 @@
 
     <div class="form-input">
         <label for="validationCustompassword">Password *</label>
-        <input name="validationCustompassword" type="password" class="form-control" id="validationCustompassword" placeholder="" required
-              name="up" pattern="^[a-zA-Z!@#$%-^&?_0-9]{8,40}$"
+        <input name="validationCustompassword" type="password" class="form-control" id="validationCustompassword"
+               placeholder="" required
+               name="up" pattern="^[a-zA-Z!@#$%-^&?_0-9]{8,40}$"
                value="${sessionScope.currentuser.password}"/>
         <div class="valid-feedback">
             Looks good!
@@ -110,7 +112,8 @@
     </div>
     <div class="form-input">
         <label for="validationCustomConfirmpassword">Confirm Password *</label>
-        <input name="validationCustomConfirmpassword" type="password"  class="form-control" id="validationCustomConfirmpassword"
+        <input name="validationCustomConfirmpassword" type="password" class="form-control"
+               id="validationCustomConfirmpassword"
                placeholder="" required name="up2"
                value="${sessionScope.currentuser.password}"/>
         <div class="invalid-feedback" id="validation">
@@ -124,13 +127,15 @@
     </div>
     <div class="form-input">
         <label for="validationCustomAddress">address</label>
-        <input name="validationCustomAddress" type="text" class="form-control" id="validationCustomAddress" placeholder=""
+        <input name="validationCustomAddress" type="text" class="form-control" id="validationCustomAddress"
+               placeholder=""
                value="${sessionScope.currentuser.address}"/>
 
     </div>
 
     <button class="btn " type="submit" style="background-color: black; color: white; margin-top: 20px; ">Edit Profile
     </button>
+    <br><br>
     <c:if test="${!empty requestScope.message}">
         <p style=" color: white; float: right;  display: inline-block; background-color: #e7ab3c">${requestScope.message}</p>
     </c:if>

@@ -73,7 +73,7 @@
                 <input class="inputTextCustom" type="text"  name="ProductImage" id="ProductImage" required/><br>
 
                 <span>Product Category Id</span>
-                <input class="inputTextCustom" type="number"  name="ProductCategory" id="ProductCategory" required/>
+                <input class="inputTextCustom" type="number" min="1" max="4" name="ProductCategory" id="ProductCategory" required/>
 
                 <span>Product Description</span>
                 <textarea class="inputTextCustom"  name="ProductDescription"></textarea>

@@ -56,10 +56,10 @@
         <div class="container">
             <nav class="nav-menu mobile-menu">
                 <ul>
-                    <li><a href="/ECommerce/home" disabled="true">&nbsp;&nbsp;&nbsp;Home&nbsp;&nbsp;&nbsp;</a></li>
-                    <li><a href="/ECommerce/profile" disabled="true">&nbsp;&nbsp;&nbsp;Profile&nbsp;&nbsp;&nbsp;</a>
+                    <li><a href="#" disabled="true">&nbsp;&nbsp;&nbsp;Home&nbsp;&nbsp;&nbsp;</a></li>
+                    <li><a href="#" disabled="true">&nbsp;&nbsp;&nbsp;Profile&nbsp;&nbsp;&nbsp;</a>
                     </li>
-                    <li><a href="/ECommerce/cart" disabled="true">&nbsp;&nbsp;&nbsp;Shopping cart&nbsp;&nbsp;&nbsp;</a>
+                    <li><a href="#" disabled="true">&nbsp;&nbsp;&nbsp;Shopping cart&nbsp;&nbsp;&nbsp;</a>
                     </li>
                     <li><a href="#" disabled="true">&nbsp;&nbsp;&nbsp;Contact&nbsp;&nbsp;&nbsp;</a></li>
                     <li><a href="#" disabled="true">&nbsp;&nbsp;&nbsp;About us&nbsp;&nbsp;&nbsp;</a></li>

@@ -62,7 +62,7 @@
 <body>
 <%@include file="header.jsp" %>
 <br>
-<form method="post" action="/ECommerce/updateAdminProduct"enctype="multipart/form-data">
+<form method="post" action="/ECommerce/updateAdminProduct">
     <div>
         <input id="id" name="id" style="margin-left: 20px" class="inputTextCustom" type="hidden" value="${requestScope.selectedProduct.productId}">
         <span>Product Name: </span>

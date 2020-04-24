@@ -2,6 +2,7 @@ package org.iti.model.dao.daoimpl;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
 import org.iti.model.confg.DBConnection;
 import org.iti.model.dao.interfaces.ProductDao;
 import org.iti.model.entity.Product;
@@ -65,15 +66,15 @@ public class ProductDaoImpl implements ProductDao {
     public Product updateProduct(Product product) {
         Session session = sessionFactory.openSession();
         session.beginTransaction();
-//        Query query = session.createQuery(UPDATE_PRODUCT).
-//                setParameter("productId", product.getProductId())
-//                .setParameter("productName", product.getProductName())
-//                .setParameter("description", product.getDescription())
-//                .setParameter("price", product.getPrice())
-//                .setParameter("stock", product.getStock())
-//                .setParameter("image", product.getImage());
-//        int result = query.executeUpdate();
-        session.update(product);
+        Query query = session.createQuery(UPDATE_PRODUCT).
+                setParameter("productId", product.getProductId())
+                .setParameter("productName", product.getProductName())
+                .setParameter("description", product.getDescription())
+                .setParameter("price", product.getPrice())
+                .setParameter("stock", product.getStock())
+                .setParameter("image", product.getImage());
+        int result = query.executeUpdate();
+       // session.update(product);
 
         session.getTransaction().commit();
 

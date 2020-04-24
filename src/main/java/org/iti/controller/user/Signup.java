@@ -17,7 +17,7 @@ import java.io.PrintWriter;
 public class Signup extends HttpServlet {
 
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("signin_signup/html/SigninSignUp.jsp").include(req, resp);
+        req.getRequestDispatcher("signin_signup/html/signup.jsp").include(req, resp);
     }
 
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -30,31 +30,39 @@ public class Signup extends HttpServlet {
         String email = req.getParameter("email");
         String creditLimit = req.getParameter("creditLimit");
 
-        String user1 = req.getParameter("user");
+//        String user1 = req.getParameter("user");
 
-        // boolean validateMail = validation.isEmailUnique(email);
-        boolean validateUsername = validation.isUsernameUnique(user1);
-        System.out.println(validateUsername + "validateUsername");
-        PrintWriter out = resp.getWriter();
-        out.println("{user:" + validateUsername + "}");
+        boolean validateMail = validation.isEmailUnique(email);
+        boolean validateUsername = validation.isUsernameUnique(username);
+//        System.out.println(validateUsername + "validateUsername");
+//        PrintWriter out = resp.getWriter();
+//        out.println("{user:" + validateUsername + "}");
 
-        if (validateUsername) {
+        if (validateUsername && validateMail) {
             User user = new User(username, password, email, Integer.parseInt(creditLimit));
             user.setRole("User");
             user = userService.createUser(user);
-            if (user.getUserId() > 0) {
-                req.getSession().setAttribute("currentuser", user);
-            }
-
+            req.getSession().setAttribute("currentuser", user);
             System.out.println("User insert Successfully");
+            System.out.println("validateUsername && validateMail");
+            resp.sendRedirect("login");
 
-            resp.sendRedirect("/ECommerce/home");
+        } else if (!validateUsername && !validateMail) {
+            req.setAttribute("message", " Email and UserName already Exist");
+            System.out.println("!validateUsername && !validateMail");
+            req.getRequestDispatcher("signin_signup/html/signup.jsp").forward(req, resp);
+
+        } else if (!validateUsername) {
+            req.setAttribute("message", " UserName already Exist");
+            System.out.println("!validateUsername");
+            req.getRequestDispatcher("signin_signup/html/signup.jsp").forward(req, resp);
+
         } else {
-            resp.sendRedirect("signin_signup/html/SigninSignUp.jsp?");
-
+            req.setAttribute("message", " Email already Exist");
+            System.out.println("! validateMail");
+            req.getRequestDispatcher("signin_signup/html/signup.jsp").forward(req, resp);
 
         }
-
 
     }
 
