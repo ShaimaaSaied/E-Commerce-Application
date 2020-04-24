@@ -12,7 +12,7 @@ public interface ProductService {
 
     List<Product> selectProductByName(String name);
 
-    List<Product> selectProductByPrice(double price);
+    List<Product> selectProductByPrice(double min, double max);
 
     void addProduct(Product product);
 

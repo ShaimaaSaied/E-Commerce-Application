@@ -15,7 +15,7 @@ public class ProductDaoImpl implements ProductDao {
     private final String RETRIVE_ALL_PRODUCTS = "select p from org.iti.model.entity.Product p";
     private final String RETRIVE_PRODUCT_BY_ID = "from org.iti.model.entity.Product as product where product.productId =: product_id";
     private final String RETRIVE_PRODUCT_BY_NAME = "from org.iti.model.entity.Product as product where product.productName like : productName";
-    private final String RETRIVE_PRODUCT_BY_PRICE = "from org.iti.model.entity.Product as product where product.price =: price";
+    private final String RETRIVE_PRODUCT_BY_PRICE = "from org.iti.model.entity.Product as product where product.price between :min and :max";
     private final String RETRIVE_PRODUCT_BY_CATEGORY = "from org.iti.model.entity.Product as product where product.category.categoryName like: categoryName";
     private final String DELETE_PRODUCT_BY_ID = "delete from org.iti.model.entity.Product where productId=:productId";
     private final String UPDATE_PRODUCT_PRICE = "update org.iti.model.entity.Product set price=:price where productId=:productId";
@@ -85,10 +85,10 @@ public class ProductDaoImpl implements ProductDao {
     }
 
     @Override
-    public List<Product> selectProductByPrice(double price) {
+    public List<Product> selectProductByPrice(double min,double max) {
         List<Product> productList = null;
         productList = sessionFactory.openSession().createQuery(RETRIVE_PRODUCT_BY_PRICE).
-                setParameter("price", price).list();
+                setParameter("min", min).setParameter("max",max).list();
         return productList;
     }
 

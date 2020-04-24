@@ -52,11 +52,16 @@
 
             <!-- profile part  -->
             <div class="ht-right">
-                <a href="/ECommerce/profile" class="profile-panel"><i class="fa fa-user"></i>
-                    <% User user = (User) (request.getSession().getAttribute("currentuser"));%>
-                    <%=user.getUsername() %>
-                </a>
+                <div>
+                    <a href="/ECommerce/profile" class="profile-panel"><i class="fa fa-user"></i>
+                        <% User user = (User) (request.getSession().getAttribute("currentuser"));%>
+                        <%=user.getUsername() %>
+                    </a>
+                    <a href="/ECommerce/adminlogout" style="margin: 15px; color: #e7ab3c "><i
+                            class="fa fa-fw fa-sign-out "></i> Sign Out</a>
+                </div>
                 <div class="lan-selector">
+
                     <div class="ddOutOfVision" id="countries_msddHolder"
                          style="height: 0px; overflow: hidden; position: absolute;">
                     </div>
@@ -185,23 +190,27 @@
                         <c:choose>
                             <c:when test="${empty requestScope.CartProducts}">
                                 <%--    <c:out value="List is empty"></c:out>--%>
-                              </c:when>
-                              <c:otherwise>
-                                  <c:forEach var="entry" items="${requestScope.CartProducts}">
-                                      <%--                                    <tr><td><c:out value="${entry.key}"/></td> <td><c:out value="${entry.value}"/> </td></tr>--%>
+                            </c:when>
+                            <c:otherwise>
+                                <c:forEach var="entry" items="${requestScope.CartProducts}">
+                                    <%--                                    <tr><td><c:out value="${entry.key}"/></td> <td><c:out value="${entry.value}"/> </td></tr>--%>
                                     <tr>
-                                        <td class="cart-pic first-row"><img
-                                                src='+<c:out value="${entry.key.image}"></c:out>+' alt=""></td>
+                                        <td class="cart-pic first-row"><img src='${entry.key.image}' alt="picture"></td>
                                         <td class="cart-title">
-                                            <h5><c:out value="${entry.key.productName}"></c:out></h5>
+                                            <h5 style="margin-left: 30px"><c:out value="${entry.key.productName}"></c:out></h5>
                                         </td>
                                         <td class="p-price first-row"><c:out value="${entry.key.price}"></c:out></td>
                                         <td class="qua-col first-row">
                                             <div class="quantity">
                                                 <div class="pro-qty">
-                                                    <form id="numberForm${entry.key.productId}" method="post" action="UpdateQuantity">
-                                                        <input onchange="document.getElementById('numberForm${entry.key.productId}').submit();" onKeyDown="return false" name="quantityInput${entry.key.productId}" type="number" value='${entry.value}' min="1" max="${entry.key.stock}">
-                                                        <input hidden type="text" name="productId" value="${entry.key.productId}"/>
+                                                    <form id="numberForm${entry.key.productId}" method="post"
+                                                          action="UpdateQuantity">
+                                                        <input onchange="document.getElementById('numberForm${entry.key.productId}').submit();"
+                                                               onKeyDown="return false"
+                                                               name="quantityInput${entry.key.productId}" type="number"
+                                                               value='${entry.value}' min="1" max="${entry.key.stock}">
+                                                        <input hidden type="text" name="productId"
+                                                               value="${entry.key.productId}"/>
                                                     </form>
                                                 </div>
                                             </div>
@@ -209,11 +218,10 @@
                                         <td class="qua-col first-row">
                                             <div class="quantity">
                                                 <div class="pro-qty">
-                                                    <span ><c:out value="${entry.key.stock}"></c:out></span>
+                                                    <span><c:out value="${entry.key.stock}"></c:out></span>
                                                 </div>
                                             </div>
                                         </td>
-
 
 
                                         <td class="total-price first-row"><c:out
@@ -254,7 +262,8 @@
                                         <li class="cart-total">Total <span>0.0 LE</span></li>
                                     </c:when>
                                     <c:otherwise>
-                                        <li class="cart-total">Total <span><%=request.getAttribute("totalPrice")%> LE</span></li>
+                                        <li class="cart-total">Total
+                                            <span><%=request.getAttribute("totalPrice")%> LE</span></li>
                                     </c:otherwise>
                                 </c:choose>
                             </ul>
@@ -262,7 +271,7 @@
                             <div id="checkOut" style="color:#e7ab3c;font-weight: bold;margin-left:50px;font-size:130%">
                                 <c:choose>
                                     <c:when test="${not empty requestScope.paymentMsg}">
-                                            <%=request.getAttribute("paymentMsg")%>
+                                        <%=request.getAttribute("paymentMsg")%>
                                     </c:when>
                                 </c:choose>
                             </div>
@@ -346,7 +355,6 @@
     </div>
 </footer>
 <!-- Footer Section End -->
-
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

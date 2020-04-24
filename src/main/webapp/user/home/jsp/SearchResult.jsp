@@ -149,6 +149,8 @@
                     <% User user = (User) (request.getSession().getAttribute("currentuser"));%>
                     <%=user.getUsername() %>
                 </a>
+                <a href="/ECommerce/adminlogout" style="margin: 15px; color: #e7ab3c "><i
+                        class="fa fa-fw fa-sign-out "></i> Sign Out</a>
 
                 <div class="lan-selector">
                     <div class="ddOutOfVision" id="countries_msddHolder"
@@ -299,10 +301,9 @@
                                                 <img src="${product.image}" alt='picture'>
                                                 <ul>
                                                     <li class='w-icon active'>
-                                                        <form>
-                                                            <input onclick='cart()' type='button' value='Add to cart'
-                                                                   id='addToCartBtn'
-                                                                   class='btn btn-warning'/>
+                                                        <form action="AddProductToCart?id=${product.productId}" method='post'>
+                                                            <input  type='submit' value='Add to cart'
+                                                                   id='addToCartBtn' class='btn btn-warning'/>
                                                         </form>
                                                     </li>
                                                 </ul>
