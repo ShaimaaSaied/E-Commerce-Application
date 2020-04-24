@@ -33,8 +33,8 @@ function viewProducts() {
             "                                    <img src=" + product[3] + " alt='picture'>\n" +
             "                                    <ul>\n" +
             "                                        <li class='w-icon active'>" +
-            "                                           <form  action='AddProductToCart?id="+   product[4] +"' method='post'>" +
-            "                                               <input  type='submit' value='Add to cart' id='addToCartBtn?id=+product[4] class='btn btn-warning'> " +
+            "                                           <form  action='AddProductToCart?id=" + product[4] + "' method='post'>" +
+            "                                               <input  type='submit' value='Add to cart' id='addToCartBtn?id=" + product[4] + "' class='btn btn-warning'> " +
             "                                                 </input></form></li>\n" +
             "                                    </ul>\n" +
             "                                </div>\n" +
@@ -51,17 +51,18 @@ function viewProducts() {
 
 
 $(document).ready(function () {
-   // setInterval(getAllProducts,2000)
+    // setInterval(getAllProducts,2000)
     getAllProducts();
 });
 
 // $("#addToCartBtn").click(function () {
-// function cart(x) {
-//     var productid = document.getElementById("productid" + x+').innerHTML;
-//     console.log("productid : " + productid);
-//     $.post("AddProductToCart", {"productid": productid}, ajaxCallBackAddProductToCart);
-// }
-
-function ajaxCallBackAddProductToCart() {
-    alert("ajaxCallBackAddProductToCart")
-}
+//     function cart(x) {
+//         var productid = document.getElementById("productid" + x).innerHTML;
+//         console.log("productid : " + productid);
+//         $.post("AddProductToCart", {"productid": productid}, ajaxCallBackAddProductToCart);
+//     }
+//
+//     function ajaxCallBackAddProductToCart() {
+//         alert("ajaxCallBackAddProductToCart");
+//     }
+// });
