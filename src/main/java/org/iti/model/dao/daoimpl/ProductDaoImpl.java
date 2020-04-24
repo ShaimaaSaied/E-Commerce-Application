@@ -17,7 +17,7 @@ public class ProductDaoImpl implements ProductDao {
     private final String RETRIVE_PRODUCT_BY_NAME = "from org.iti.model.entity.Product as product where product.productName like : productName";
     private final String RETRIVE_PRODUCT_BY_PRICE = "from org.iti.model.entity.Product as product where product.price between :min and :max";
     private final String RETRIVE_PRODUCT_BY_CATEGORY = "from org.iti.model.entity.Product as product where product.category.categoryName like: categoryName";
-    private final String DELETE_PRODUCT_BY_ID = "delete from org.iti.model.entity.Product where productId=:productId";
+    private final String DELETE_PRODUCT_BY_ID = "delete from org.iti.model.entity.Product p where p.productId=:productId";
     private final String UPDATE_PRODUCT_PRICE = "update org.iti.model.entity.Product set price=:price where productId=:productId";
     private final String UPDATE_PRODUCT_STOCK = "update org.iti.model.entity.Product set stock=:stock where productId=:productId";
     private final String RETRIVE_ALL_PRODUCTS_NAME = "SELECT product.productName from org.iti.model.entity.Product as product";

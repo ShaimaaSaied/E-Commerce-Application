@@ -43,7 +43,14 @@ public class Payment extends HttpServlet {
                 //update stock
                 for (Product product : allProductsFromCart) {
                     int quantity = cartService.getQuantityOfProductInCart(currentuser.getUserId(), product.getProductId());
-                    System.out.println("update stock in product:  " + productService.updateProductStock(product.getProductId(), product.getStock() - quantity));
+
+                    //delete the products that run out (products with empty stock)
+                    if(product.getStock()-quantity==0) {
+                        System.out.println("delete first from cart, deleted:"+ cartService.deleteProductFromCart(currentuser.getUserId(),product.getProductId()));
+                        System.out.println("product ran out, deleted=" + productService.deleteProduct(product.getProductId()));
+                    }else
+                        System.out.println("update stock in product:  " + productService.updateProductStock(product.getProductId(), product.getStock() - quantity));
+
                 }
 
                 //update CreditLimit
