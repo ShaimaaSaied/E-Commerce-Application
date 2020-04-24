@@ -14,28 +14,28 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-@WebServlet(name="searchByName",urlPatterns = {"/searchByName"})
-public class SearchForProducts extends HttpServlet {
+@WebServlet(name="searchByCategory",urlPatterns = {"/searchByCategory"})
+public class SearchForProductsByCategory extends HttpServlet {
+
     List<Product> products = new ArrayList<>();
     ProductServiceImpl productService = new ProductServiceImpl();
-
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        String productName = "";
-        System.out.println(request.getParameter("search"));
-        if (request.getParameter("search") != null) {
-            productName = request.getParameter("search");
-            System.out.println(productName);
-            products = productService.selectProductByName(productName);
+        String productCategory = "";
+        System.out.println(request.getParameter("category"));
+        if (request.getParameter("category") != null) {
+            productCategory = request.getParameter("category");
+            System.out.println(productCategory);
+            products = productService.searchForProductByCategory(productCategory);
             System.out.println(products.size());
             System.out.println(products);
             request.setAttribute("productsFromSearch", products);
 
         } else {
-            request.setAttribute("NotFound","Keyword" + productName + "Does not match any products");
+            request.setAttribute("NotFound","This Category" + productCategory + "Does not exist");
         }
 
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/user/home/jsp/SearchResult.jsp");

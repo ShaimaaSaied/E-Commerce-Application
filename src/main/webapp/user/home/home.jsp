@@ -200,10 +200,10 @@
                 <div class="filter-widget">
                     <h4 class="fw-title">Categories</h4>
                     <ul class="filter-catagories">
-                        <li><a href="#">Blouses</a></li>
-                        <li><a href="#">Skirts</a></li>
-                        <li><a href="#">Dresses</a></li>
-                        <li><a href="#">Shoes</a></li>
+                        <li><a onclick="this.href='/ECommerce/searchByCategory?category=blouse'">Blouses</a></li>
+                        <li><a onclick="this.href='/ECommerce/searchByCategory?category=skirts'">Skirts</a></li>
+                        <li><a onclick="this.href='/ECommerce/searchByCategory?category=pantalon'">Pants</a></li>
+                        <li><a onclick="this.href='/ECommerce/searchByCategory?category=shose'">Shoes</a></li>
                     </ul>
                 </div>
 
