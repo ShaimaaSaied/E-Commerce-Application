@@ -149,6 +149,8 @@
                     <% User user = (User) (request.getSession().getAttribute("currentuser"));%>
                     <%=user.getUsername() %>
                 </a>
+                <a href="/ECommerce/adminlogout" style="margin: 15px; color: #e7ab3c "><i
+                        class="fa fa-fw fa-sign-out "></i> Sign Out</a>
 
                 <div class="lan-selector">
                     <div class="ddOutOfVision" id="countries_msddHolder"

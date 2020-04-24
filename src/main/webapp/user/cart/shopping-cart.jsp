@@ -195,10 +195,9 @@
                                 <c:forEach var="entry" items="${requestScope.CartProducts}">
                                     <%--                                    <tr><td><c:out value="${entry.key}"/></td> <td><c:out value="${entry.value}"/> </td></tr>--%>
                                     <tr>
-                                        <td class="cart-pic first-row"><img
-                                                src='+<c:out value="${entry.key.image}"></c:out>+' alt=""></td>
+                                        <td class="cart-pic first-row"><img src='${entry.key.image}' alt="picture"></td>
                                         <td class="cart-title">
-                                            <h5><c:out value="${entry.key.productName}"></c:out></h5>
+                                            <h5 style="margin-left: 30px"><c:out value="${entry.key.productName}"></c:out></h5>
                                         </td>
                                         <td class="p-price first-row"><c:out value="${entry.key.price}"></c:out></td>
                                         <td class="qua-col first-row">

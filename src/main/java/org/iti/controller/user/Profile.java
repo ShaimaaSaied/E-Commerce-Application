@@ -28,44 +28,71 @@ public class Profile extends HttpServlet {
         }
 
     }
-        protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-            Validation validation = new Validation();
-            System.out.println("doPostProfile");
-            UserService userService = new UserServiceImpl();
+        Validation validation = new Validation();
+        System.out.println("doPostProfile");
+        UserService userService = new UserServiceImpl();
 
-            String username = req.getParameter("validationCustomName");
-            String password = req.getParameter("validationCustompassword");
-            String email = req.getParameter("validationCustomEmail");
-            String jop = req.getParameter("validationjop");
-            String address = req.getParameter("validationCustomAddress");
+        String username = req.getParameter("validationCustomName");
+        String password = req.getParameter("validationCustompassword");
+        String email = req.getParameter("validationCustomEmail");
+        int creditCard = Integer.parseInt(req.getParameter("validationCredit"));
+        String address = req.getParameter("validationCustomAddress");
 
+        //1- get all Field update
 
-            boolean validateUsername = validation.isUsernameUnique(username);
+        User user = (User) req.getSession().getAttribute("currentuser");
+        user.setFirstName("firstName");
+        user.setLastName("lastName");
+        user.setPassword(password);
+        user.setCreditLimit(creditCard);
+        user.setAddress(address);
 
-            if (validateUsername) {
-                //hna hagebo mn session
-
-                User user= (User) req.getSession().getAttribute("currentuser");
-                user.setUsername(username);
-                user.setFirstName("firstTest");
-                user.setLastName("lastTest");
-                user.setPassword(password);
-                user.setEmail(email);
-                user.setJop(jop);
-                user.setAddress(address);
-                System.out.println("user Test"+user);
-                userService.updateUser(user);
-                System.out.println("User updated Successfully");
-                req.setAttribute("message","User updated Successfully");
-                req.getSession().setAttribute("currentuser",user);
-            } else {
-                System.out.println("User not updated ");
-                req.setAttribute("message","User not updated");
-
-
-            }
-            req.getRequestDispatcher("user/profile/profile.jsp").include(req, resp);
-
+        // 2-User Name and mail check not in data base
+        //check userName & email not change
+        if(username.equals(user.getUsername()) && email.equals(user.getEmail())){
+            req.setAttribute("message", "User updated Successfully :)");
+            userService.updateUser(user);
         }
+        //if change username and email
+        else if (!username.equals(user.getUsername())&&!email.equals(user.getEmail())){
+            boolean isUniqueUsername = validation.isUsernameUnique(username);
+            boolean isUniqueEmail = validation.isEmailUnique(email);
+
+            if(isUniqueUsername&&isUniqueEmail){
+                user.setUsername(username);
+                user.setEmail(email);
+                req.setAttribute("message", "User updated Successfully :)");
+                userService.updateUser(user);
+            }else{
+                req.setAttribute("message", "username and email is already exist");
+            }
+        }
+        else if (!username.equals(user.getUsername())){
+            boolean isUniqueUsername = validation.isUsernameUnique(username);
+            if(isUniqueUsername){
+                user.setUsername(username);
+                req.setAttribute("message", "User updated Successfully :)");
+                userService.updateUser(user);
+            }else{
+                req.setAttribute("message", "username is already exist");
+            }
+
+        }else {
+            boolean isUniqueEmail = validation.isEmailUnique(email);
+            if(isUniqueEmail){
+                user.setEmail(email);
+                req.setAttribute("message", "User updated Successfully :)");
+                userService.updateUser(user);
+            }else{
+                req.setAttribute("message", "Email is already exist");
+            }
+        }
+        req.getRequestDispatcher("user/profile/profile.jsp").include(req, resp);
+    }
 }
+
+
+
+

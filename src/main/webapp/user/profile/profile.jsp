@@ -64,9 +64,7 @@
      alt="">
 
 
-<c:if test="${!empty requestScope.message}">
-    <p>${requestScope.message}</p>
-</c:if>
+
 
 <form class="needs-validation" novalidate style="margin-left: 300px; width: 600px;" action="/ECommerce/profile" method="post"
       oninput='up2.setCustomValidity(up2.value != up.value ? document.getElementById("validation").innerHTML = "pasword doesnot match" : "")' >
@@ -120,9 +118,9 @@
         </div>
     </div>
     <div class="form-input">
-        <label for="validationjop">jop</label>
-        <input name="validationjop" type="text" class="form-control" id="validationjop" placeholder=""
-               value="${sessionScope.currentuser.jop}"/>
+        <label for="validationCredit">Credit Limit</label>
+        <input name="validationCredit" type="number" class="form-control" id="validationCredit" placeholder=""
+               value="${sessionScope.currentuser.creditLimit}"/>
     </div>
     <div class="form-input">
         <label for="validationCustomAddress">address</label>
@@ -133,6 +131,9 @@
 
     <button class="btn " type="submit" style="background-color: black; color: white; margin-top: 20px; ">Edit Profile
     </button>
+    <c:if test="${!empty requestScope.message}">
+        <p style=" color: white; float: right;  display: inline-block; background-color: #e7ab3c">${requestScope.message}</p>
+    </c:if>
 </form>
 
 <script>
