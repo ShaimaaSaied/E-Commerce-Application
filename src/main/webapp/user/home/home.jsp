@@ -96,6 +96,10 @@
                     <%=user.getUsername() %>
                 </a>
 
+                <div class="header-right">
+                    <a href="/ECommerce/userlogout"><i class="fa fa-fw fa-sign-out "></i> Sign Out</a>
+                </div>
+
                 <div class="lan-selector">
                     <div class="ddOutOfVision" id="countries_msddHolder"
                          style="height: 0px; overflow: hidden; position: absolute;">
@@ -285,6 +289,8 @@
             </div>
         </div>
     </div>
+
+
     <div class="copyright-reserved">
         <div class="container">
             <div class="row">
@@ -306,6 +312,9 @@
             </div>
         </div>
     </div>
+
+    <%--    _______________________--%>
+
 </footer>
 <!-- Footer Section End -->
 
