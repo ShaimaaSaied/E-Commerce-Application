@@ -4,7 +4,9 @@ public class Test {
 
     public static void main(String[] args) {
 
-        UserServiceImpl userService=new UserServiceImpl();
+        ProductServiceImpl productService=new ProductServiceImpl();
+        System.out.println(productService.selectProductByPrice(-11,9));
+
 
     }
 }

@@ -25,12 +25,13 @@ public interface ProductDao {
      */
     List<Product> selectProductByName(String name);
 
-    /***
-     * you can select product by price
-     * @param price
+    /**
+     *
+     * @param min
+     * @param max
      * @return
      */
-    List<Product> selectProductByPrice(double price);
+    List<Product> selectProductByPrice(double min,double max);
 
     /***
      * you can select product by category
