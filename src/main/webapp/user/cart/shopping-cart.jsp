@@ -261,8 +261,8 @@
                             <a id="purchaseBtn" href="checkOut" class="proceed-btn">Purchase</a>
                             <div id="checkOut" style="color:#e7ab3c;font-weight: bold;margin-left:50px;font-size:130%">
                                 <c:choose>
-                                    <c:when test="${not empty sessionScope.paymentMsg}">
-                                            <%=request.getSession().getAttribute("paymentMsg")%>
+                                    <c:when test="${not empty requestScope.paymentMsg}">
+                                            <%=request.getAttribute("paymentMsg")%>
                                     </c:when>
                                 </c:choose>
                             </div>

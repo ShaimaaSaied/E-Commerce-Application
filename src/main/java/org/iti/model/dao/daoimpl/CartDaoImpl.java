@@ -154,8 +154,9 @@ public class CartDaoImpl implements CartDao {
 
     @Override
     public int getQuantityOfProductInCart(int userId, int productId) {
+        if (sessionFactory.openSession().get(Cart.class, new CartId(userId, productId)) == null) {
+            return 0;
+        }
         return (int) sessionFactory.openSession().createQuery(GET_QUANTITY_OF_PRODUCT).setParameter("product_id", productId).setParameter("user_id", userId).uniqueResult();
     }
-
-
 }

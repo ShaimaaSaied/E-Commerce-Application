@@ -58,6 +58,7 @@ public class Profile extends HttpServlet {
                 userService.updateUser(user);
                 System.out.println("User updated Successfully");
                 req.setAttribute("message","User updated Successfully");
+                req.getSession().setAttribute("currentuser",user);
             } else {
                 System.out.println("User not updated ");
                 req.setAttribute("message","User not updated");

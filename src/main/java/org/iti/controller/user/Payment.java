@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name="checkOut",urlPatterns = "/checkOut")
+@WebServlet(name = "checkOut", urlPatterns = "/checkOut")
 public class Payment extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -29,20 +29,7 @@ public class Payment extends HttpServlet {
         System.out.println(currentuser + " inside checkOut ");
 
         List<Product> allProductsFromCart = cartService.getAllProductsFromCart(currentuser.getUserId());
-        if(allProductsFromCart.size() != 0) {
-            //check stock
-            for (Product product : allProductsFromCart) {
-
-                int quantity = cartService.getQuantityOfProductInCart(currentuser.getUserId(), product.getProductId());
-                if (product.getStock() < quantity) {
-                    req.getSession().setAttribute("paymentMsg", "Invalid quantity!");
-                    System.out.println("***********");
-                    req.getRequestDispatcher("GetCartProducts").forward(req, resp);
-                    System.out.println("after forward");
-                } else {
-                    System.out.println(product.getProductName() + " stock is okay");
-                }
-            }
+        if (allProductsFromCart.size() != 0) {
 
             double totalPrice = (double) cartService.getTotalPrice(currentuser.getUserId());
             System.out.println("total price " + totalPrice);
@@ -51,29 +38,25 @@ public class Payment extends HttpServlet {
 
             //check creditlimit
             if (creditLimit - totalPrice < 0) {
-                req.getSession().setAttribute("paymentMsg", "Credit Limit is not enough!");
-                req.getRequestDispatcher("GetCartProducts").forward(req, resp);
+                req.setAttribute("paymentMsg", "Credit Limit is not enough!");
             } else {
-                System.out.println("credit limit is okay");
+                //update stock
+                for (Product product : allProductsFromCart) {
+                    int quantity = cartService.getQuantityOfProductInCart(currentuser.getUserId(), product.getProductId());
+                    System.out.println("update stock in product:  " + productService.updateProductStock(product.getProductId(), product.getStock() - quantity));
+                }
+
+                //update CreditLimit
+                System.out.println("new credit" + (currentuser.getCreditLimit() - totalPrice));
+                currentuser.setCreditLimit((int) (currentuser.getCreditLimit() - totalPrice));
+                System.out.println("update CreditLmit:  " + userService.updateUser(currentuser));
+
+                //reset cart
+                System.out.println("reset Cart: " + cartService.resetCart(currentuser.getUserId()));
+
+                req.setAttribute("paymentMsg", "Purchasing done Successfully");
             }
-
-            //update stock
-            for (Product product : allProductsFromCart) {
-                int quantity = cartService.getQuantityOfProductInCart(currentuser.getUserId(), product.getProductId());
-                System.out.println("update stock in product:  " + productService.updateProductStock(product.getProductId(), product.getStock() - quantity));
-            }
-
-            //update CreditLimit
-            System.out.println("new credit" + (currentuser.getCreditLimit() - totalPrice));
-            currentuser.setCreditLimit((int) (currentuser.getCreditLimit() - totalPrice));
-            System.out.println("update CreditLmit:  " + userService.updateUser(currentuser));
-
-            //reset cart
-            System.out.println("reset Cart: " + cartService.resetCart(currentuser.getUserId()));
-
-            req.getSession().setAttribute("paymentMsg", "Purchasing done Successfully");
         }
         req.getRequestDispatcher("GetCartProducts").forward(req, resp);
-
     }
 }
