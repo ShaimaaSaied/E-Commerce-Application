@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="E-Commerce-ApplicationV2" />
         <module name="E-Commerce_Application" />
         <module name="E-Commerce-Application" />
       </profile>
@@ -14,6 +15,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="E-Commerce-Application" options="-endorseddirs &quot;C:\Users\Shimaa Shokry\IdeaProjects\E-Commerce-Application\target/endorsed&quot;" />
+      <module name="E-Commerce-ApplicationV2" options="-endorseddirs &quot;C:\Users\Shimaa Shokry\IdeaProjects\E-Commerce-ApplicationV2\target/endorsed&quot;" />
       <module name="E-Commerce_Application" options="-endorseddirs &quot;C:\Users\Shimaa Shokry\Documents\NetBeansProjects\E-Commerce_Application\target/endorsed&quot;" />
     </option>
   </component>

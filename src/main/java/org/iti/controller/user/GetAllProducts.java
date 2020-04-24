@@ -18,10 +18,10 @@ public class GetAllProducts extends HttpServlet {
         ProductServiceImpl productService = new ProductServiceImpl();
         List<Product> productsList = productService.selectAllProductSpesificField();
 
-        System.out.println("before json"+productsList);
+//        System.out.println("before json"+productsList);
         response.setContentType("application/json");
         response.setCharacterEncoding("UTF-8");
         response.getWriter().write(new Gson().toJson(productsList));
-        System.out.println("after json"+new Gson().toJson(productsList));
+//        System.out.println("after json"+new Gson().toJson(productsList));
     }
 }

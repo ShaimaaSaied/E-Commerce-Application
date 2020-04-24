@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "logout", urlPatterns = {"/logout", "/admin/logout"})
+@WebServlet(name = "logout", urlPatterns = {"/userlogout"})
 public class Logout extends HttpServlet {
 
 
@@ -15,8 +15,8 @@ public class Logout extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        request.getSession(false).invalidate();
-        response.sendRedirect("signin_signup/html/SigninSignUp.jsp");
+//        request.getSession(false).invalidate();
+        response.sendRedirect("/signin_signup/html/SigninSignUp.jsp");
     }
 
 

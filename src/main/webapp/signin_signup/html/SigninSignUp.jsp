@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 
 <head>
@@ -18,7 +19,8 @@
                     <div class="group ">
                         <label for="email_login" class="label">Email</label>
                         <input id="email_login" name="email" type="text" class="input" required
-                               placeholder="xxx@gmail.com" pattern="^[\w-]+(\.[\w-]+)@([a-z0-9-]+(\.[a-z0-9-]+)?\.[a-z]{2,6}|(\d{1,3}\.){3}\d{1,3})(:\d{4})?$">
+                               placeholder="xxx@gmail.com"
+                               pattern="^[\w-]+(\.[\w-]+)@([a-z0-9-]+(\.[a-z0-9-]+)?\.[a-z]{2,6}|(\d{1,3}\.){3}\d{1,3})(:\d{4})?$">
                     </div>
 
                     <div class="group">
@@ -31,6 +33,11 @@
                         <input type="submit" class="button" value="Sign In">
                     </div>
                     <div class="hr"></div>
+                    <c:if test="${!empty requestScope.message}">
+                        <p>
+                            <c:out value="${requestScope.message}"></c:out>
+                        </p>
+                    </c:if>
 
                 </div>
             </form>
@@ -50,7 +57,8 @@
                     </div>
                     <div class="group">
                         <label for="confirm_password" class="label">Confirm Password</label>
-                        <input id="confirm_password" type="password" class="input" data-type="password" required placeholder="at least 8 characters" pattern="^[a-zA-Z!@#$%-^&?_0-9]{8,40}$">
+                        <input id="confirm_password" type="password" class="input" data-type="password" required
+                               placeholder="at least 8 characters" pattern="^[a-zA-Z!@#$%-^&?_0-9]{8,40}$">
                     </div>
                     <div class="group">
                         <label for="email" class="label">Email Address</label>
@@ -101,6 +109,7 @@
                 , ajaxCallBack);
         });
     });
+
     function ajaxCallBack(responseTxt, statusTxt, xhr) {
         if (statusTxt == "success") {
             console.log(responseTxt.data);

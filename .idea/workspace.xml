@@ -2,12 +2,25 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="E-Commerce-Application:war" />
+      <artifact name="E-Commerce-ApplicationV2:war" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="83ff69a3-d345-4ba9-a541-95019bb69808" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/E-Commerce_Application.iml" afterDir="false" />
+    <list default="true" id="83ff69a3-d345-4ba9-a541-95019bb69808" name="Default Changelist" comment="Update product in admin works correctly now (by Shimaa) and css is updated (by Radwa) and Search by name (by Sara)">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iti/controller/admin/Logout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iti/controller/admin/Logout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iti/controller/user/GetAllProducts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iti/controller/user/GetAllProducts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iti/controller/user/Logout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iti/controller/user/Logout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iti/controller/user/getAllProductsNames.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iti/controller/user/getAllProductsNames.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iti/model/dao/daoimpl/ProductDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iti/model/dao/daoimpl/ProductDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/home/jsp/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/home/jsp/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/signin_signup/html/SigninSignUp.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/signin_signup/html/SigninSignUp.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/user/home/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/user/home/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/user/home/jsp/SearchResult.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/user/home/jsp/SearchResult.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,34 +106,34 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/admin/home/jsp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/signin_signup/html" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Shimaa Shokry\IdeaProjects\E-Commerce-Application\src\main\webapp\admin\home\jsp" />
-      <recent name="C:\Users\Shimaa Shokry\Documents\NetBeansProjects\E-Commerce_Application\src\main\webapp" />
-      <recent name="C:\Users\Shimaa Shokry\Documents\NetBeansProjects\E-Commerce_Application\src\main\webapp\user" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="org.iti.model.dao" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Shimaa Shokry\IdeaProjects\E-Commerce-ApplicationV2\src\main\webapp\signin_signup\html" />
       <recent name="C:\Users\Shimaa Shokry\IdeaProjects\E-Commerce-Application\src\main\webapp\admin\home\jsp" />
       <recent name="C:\Users\Shimaa Shokry\IdeaProjects\E-Commerce-Application\src\main\webapp\user\profile" />
       <recent name="C:\Users\Shimaa Shokry\IdeaProjects\E-Commerce-Application\src\main\webapp\user\home" />
       <recent name="C:\Users\Shimaa Shokry\IdeaProjects\E-Commerce-Application\src\main\webapp\user\checkout" />
-      <recent name="C:\Users\Shimaa Shokry\IdeaProjects\E-Commerce-Application\src\main\webapp\user\cart" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Shimaa Shokry\IdeaProjects\E-Commerce-Application\src\main\webapp\admin\home\jsp" />
+      <recent name="C:\Users\Shimaa Shokry\Documents\NetBeansProjects\E-Commerce_Application\src\main\webapp" />
+      <recent name="C:\Users\Shimaa Shokry\Documents\NetBeansProjects\E-Commerce_Application\src\main\webapp\user" />
     </key>
   </component>
   <component name="RunManager">
     <configuration name="Tomcat 9.0.0.M17" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.0.M17" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="E-Commerce-Application:war">
+        <artifact name="E-Commerce-ApplicationV2:war">
           <settings>
             <option name="CONTEXT_PATH" value="/ECommerce" />
           </settings>
@@ -186,6 +199,7 @@
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
           <artifact name="E-Commerce-Application:war" />
+          <artifact name="E-Commerce-ApplicationV2:war" />
         </option>
       </method>
     </configuration>
@@ -259,6 +273,7 @@
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
           <artifact name="E-Commerce-Application:war" />
+          <artifact name="E-Commerce-ApplicationV2:war exploded" />
         </option>
       </method>
     </configuration>
@@ -278,10 +293,6 @@
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
                 <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:MySQL - ecommerce_app@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
             <select />
@@ -303,6 +314,9 @@
       <workItem from="1586528902891" duration="10090000" />
       <workItem from="1586568471294" duration="548000" />
       <workItem from="1587373152071" duration="37493000" />
+      <workItem from="1587721860521" duration="7268000" />
+      <workItem from="1587731079471" duration="6605000" />
+      <workItem from="1587738254115" duration="1079000" />
     </task>
     <task id="LOCAL-00001" summary="Admin Product">
       <created>1587310329839</created>
@@ -373,10 +387,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="26" key="#Assign_Data_Sources/0.0.1366.728@0.0.1366.728" timestamp="1587432448937" />
-    <state x="-4" y="10" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587432340032">
+    <state x="137" y="23" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587721944051">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="-4" y="10" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1587432340032" />
+    <state x="137" y="23" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1587721944051" />
     <state x="488" y="74" key="#com.intellij.ide.util.MemberChooser" timestamp="1587336463126">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -385,62 +399,62 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="484" y="277" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1366.728@0.0.1366.728" timestamp="1586530287942" />
-    <state x="82" y="0" key="CommitChangelistDialog2" timestamp="1587491967162">
+    <state x="82" y="0" key="CommitChangelistDialog2" timestamp="1587739521705">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="82" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1587491967162" />
+    <state x="82" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1587739521705" />
     <state x="105" y="61" key="DiffContextDialog" timestamp="1587411497167">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="105" y="61" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1587411497167" />
-    <state width="1023" height="196" key="GridCell.Tab.0.bottom" timestamp="1587491576955">
+    <state width="1023" height="140" key="GridCell.Tab.0.bottom" timestamp="1587739254975">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1023" height="196" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1587491576955" />
-    <state width="1023" height="196" key="GridCell.Tab.0.center" timestamp="1587491576955">
+    <state width="1023" height="140" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1587739254975" />
+    <state width="1023" height="140" key="GridCell.Tab.0.center" timestamp="1587739254975">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1023" height="196" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1587491576955" />
-    <state width="1023" height="196" key="GridCell.Tab.0.left" timestamp="1587491576954">
+    <state width="1023" height="140" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1587739254975" />
+    <state width="1023" height="140" key="GridCell.Tab.0.left" timestamp="1587739254975">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1023" height="196" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1587491576954" />
-    <state width="1023" height="196" key="GridCell.Tab.0.right" timestamp="1587491576955">
+    <state width="1023" height="140" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1587739254975" />
+    <state width="1023" height="140" key="GridCell.Tab.0.right" timestamp="1587739254975">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1023" height="196" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1587491576955" />
-    <state width="1023" height="196" key="GridCell.Tab.1.bottom" timestamp="1587491576955">
+    <state width="1023" height="140" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1587739254975" />
+    <state width="1023" height="140" key="GridCell.Tab.1.bottom" timestamp="1587739254976">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1023" height="196" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1587491576955" />
-    <state width="1023" height="196" key="GridCell.Tab.1.center" timestamp="1587491576955">
+    <state width="1023" height="140" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1587739254976" />
+    <state width="1023" height="140" key="GridCell.Tab.1.center" timestamp="1587739254975">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1023" height="196" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1587491576955" />
-    <state width="1023" height="196" key="GridCell.Tab.1.left" timestamp="1587491576955">
+    <state width="1023" height="140" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1587739254975" />
+    <state width="1023" height="140" key="GridCell.Tab.1.left" timestamp="1587739254975">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1023" height="196" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1587491576955" />
-    <state width="1023" height="196" key="GridCell.Tab.1.right" timestamp="1587491576955">
+    <state width="1023" height="140" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1587739254975" />
+    <state width="1023" height="140" key="GridCell.Tab.1.right" timestamp="1587739254976">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1023" height="196" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1587491576955" />
-    <state width="1023" height="196" key="GridCell.Tab.2.bottom" timestamp="1587491576956">
+    <state width="1023" height="140" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1587739254976" />
+    <state width="1023" height="140" key="GridCell.Tab.2.bottom" timestamp="1587739254976">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1023" height="196" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1587491576956" />
-    <state width="1023" height="196" key="GridCell.Tab.2.center" timestamp="1587491576955">
+    <state width="1023" height="140" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1587739254976" />
+    <state width="1023" height="140" key="GridCell.Tab.2.center" timestamp="1587739254976">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1023" height="196" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1587491576955" />
-    <state width="1023" height="196" key="GridCell.Tab.2.left" timestamp="1587491576955">
+    <state width="1023" height="140" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1587739254976" />
+    <state width="1023" height="140" key="GridCell.Tab.2.left" timestamp="1587739254976">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1023" height="196" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1587491576955" />
-    <state width="1023" height="196" key="GridCell.Tab.2.right" timestamp="1587491576956">
+    <state width="1023" height="140" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1587739254976" />
+    <state width="1023" height="140" key="GridCell.Tab.2.right" timestamp="1587739254976">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1023" height="196" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1587491576956" />
+    <state width="1023" height="140" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1587739254976" />
     <state width="905" height="200" key="GridCell.Tab.3.bottom" timestamp="1587285175387">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -493,10 +507,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="101" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1587394247690" />
-    <state x="391" y="193" key="com.intellij.ide.util.TipDialog" timestamp="1587373857054">
+    <state x="391" y="193" key="com.intellij.ide.util.TipDialog" timestamp="1587738275286">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="391" y="193" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1587373857054" />
+    <state x="391" y="193" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1587738275286" />
     <state x="494" y="284" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1587419601653">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
