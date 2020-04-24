@@ -30,8 +30,8 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public List<Product> selectProductByPrice(double price) {
-        return productDao.selectProductByPrice(price);
+    public List<Product> selectProductByPrice(double min, double max) {
+        return productDao.selectProductByPrice(min, max);
     }
 
     @Override
