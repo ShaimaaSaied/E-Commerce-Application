@@ -149,8 +149,6 @@
                     <% User user = (User) (request.getSession().getAttribute("currentuser"));%>
                     <%=user.getUsername() %>
                 </a>
-                <a href="/ECommerce/adminlogout" style="margin: 15px; color: #e7ab3c "><i
-                        class="fa fa-fw fa-sign-out "></i> Sign Out</a>
 
                 <div class="lan-selector">
                     <div class="ddOutOfVision" id="countries_msddHolder"
@@ -286,24 +284,24 @@
             <div class="col-lg-9 order-1 order-lg-2">
                 <div class="product-list">
                     <div id="products" class="row">
-                        <%--            search--%>
+                        <%--search by price--%>
                         <c:choose>
-                            <c:when test="${empty requestScope.productsFromSearch}">
+                            <c:when test="${empty requestScope.productsFromSearchByPrice}">
                                 <c:out value="This Keyword does not match any products"></c:out>
                             </c:when>
                             <c:otherwise>
-                                <c:forEach items="${requestScope.productsFromSearch}" var="product">
+                                <c:forEach items="${requestScope.productsFromSearchByPrice}" var="product">
                                     <div class='col-lg-4 col-sm-6'>
                                         <div class='product-item'>
                                             <div class='pi-pic'>
-                                                <div hidden id='productid'> ${product.productId} </div>
+                                                <div hidden id="productid" > ${product.productId} </div>
 
                                                 <img src="${product.image}" alt='picture'>
                                                 <ul>
                                                     <li class='w-icon active'>
                                                         <form action="AddProductToCart?id=${product.productId}" method='post'>
                                                             <input  type='submit' value='Add to cart'
-                                                                   id='addToCartBtn' class='btn btn-warning'/>
+                                                                    id='addToCartBtn' class='btn btn-warning'/>
                                                         </form>
                                                     </li>
                                                 </ul>
@@ -320,7 +318,7 @@
                                 </c:forEach>
                             </c:otherwise>
                         </c:choose>
-                        <%--            End Search --%>
+                        <%--search by price--%>
                     </div>
                 </div>
             </div>
